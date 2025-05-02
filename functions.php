@@ -32,21 +32,25 @@
 
     function enqueue_graph_script() {
         $theme_uri = get_stylesheet_directory_uri();
+        
+        // Enqueue jQuery first
+        wp_enqueue_script('jquery');
+        
+        // Third-party scripts
+        wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js', ['jquery'], null, true);
+        wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', ['jquery'], null, true);
+        
+        // Custom scripts with correct path and dependencies
         wp_enqueue_script(
-            'graph-js',                // $handle: A unique name for the script
-            get_template_directory_uri().'-child/assets/js/graph.js', // $src: Path to the JavaScript file
-            array('jquery'),           // $deps: Array of dependencies (e.g., 'jquery' if needed)
-            null,                      // $ver: You can specify a version number or null to ignore it
-            true                       // $in_footer: Load script in the footer (true)
+            'graph-js',
+            $theme_uri . '/assets/js/graph.js', // Fixed path
+            ['jquery'],
+            null,
+            true
         );
-
-        //all under here for BENEFIT PAGE
-        wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js', [], null, true);
-        wp_enqueue_script('splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', [], null, true);
-
-        // Custom JS files
-        wp_enqueue_script('app-js', $theme_uri . '/assets/js/app.js', [], null, true);
-        wp_enqueue_script('script-js', $theme_uri . '/assets/js/script.js', [], ['lottie'], null, true);
+        
+        wp_enqueue_script('app-js', $theme_uri . '/assets/js/app.js', ['jquery'], null, true);
+        wp_enqueue_script('script-js', $theme_uri . '/assets/js/script.js', ['jquery', 'lottie'], null, true);
     }
     add_action('wp_enqueue_scripts', 'enqueue_graph_script');    
 ?>
