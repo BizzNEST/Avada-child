@@ -65,8 +65,7 @@ get_header(); ?>
     </div>
   </section>
   
-  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
-  <script src="script.js"></script>-->
+  
   
   
   <!-- Trigger animation on scroll -->
@@ -103,6 +102,8 @@ get_header(); ?>
     });
   </script>
   
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 <!-- End of Stats Bar Section-->  
 
     <!-- sponsors section -->
