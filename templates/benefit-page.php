@@ -117,105 +117,105 @@ get_header(); ?>
             
             <div class="sponsor-pair">
                 <div class="sponsor-con">
-                    <img src="images/Game Changer Sponsor.png" alt="Game Changer Sponsor" class="sponsor-title-pair" loading="lazy">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Game Changer Sponsor.png" alt="Game Changer Sponsor" loading="lazy">
                     <div class="sponsor-center-div">
-                        <img src="images/image 1.png" alt="The Eden Foundation" class="sponsor-logo-pair" loading="lazy">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 1.png" alt="The Eden Foundation" />
                     </div>
                 </div>
 
                 <div class="sponsor-con">
-                    <img src="images/Advocate Sponsor.png" alt="Advocate Sponsor" class="sponsor-title-pair" loading="lazy">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Advocate Sponsor.png" alt="Advocate Sponsor" loading="lazy">
                     <div class="sponsor-center-div">
-                        <img src="images/image 2.png" alt="Driscoll's" class="sponsor-logo-pair" loading="lazy">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 2.png" alt="Driscoll's" />
                     </div>
               </div>
             </div>
             
             <div class="sponsor-grid one-cols">
-                <img src="images/Supporter Sponsors.png" alt="" loading="lazy">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Supporter Sponsors.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid three-cols">
-                <img src="images/image 3.png" alt="" loading="lazy"/>
-                <img src="images/image 4.png" alt="" loading="lazy"/>
-                <img src="images/image 5.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 3.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 4.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 5.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Table Sponsors.png" alt="Driscoll's">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Table Sponsors.png" alt="Driscoll's" />
             </div>
            
             <div class="sponsor-grid three-cols">
-                <img src="images/image 6.png" alt="" loading="lazy"/>
-                <img src="images/image 7.png" alt="" loading="lazy"/>
-                <img src="images/image 8.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 6.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 7.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 8.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid three-cols">
-                <img src="images/image 9.png" alt="" loading="lazy"/>
-                <img src="images/image 10.png" alt="" loading="lazy"/>
-                <img src="images/image 11.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 9.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 10.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 11.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid two-cols">
-                <img src="images/image 12.png" alt="" loading="lazy"/>
-                <img src="images/image 13.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 12.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 13.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 1.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 1.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 4.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 4.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 3.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 3.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 5.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 5.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 6.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 6.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 7.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 7.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 8.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 8.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 9.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 9.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Friends of The Nest.png" alt="Driscoll's">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Friends of The Nest.png" alt="Driscoll's" />
             </div>
 
             <div class="sponsor-grid three-cols">
-                <img src="images/image 21.png" alt="" loading="lazy"/>
-                <img src="images/image 22.png" alt="" loading="lazy"/>
-                <img src="images/image 23.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 21.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 22.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 23.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid two-cols">
-                <img src="images/image 24.png" alt="" loading="lazy"/>
-                <img src="images/Frame 10.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 24.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/image 10.png" alt="" loading="lazy"/>
             </div>
 
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 11.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 11.png" alt="" loading="lazy"/>
             </div>
 
             <div class="sponsor-grid one-cols">
-                <img src="images/Frame 128.png" alt="" loading="lazy"/>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Frame 128.png" alt="" loading="lazy"/>
             </div>
           </div>
         </div>
