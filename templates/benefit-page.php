@@ -294,7 +294,7 @@ get_header(); ?>
         <div class="donation-line-break">
             <div class="donation-circle donation-bottom"></div>
             <fieldset class="donation-text-frame">
-                <legend class="donation-bottom-legend"><button class="donate-more-bttn">DONATE TODAY</button></legend>
+                <legend class="donation-bottom-legend"><button class="donate-more-bttn"><span class="gradient-text">DONATE TODAY</span></button></legend>
             </fieldset>
             <div class="donation-circle donation-bottom"></div>
         </div>
