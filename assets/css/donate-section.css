@@ -175,6 +175,10 @@
 }
 
 @media only screen and (max-width: 48rem) {
+  .donation-section {
+    width: 100%;
+  }
+
   .donation-circle {
     visibility: hidden;
   }

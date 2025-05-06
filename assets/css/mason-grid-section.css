@@ -21,6 +21,7 @@
 .line-break:last-of-type{
     padding-top: 4rem;
     padding-bottom: 4rem;
+    width: 100%;
 }
 /* Make each column a fixed size so they scroll horizontally */
 .column-first,
@@ -173,8 +174,5 @@
 @media only screen and (max-width: 48rem) {
     .circle {
       visibility: hidden;
-    }
-    .fusion-row {
-        display: block !important;
     }
   }
