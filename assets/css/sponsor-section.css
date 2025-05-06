@@ -4,12 +4,12 @@
     padding: 2rem;
   }
 
-  .sponsor-section-title {
+  .sponsor-section-title h1 {
     display: flex;
     justify-content: center;
     text-align: center;
     font-family: 'Inglesa';
-    font-size: 1.3rem;
+    font-size: 2.85rem;
     color: #B72F8B;
     padding: 2rem;
   }
