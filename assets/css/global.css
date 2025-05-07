@@ -5,12 +5,12 @@
 
 
 /*The css here is only meant to mess with the benefit landing page*/
-html:not(.avada-has-site-width-percent) body.page-id-6943 #main {
+html:not(.avada-has-site-width-percent) body.page-id-6936 #main {
     /* padding-left: 0 !important;
     padding-right: 0 !important; */
     padding: 0 !important;
   }
 
-  html:not(.avada-has-site-width-percent) body.page-id-6943 #main .fusion-row{
+  html:not(.avada-has-site-width-percent) body.page-id-6936 #main .fusion-row{
     min-width: 100% !important;
   }
