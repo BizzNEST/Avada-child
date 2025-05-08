@@ -169,6 +169,11 @@
     font-weight: 700;
     font-size: 1.2rem;
     margin: 1rem;
+
+    &:hover{
+        background-color: #B72F8B;
+        color: white;
+    }
 }
 
 @media only screen and (max-width: 48rem) {

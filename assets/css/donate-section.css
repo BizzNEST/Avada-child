@@ -39,6 +39,12 @@
     height: 2.5rem;
   }
 }
+.donate-more-bttn:hover{
+  color: #000000;
+  background: linear-gradient(180deg, #CE9728 0%, #E5B543 29%, #FCE674 53.5%, #EDC04D 63%, #EEB538 75%, #D19A29 93.75%);
+
+}
+
 
 .donate-more-bttn .gradient-text {
   background: linear-gradient(
@@ -52,8 +58,11 @@
   );
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  color: black;
   -webkit-text-fill-color: transparent;
+}
+.donate-more-bttn:hover .gradient-text {
+  -webkit-text-fill-color: black;
 }
 
 
