@@ -25,7 +25,7 @@ get_header(); ?>
             </h3>
             <h4 class="help-us-text">HELP US CLOSE THE GAP</h4>
             <h4 class="our-goal-text">$200K TO REACH OUR GOAL</h4>
-            <a href="?campaign=623505"><button class="donate-today-button"><p class="donate-today-text">DONATE TODAY</p></button></a>
+            <a href="https://digitalnest.org/donations"><button class="donate-today-button"><p class="donate-today-text">DONATE TODAY</p></button></a>
         </div>
     </section>
     <div id="videoContainer">
@@ -294,7 +294,7 @@ get_header(); ?>
         <div class="donation-line-break">
             <div class="donation-circle donation-bottom"></div>
             <fieldset class="donation-text-frame">
-                <legend class="donation-bottom-legend"><a href="?campaign=623505"><button class="donate-more-bttn"><span class="gradient-text">DONATE TODAY</span></button></legend></a>
+                <legend class="donation-bottom-legend"><a href="https://digitalnest.org/donations"><button class="donate-more-bttn"><span class="gradient-text">DONATE TODAY</span></button></legend></a>
             </fieldset>
             <div class="donation-circle donation-bottom"></div>
         </div>
