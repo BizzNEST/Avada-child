@@ -29,17 +29,17 @@ This repository holds all updates to the child theme of the digitalnest.org webs
    ```
    into the repo. 
 4. Checkout a local branch using the standard conventions.
-  ```
+   ```bash
    git checkout -b 'yourInitials-issueNumber-taskName'
-  ```
-6. Stage and Commit the changes using the standard conventions.
    ```
-      git add .
-      git commit -m 'type(summary):description of changes'
+5. Stage and Commit the changes using the standard conventions.
+   ```bash
+   git add .
+   git commit -m 'type(summary):description of changes'
    ```
-8. Push your branch and create a pull request. DO NOT PUSH TO MAIN.
-   ```
-      git push --set-upstream origin your-branch-name
+6. Push your branch and create a pull request. DO NOT PUSH TO MAIN.
+   ```bash
+   git push --set-upstream origin your-branch-name
    ```
 ## File Structure
 
