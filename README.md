@@ -23,14 +23,24 @@ This repository holds all updates to the child theme of the digitalnest.org webs
    ```bash
    git clone https://github.com/BizzNEST/Avada-child.git
    ```
-3. Replace the Local child theme folder with Git's child theme folder:
-
+3. All changes in Local must be duplicated to the github repo folder. You can drag and drop
    ```
    wp-content/themes/Avada-child
    ```
-4. Ensure the parent theme is installed.
-5. Activate the child theme in **Appearance → Themes**.
-
+   into the repo. 
+4. Checkout a local branch using the standard conventions.
+  ```
+   git checkout -b 'yourInitials-issueNumber-taskName'
+  ```
+6. Stage and Commit the changes using the standard conventions.
+   ```
+      git add .
+      git commit -m 'type(summary):description of changes'
+   ```
+8. Push your branch and create a pull request. DO NOT PUSH TO MAIN.
+   ```
+      git push --set-upstream origin your-branch-name
+   ```
 ## File Structure
 
 ```
@@ -46,9 +56,9 @@ Avada-child/
 
 ## Modifying Styles
 
-Add your custom CSS to `style.css`. Example:
+Add your custom CSS to the page's css file (`/assets/css/example-page.css`). Example:
 
-```css
+```example-page.css
 /* Custom button styling */
 button {
   border-radius: 5px;
