@@ -13,6 +13,7 @@ This repository holds all updates to the child theme of the digitalnest.org webs
 
 * Text Editor of choice (VSCode, Cursor, etc.)
 * Local
+* (Standards and Practices)[https://github.com/BizzNEST/Standards-and-Practices]
 
 ## Installation
 
