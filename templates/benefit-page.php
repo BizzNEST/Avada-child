@@ -270,7 +270,7 @@ get_header(); ?>
     <div class="line-break">
         <div class="circle bottom"></div>
         <fieldset class="text-frame">
-            <legend><button class="browse-more-bttn">BROWSE MORE</button></legend>
+            <legend><button class="browse-more-bttn" onclick="window.location.href='https://photos.app.goo.gl/ZkLUJhXdhEJsDsQL8'">BROWSE MORE</button></legend>
         </fieldset>
         <div class="circle bottom"></div>
     </div>
