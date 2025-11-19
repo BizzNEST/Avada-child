@@ -11,6 +11,7 @@
             array( $parenthandle ),
             $theme->get('Version') // this only works if you have Version in the style header
         );
+        
         //all under here is for BENEFIT PAGE
         $theme_uri = get_stylesheet_directory_uri();
 
@@ -30,7 +31,6 @@
             // Splide Carousel
             wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css');
         }
-        
     }
 
     function enqueue_graph_script() {
@@ -59,8 +59,26 @@
             null,
             true
         );
-        
-        
     }
-    add_action('wp_enqueue_scripts', 'enqueue_graph_script');    
+    add_action('wp_enqueue_scripts', 'enqueue_graph_script');
+
+    function enqueue_anime_script(){
+        if(is_page('eoy-2025')){
+            wp_enqueue_script(
+                'animejs', // Script handle (unique name)
+                get_stylesheet_directory_uri() . '/scripts/anime.umd.min.js', // Full URI to the file
+                array(), // Dependencies (none needed for animejs itself)
+                '4.0.0', // Version number (or '1.0' or false)
+                true // Load in the footer (recommended for performance)
+            );
+            wp_enqueue_script(
+                'eoy-animations',
+                get_stylesheet_directory_uri() . '/scripts/eoy-animations.js',
+                array('animejs'), // DEPENDS on 'animejs' being loaded first
+                '1.0',
+                true 
+            );
+        }
+    }
+    add_action( 'wp_enqueue_scripts', 'enqueue_anime_script' );
 ?>
