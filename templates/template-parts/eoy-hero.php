@@ -5,7 +5,7 @@
             This is a pivotal time for Digital NEST. As we equip young people with the 
             power to reshape their futures and create economic prosperity for families, 
             we will become a national model for workforce development and sustain our 
-            presence for generations to come.
+            presence for generations to come. 2
         </p>
     </div>
 </section>
