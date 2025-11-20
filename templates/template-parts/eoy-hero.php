@@ -1,3 +1,4 @@
+<style><?php include './assets/css/eoy-2025/hero-section.css'?></style>
 <section class="eoy-hero">
     <div class="container" style='padding: 0 0; margin: 0 0;'>
         <h2>Hero Section</h2>
