@@ -81,4 +81,29 @@
         }
     }
     add_action( 'wp_enqueue_scripts', 'enqueue_anime_script' );
+
+    function eoy_2025_enqueue_section_styles() {
+        $base_uri  = get_stylesheet_directory_uri() . '/assets/css/eoy-2025/';
+        $base_path = get_stylesheet_directory() . '/assets/css/eoy-2025/';
+
+        $sections = array( 'hero', 'toc', 'financial', 'effective', 'economic', 'donation', 'confidence' );
+
+        if ( is_page( 'eoy-2025' ) ) {
+            foreach ( $sections as $section ) {
+                $handle = 'eoy-' . $section . '-section';
+                $file   = $section . '-section.css';
+
+                wp_enqueue_style(
+                    $handle,
+                    $base_uri . $file,
+                    array(),
+                    filemtime( $base_path . $file )
+                );
+            }
+        }
+    }
+    add_action( 'wp_enqueue_scripts', 'eoy_2025_enqueue_section_styles' );
+
+    
+
 ?>
