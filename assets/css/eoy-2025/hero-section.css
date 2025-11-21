@@ -1,9 +1,9 @@
-@media screen and (max-width:767px){
+@media screen and (max-width:800px){
     .eoy-hero .container{
         width: 100%;
         align-items: center;
         background-color: black !important;
-        padding: 0 2em;
+        padding: 0 1.5em;
         margin: 0 0;    
     }
 
@@ -35,7 +35,7 @@
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:801px) {
     .eoy-hero .container{
         background-color: black;
         width: 100%;
@@ -60,8 +60,8 @@
         justify-content: center;
         width: 50%;
         margin: auto 0;
-        padding-left: 1em;
         padding: 2em 0;
+        padding-left: 1em;
     }
 }
 
@@ -99,6 +99,7 @@
     padding: 1em 4em;
     font-weight: 700;
     font-size: large;
+    white-space: nowrap;
 }
 
 @keyframes scrolling {
