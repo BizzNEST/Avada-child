@@ -89,6 +89,15 @@
         $sections = array( 'hero', 'toc', 'financial', 'effective', 'economic', 'donation', 'confidence' );
 
         if ( is_page( 'eoy-2025' ) ) {
+            $main_style_file = 'eoy-2025.css';
+
+            wp_enqueue_style(
+                'eoy-2025-main',
+                $base_uri . $main_style_file,
+                array(),
+                filemtime( $base_path . $main_style_file )
+            );
+
             foreach ( $sections as $section ) {
                 $handle = 'eoy-' . $section . '-section';
                 $file   = $section . '-section.css';
@@ -96,14 +105,12 @@
                 wp_enqueue_style(
                     $handle,
                     $base_uri . $file,
-                    array(),
+                    array(), 
                     filemtime( $base_path . $file )
                 );
             }
         }
     }
     add_action( 'wp_enqueue_scripts', 'eoy_2025_enqueue_section_styles' );
-
-    
 
 ?>

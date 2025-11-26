@@ -1,0 +1,8 @@
+main {
+    background-color: black !important;
+}
+
+.content-area{
+    background-image: url('../../images/eoy-2025/page-background.png');
+    background-size: cover;
+}

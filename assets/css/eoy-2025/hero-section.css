@@ -2,7 +2,8 @@
     .eoy-hero .container{
         width: 100%;
         align-items: center;
-        background-color: black !important;
+        /* background-image: url('../../images/eoy-2025/Texture.png');
+        background-size: cover; */
         padding: 0 1.5em;
         margin: 0 0;    
     }
@@ -46,7 +47,8 @@
 
 @media screen and (min-width:801px) {
     .eoy-hero .container{
-        background-color: black;
+        /* background-image: url('../../images/eoy-2025/Texture.png');
+        background-size: cover; */
         width: 100%;
         height: 500px;
         display: flex;
