@@ -1,7 +1,66 @@
-.eoy-toc .container{
+/*  */
+
+@media screen and (min-width : 801px){
+    .eoy-toc .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 1.5em; 
+        padding-bottom: 2em;
+        margin: 0 0;    
+        row-gap: 1.5em;
+    }
+
+    .eoy-toc .button-container {
+        display: flex;
+        column-gap: .7em;
+        justify-content: center;
+        background-color: #3E3C3C;
+        border-radius: 3em;
+        padding: .4em .4em;
+        width: fit-content;
+    }
+
+    .eoy-toc button {
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 3em;
+        font-size: x-large;
+        font-weight: 800;
+        padding: .5em 1.8em;
+        line-height: 1;
+        transition: 350ms;
+    }
+    .eoy-toc button:hover {
+        /* transition: 250ms; */
+        color: white;
+        
+    }
+    #btn-mustard:hover {
+        background-color: #CAA737;
+    }
+    #btn-violet:hover{
+        background-color: #6A4B9A;
+    }
+    #btn-blue:hover{
+        background-color: #0B7AB6;
+    }
+    #btn-cranberry:hover{
+        background-color: #CE2459;
+    }
+    
+}
+
+.eoy-toc .container {
+    align-items: center;
     background-color: black;
-    border:1px blue solid;
-    width: 100%;
-    padding: 0 0; 
-    margin: 0 0;    
+}
+
+.eoy-toc h2 {
+    color: white;
+    text-align: center;
+
 }
