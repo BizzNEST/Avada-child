@@ -80,6 +80,7 @@
 
 .eoy-toc .container {
     align-items: center;
+    background-image: linear-gradient(to bottom, black, transparent);
 }
 
 .eoy-toc h2 {
