@@ -1,6 +1,73 @@
 .eoy-donation .container{
     border:1px blue solid;
     width: 100%;
-    padding: 0 0; 
-    margin: 0 0;    
+    margin: 0 0;  
+    display: flex;
+    padding: 60px 69px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;  
+}
+.container .hero {
+    height: 358px;
+    align-self: stretch;
+    border-radius: 19.122px;
+    background-image: url("../../images/eoy-2025/Backgrounds/BG-donations.png");
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.text h3 {
+    color: #FFF;
+    text-align: center;
+    font-family: "IBM Plex Sans";
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 59.4px */
+    letter-spacing: -1.188px;
+}
+.eoy-donation .donate {
+    display: flex;
+    width: 197px;
+    height: 53px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #FFF;
+    color: #000;
+    font-family: "IBM Plex Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;   
+}
+.container .subtext {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+.subtext {
+    color: #FFF;
+    text-align: center;
+
+    /* Desktop/Body 1 */
+    font-family: Nunito;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    flex: 1 0 0;
 }

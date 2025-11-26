@@ -2,5 +2,103 @@
     border:1px blue solid;
     width: 100%;
     padding: 0 0; 
-    margin: 0 0;    
+    margin: 0 0;
+    display: flex;
+    padding: 60px 69px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+    background-color: black;    
+}
+.eoy-economic .main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+.eoy-economic .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.eoy-economic .star {
+    width: 118px;
+    height: 118px;
+}
+.eoy-economic h2 {
+    color: #FFF;
+
+/* Desktop/Heading 2 */
+/* font-family: IBM Plex Sans; */
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.792px;
+}
+.eoy-economic .main-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.main-text li {
+    color: #FFF;
+
+/* Desktop/Body 1 */
+font-family: Nunito;
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.main-text p {
+color: #FFF;
+width: 50%;
+
+/* Desktop/Body 1 */
+font-family: Nunito;
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.eoy-economic .subtext {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.subtext p {
+    color: #FFF;
+
+/* Desktop/Caption */
+font-family: Nunito;
+font-size: 16px;
+font-style: italic;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.352px;
+}
+.eoy-economic .animation {
+display: flex;
+width: 1051px;
+flex-direction: column;
+align-items: flex-start;
+gap: 28.521px;
+background-color: #FFF;
+height: 398px;
+width: 100%;
+}
+.button p {
+    color: #000;
+    font-family: "IBM Plex Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
 }
