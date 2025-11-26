@@ -18,6 +18,16 @@
     .eoy-donation .container {
         padding: 2em 5em;
     }
+
+    .container .donation-hero:hover {
+    background-size: 100%, 110%;
+    background-position: center, top left;
+    filter: opacity(100%), opacity(100%);
+    
+    background-image: 
+        url('../../images/eoy-2025/Backgrounds/donation-patterns.png'), 
+        url("../../images/eoy-2025/Backgrounds/BG-donations.png");
+}
 }
 .eoy-donation .container{
     background-color: black;
@@ -34,13 +44,20 @@
     height: 358px;
     align-self: stretch;
     border-radius: 19.122px;
-    background-image: url("../../images/eoy-2025/Backgrounds/BG-donations.png");
+    background-image: 
+        url('../../images/eoy-2025/Backgrounds/donation-patterns.png'), 
+        url("../../images/eoy-2025/Backgrounds/BG-donations.png");
+    background-size: 200%, 150%;
+    background-position: center, top left;
+    filter: opacity(0%), opacity(100%);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 2em;
+    transition: background-size 1s ease, background-position 0.5s ease, filter 1s ease;
 }
+
 .donation-text {
     display: inline-flex;
     flex-direction: column;
