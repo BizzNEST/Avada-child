@@ -2,7 +2,6 @@
 /*Template Name: eoy-2025*/
 get_header();?>
 
-<style><?php include '/assets/css/eoy-2025.css'?></style>
 <div id='primary' class='content-area'>
     <?php
         $sections = array('hero', 'toc', 'economic', 'confidence', 'effective', 'financial', 'donation');
