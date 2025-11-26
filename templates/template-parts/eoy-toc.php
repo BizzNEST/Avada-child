@@ -1,6 +1,6 @@
 <section class="eoy-toc">
     <div class="container">
-        <h2>The future starts with you,</br>will you support the NEST generation?</h2>
+        <h2>The future starts with you, <br>will you support the NEST generation?</h2>
 
         <div class="button-container">
             <button id="btn-mustard">Economic<br>Prosperity</button>
