@@ -1,11 +1,17 @@
-main {
-    background-color: black !important;
+.content-area{
+    width: 100%;
 }
 
-.content-area{
-    background-image: url('../../images/eoy-2025/page-background.png');
+body {
+    width: 100%;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    background-image: url('../../images/eoy-2025/page-background.png') !important;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }

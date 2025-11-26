@@ -38,6 +38,7 @@
     align-items: center;
     gap: 40px;
     align-self: stretch;  
+    padding-bottom: 0;
 }
 .container .donation-hero {
     height: 358px;
