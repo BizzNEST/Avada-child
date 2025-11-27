@@ -1,6 +1,128 @@
 .eoy-confidence .container{
-    border:1px blue solid;
     width: 100%;
-    padding: 0 0; 
-    margin: 0 0;    
+    padding: 0;
+    margin: 0;    
+}
+
+/* Titles */
+.confidence-title{
+    font-size: 36px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.star{
+    height: 118px;
+    aspect-ratio: 1/1;
+}
+
+/* Layout */
+.layer-one{
+    display:flex;
+    gap: 10px;
+}
+
+.layer-two{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.layer-two-left{
+    flex: 1;
+    color: white;
+}
+
+.layer-two-right{
+    flex: 1;
+    color: white;
+}
+
+.top-left-textbox,
+.bottom-left-textbox{
+    color:white;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+.layer-three{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 10px;
+}
+
+
+.layer-three img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----------- GRID POSITIONS ----------- */
+
+
+.grid-cell-one{
+    grid-column: 1;
+    grid-row: 1 /span 2;
+}
+
+
+.grid-cell-two{
+    grid-column: 2 /span 2;
+    grid-row: 1;
+}
+
+
+.grid-cell-three{
+    border-radius: 5;
+    grid-column: 2 /span 2;
+    grid-row: 2;
+}
+.grid-cell-four{
+    grid-column: 4;
+    grid-row: 1 /span 2;
+}
+
+/* ----------- CARD STYLES ----------- */
+
+.card-vertical{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-horizontal{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.layer-three > div {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-vertical,
+.card-horizontal {
+    position: absolute;
+    inset: 0; 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 2;
 }
