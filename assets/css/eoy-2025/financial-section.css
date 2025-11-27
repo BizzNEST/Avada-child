@@ -4,3 +4,163 @@
     padding: 0 0; 
     margin: 0 0;    
 }
+
+.pie-chart {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pie-segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.pie-segment.programs {
+    background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-purple.png');
+    background-size: 400px 400px;
+    background-position: 40% center;
+    background-repeat: no-repeat;
+    -webkit-mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
+    mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
+    z-index: 2;
+    transform-origin: center;
+}
+
+.pie-segment.operations {
+    background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-green.png');
+    background-size: 300px 300px;
+    background-position: 20% 90%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.pie-percentage {
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.pie-percentage-12 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.pie-label {
+    position: absolute;
+    bottom: 13%;
+    right: 15%;
+    font-size: 0.9rem;
+    color: white;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.pie-segment.operations::after {
+    content: '12%';
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    z-index: 3;
+}
+
+.pie-chart:hover .pie-segment.programs {
+    transform: scale(1.10);
+    background-size: 363.64px 363.64px;
+}
+
+.pie-segment::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.03) 2px,
+            rgba(255, 255, 255, 0.03) 4px
+        );
+    z-index: 2;
+    pointer-events: none;
+}
+
+.pie-chart:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 800px) {
+    .pie-chart {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pie-percentage {
+        font-size: 1.5rem;
+        bottom: 18%;
+        right: 12%;
+    }
+
+    .pie-percentage-12 {
+        font-size: 1rem;
+        top: 12%;
+        left: 28%;
+    }
+
+    .pie-label {
+        font-size: 0.75rem;
+        bottom: 11%;
+        right: 12%;
+    }
+
+    .pie-segment.operations::after {
+        font-size: 1rem;
+        top: 32%;
+        right: 18%;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .pie-chart {
+        width: 300px;
+        height: 300px;
+    }
+
+    .pie-percentage {
+        font-size: 2rem;
+    }
+
+    .pie-percentage-12 {
+        font-size: 1.5rem;
+    }
+
+    .pie-label {
+        font-size: 0.9rem;
+    }
+
+    .pie-segment.operations::after {
+        font-size: 1.5rem;
+    }
+}
