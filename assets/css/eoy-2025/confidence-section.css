@@ -28,7 +28,7 @@
 }
 .confidence-grid {
     display: grid;
-    height: 343px;
+    min-height: 400px;
     gap: 12px;
     padding: 2em 0;
 }
@@ -55,6 +55,7 @@
 .item-stat h2 {
     top: 0%;
     left: 0%;
+    font-size: 3em;
 }
 .grid-item p {
     opacity: 0;
@@ -69,7 +70,7 @@
     justify-content: space-evenly;
     align-items: center;
 }
-.item-content {
+.item-content p {
     padding: 0 1em;
 }
 .grid-item:nth-child(1) img{
@@ -150,8 +151,8 @@
     .grid-item:nth-child(3) p {left: 210%;}
     .confidence-grid:hover .grid-item p {opacity: 1;}
     .confidence-grid:hover .grid-item p {left:0%; opacity: 1;}
-    .confidence-grid:hover .grid-item:nth-child(3) p {left: 105%; opacity: 1;}
-    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -106%;}
+    .confidence-grid:hover .grid-item:nth-child(3) p {left: 100%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -100%;}
 
     .confidence-grid:hover .grid-item img {left: 100%;}
     .confidence-grid:hover .grid-item:nth-child(3) img {left: -100%;}
@@ -170,7 +171,7 @@
         height: fit-content;
     }
     .grid-item {
-        min-height: 100px;
+        min-height: 140px;
     }
     .item-content p {
         left: -100%;
@@ -180,8 +181,8 @@
     .grid-item:nth-child(3) p {left: 210%;}
     .confidence-grid:hover .grid-item p {opacity: 1;}
     .confidence-grid:hover .grid-item p {left:0%; opacity: 1;}
-    .confidence-grid:hover .grid-item:nth-child(3) p {left: 105%; opacity: 1;}
-    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -106%;}
+    .confidence-grid:hover .grid-item:nth-child(3) p {left: 100%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -100%;}
 
     .confidence-grid:hover .grid-item img {left: 100%;}
     .confidence-grid:hover .grid-item:nth-child(3) img {left: -100%;}
@@ -196,6 +197,7 @@
         display: none;
     }
     .confidence-grid {
+        display: none;
         flex-direction: column;
         height: fit-content;
     }
@@ -210,8 +212,8 @@
     .grid-item:nth-child(3) p {left: 210%;}
     .confidence-grid:hover .grid-item p {opacity: 1;}
     .confidence-grid:hover .grid-item p {left:0%; opacity: 1;}
-    .confidence-grid:hover .grid-item:nth-child(3) p {left: 105%; opacity: 1;}
-    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -106%;}
+    .confidence-grid:hover .grid-item:nth-child(3) p {left: 100%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -100%;}
 
     .confidence-grid:hover .grid-item img {left: 100%;}
     .confidence-grid:hover .grid-item:nth-child(3) img {left: -100%;}
