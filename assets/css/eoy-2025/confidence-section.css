@@ -57,8 +57,9 @@
     left: 0%;
 }
 .grid-item p {
-    opacity: 1;
+    opacity: 0;
     text-shadow: 2px 2px 20px black;
+    transition: 0.5s ease;
 }
 .grid-item .item-stat, .grid-item .item-content{
     position: relative;
@@ -142,12 +143,15 @@
         min-height: 100px;
     }
     .item-content p {
-        left: 0%;
+        left: -100%;
         right: 0%;
         top: 0%;
     }
     .grid-item:nth-child(3) p {left: 210%;}
-    .confidence-grid:hover .grid-item:nth-child(3) p {left: 105%;}
+    .confidence-grid:hover .grid-item p {opacity: 1;}
+    .confidence-grid:hover .grid-item p {left:0%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) p {left: 105%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -106%;}
 
     .confidence-grid:hover .grid-item img {left: 100%;}
     .confidence-grid:hover .grid-item:nth-child(3) img {left: -100%;}
@@ -168,6 +172,17 @@
     .grid-item {
         min-height: 100px;
     }
+    .item-content p {
+        left: -100%;
+        right: 0%;
+        top: 0%;
+    }
+    .grid-item:nth-child(3) p {left: 210%;}
+    .confidence-grid:hover .grid-item p {opacity: 1;}
+    .confidence-grid:hover .grid-item p {left:0%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) p {left: 105%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -106%;}
+
     .confidence-grid:hover .grid-item img {left: 100%;}
     .confidence-grid:hover .grid-item:nth-child(3) img {left: -100%;}
 }
@@ -187,6 +202,17 @@
     .grid-item {
         min-height: 100px;
     }
+    .item-content p {
+        left: -100%;
+        right: 0%;
+        top: 0%;
+    }
+    .grid-item:nth-child(3) p {left: 210%;}
+    .confidence-grid:hover .grid-item p {opacity: 1;}
+    .confidence-grid:hover .grid-item p {left:0%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) p {left: 105%; opacity: 1;}
+    .confidence-grid:hover .grid-item:nth-child(3) h2 {left: -106%;}
+
     .confidence-grid:hover .grid-item img {left: 100%;}
     .confidence-grid:hover .grid-item:nth-child(3) img {left: -100%;}
 }
