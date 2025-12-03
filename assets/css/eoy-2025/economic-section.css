@@ -1,6 +1,57 @@
-.eoy-economic .container{
-    border:1px blue solid;
-    width: 100%;
-    padding: 0 0; 
-    margin: 0 0;    
+/* Container styling */
+.eoy-economic .container {
+  border: 1px blue solid; /* for testing */
+  width: 100%;
+}
+
+/* Show carousel on mobile */
+.ep-mobile {
+  display: block;
+}
+
+/* Hide desktop layout on mobile */
+.ep-desktop {
+  display: none;
+}
+
+.ep-mobile .carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  justify-content: flex-start; /* avoid centering extra space */
+}
+
+/* Each slide inside carousel */
+.ep-mobile .slide {
+  flex: 0 0 80%; /* 80% width, no shrinking/growing */
+  background: #ffffff;
+
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+  scroll-snap-align: center;
+}
+
+/* DESKTOP VIEW (768px or wider) */
+@media (min-width: 768px) {
+  /* Hide carousel on desktop */
+  .ep-mobile {
+    display: none;
+  }
+
+  /* Show the two desktop sections */
+  .ep-desktop {
+    display: flex; /* use flex to place left/right side by side */
+    gap: 20px;
+  }
+
+  .ep-left,
+  .ep-right {
+    flex: 1; /* equal width */
+    box-sizing: border-box;
+  }
 }
