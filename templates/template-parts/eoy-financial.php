@@ -8,22 +8,24 @@
             <p>Your dollar goes farther at the NEST. 88% of all funding directly supports our programs. The remaining 12% ensures an enduring ecosystem in our communities by providing the necessary financial, human resources, and investments, and digital infrastructure support. </p>
         </div>
         <div class="financial-chart-section">
-            <div class="financial-chart-text">
-                <h3><span class="financial-chart-amount">88¢</span> of every dollar goes to:</h3>
-                <ul class="financial-chart-list">
-                    <li>Mentor Programs</li>
-                    <li>Workshops</li>
-                    <li>BizzNEST</li>
-                    <li>Data & Evaluation</li>
-                    <li>Technical Skills</li>
-                    <li>Networking Events</li>
-                    <li>Alumni Services</li>
-                    <li>Career Navigation</li>
-                    <li>Laptops, Software & Equipment</li>
-                    <li>Professional Skills</li>
-                    <li>Free snacks</li>
-                    <li>High-speed Internet</li>
-                </ul>
+            <div class="financial-chart-text scroll-anim">
+                <div class="hover-text-wrapper">
+                    <h3><span class="financial-chart-amount">88¢</span> of every dollar goes to:</h3>
+                    <ul class="financial-chart-list">
+                        <li>Mentor Programs</li>
+                        <li>Workshops</li>
+                        <li>BizzNEST</li>
+                        <li>Data & Evaluation</li>
+                        <li>Technical Skills</li>
+                        <li>Networking Events</li>
+                        <li>Alumni Services</li>
+                        <li>Career Navigation</li>
+                        <li>Laptops, Software & Equipment</li>
+                        <li>Professional Skills</li>
+                        <li>Free snacks</li>
+                        <li>High-speed Internet</li>
+                    </ul>
+                </div>
             </div>
             <div class="financial-pie-chart">
                 <div class="pie-chart">
@@ -36,3 +38,23 @@
         </div>
     </div>
 </section>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            } else {
+                entry.target.classList.remove('in-view');
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
+    
+    const financialSection = document.querySelector('.financial-chart-section');
+    
+    if (financialSection) {
+        observer.observe(financialSection);
+    }
+</script>

@@ -1,9 +1,36 @@
 .eoy-financial .container{
     border:1px blue solid;
+    background-color: black;
     width: 100%;
     padding: 0 0; 
     margin: 0 0;    
 }
+
+.financial-image{
+    width: 118px;
+    height: 118px;
+}
+
+.financial-heading{
+    display: flex;
+    align-items: center;
+}
+
+.financial-title h2{
+    color: white !important;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.financial-chart-amount{ 
+    color: #8447D9;
+}
+
+/* .financial-chart-list li{
+    animation: fadeIn 0.5s ease reverse slide-in;
+} */
 
 .pie-chart {
     width: 300px;
@@ -84,7 +111,62 @@
     z-index: 3;
 }
 
-.pie-chart:hover .pie-segment.programs {
+.financial-chart-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.financial-chart-text h3,
+.financial-chart-text ul,
+.financial-chart-text p {
+    color: white !important;
+}
+
+.financial-chart-text li {
+    color: white !important;
+}
+
+.financial-chart-text{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.financial-chart-text li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.pie-segment.programs {
+    transition: all 1s ease, transform 1s ease, background-size 0.6s ease;
+}
+
+.financial-chart-section.in-view .financial-chart-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+.financial-chart-section.in-view .financial-chart-text li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(1) { transition-delay: 0.1s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(2) { transition-delay: 0.15s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(3) { transition-delay: 0.2s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(4) { transition-delay: 0.25s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(5) { transition-delay: 0.3s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(6) { transition-delay: 0.35s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(7) { transition-delay: 0.4s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(8) { transition-delay: 0.45s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(9) { transition-delay: 0.5s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(10) { transition-delay: 0.55s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(11) { transition-delay: 0.6s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(12) { transition-delay: 0.65s; }
+
+.financial-chart-section.in-view .pie-segment.programs {
     transform: scale(1.10);
     background-size: 363.64px 363.64px;
 }
@@ -108,6 +190,10 @@
 }
 
 .pie-chart:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.financial-chart-section:hover .pie-chart {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -164,3 +250,4 @@
         font-size: 1.5rem;
     }
 }
+
