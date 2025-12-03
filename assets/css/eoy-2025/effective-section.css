@@ -454,21 +454,22 @@
   .associate img {
     transition: transform 0.8s ease, opacity 0.8s ease;
   }
-
+  /*
   .bottom-section:hover .associate img {
     transform: translateY(-15px) scale(1.1);
     opacity: 1;
   }
-
+*/
   .right-section img {
     transition: transform 0.8s ease, opacity 0.8s ease;
   }
 
+  /*
   .bottom-section:hover {
     transform: scale(1.02);
     transition: transform 0.8s ease;
   }
-
+*/
   .pie-description {
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -516,7 +517,7 @@
     display: flex;
     align-items: center;
   }
-
+  /*
   .bottom-section:hover .description70 {
     opacity: 1;
     transform: translateX(0);
@@ -526,6 +527,7 @@
     opacity: 1;
     transform: translateX(0);
   }
+    */
 
   .description70 {
     display: flex;
