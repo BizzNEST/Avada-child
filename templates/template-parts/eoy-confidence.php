@@ -1,5 +1,5 @@
-<section class="eoy-confidence">
-    <div class="container">
+<section>
+    <div>
         <div class='layer-one'>
             <img class="star" src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Stars/Property 1=Variant2.png" alt="2nd Star">
             <h2 class="confidence-title">Confidence & Agency</h2>
@@ -18,22 +18,40 @@
             </div>
         </div>
         <div class="layer-three">
-            <div class="grid-cell-one">
-                <img  src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image.png" alt="">
-                <div class='card-vertical' style="background-image: url('<?= get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Backgrounds/BG-green.png');">card1</div>
-            </div>
-            <div class="grid-cell-two">
-                <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (1).png" alt="">
-                <div class='card-horizontal' style="background-image: url('<?= get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Backgrounds/BG-purple.png');">card2</div>
-            </div>
-            <div class="grid-cell-three">
-                <div class='card-horizontal' style="background-image: url('<?= get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Backgrounds/BG-teal.png');">card3</div>
-                <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (2).png" alt="">
-            </div>
-            <div class="grid-cell-four">
-                <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (3).png" alt="">
-                <div class='card-vertical' style="background-image: url('<?= get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Backgrounds/BG-gold.png');">card4</div>
-            </div>
-        </div>
+
+<!-- CELL 1 -->
+<div class="cell-1">
+    <div class="img-half">
+        <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image.png">
+    </div>
+    <div class="bg-half" style="background-image:url('<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Backgrounds/BG-green.png');"></div>
+</div>
+
+<!-- CELL 2 -->
+<div class="cell-2">
+    <div class="img-half">
+        <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (1).png">
+    </div>
+    <div class="bg-half" style="background-image:url('<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Backgrounds/BG-purple.png');"></div>
+</div>
+
+<!-- CELL 3 -->
+<div class="cell-3">
+    <div class="bg-half" style="background-image:url('<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Backgrounds/BG-teal.png');"></div>
+    <div class="img-half">
+        <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (2).png">
+    </div>
+</div>
+
+<!-- CELL 4 -->
+<div class="cell-4">
+    <div class="bg-half" style="background-image:url('<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Backgrounds/BG-gold.png');"></div>
+    <div class="img-half">
+        <img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (3).png">
+    </div>
+</div>
+
+</div>
+
     </div>
 </section>
