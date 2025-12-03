@@ -77,7 +77,7 @@
   flex-direction: column;
   justify-content: space-around;
 
-  background: #1a1a1a;
+  background: #35373c;
 }
 
 .pie-item {
@@ -85,6 +85,7 @@
   flex-direction: row; /* Ensure pie is left, text is right */
 
   align-items: center;
+  width: 100%;
 
   color: white;
   gap: 20px;
@@ -164,6 +165,7 @@
     color: white;
     margin: 0 auto;
     position: relative;
+    padding: 1.5rem;
   }
 
   .mobile-container::before {
@@ -185,9 +187,10 @@
 
   .mobile-container4 {
     display: flex !important;
+    padding: 1.5rem;
     align-items: center;
     height: 427px;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
     margin: 0 auto;
     position: relative;
@@ -211,10 +214,11 @@
   }
 
   .mobile-container2 {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     width: 10px !important;
     height: 427px;
-    border-radius: 10px;
+    border-radius: 20px;
     background: #35373c;
     color: white;
     margin: 0 auto;
@@ -242,10 +246,13 @@
     flex-direction: row; /* change this */
     align-items: center; /* optional: keeps text centered vertically */
     margin-left: 60px;
+    width: 390px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .pie-70-top {
-    width: 27%;
+    width: 35%;
     z-index: 1;
     border-radius: 50%;
     box-shadow: #000000 0 0 60px 3px;
@@ -260,6 +267,8 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding-right: 2.5rem;
+    align-items: center;
+    justify-content: center;
   }
   .top-text {
     line-height: 1.2rem;
@@ -272,12 +281,13 @@
     align-items: center;
     margin: 0;
     background: linear-gradient(90deg, #1b7dc1 11.54%, #694b9e 50%);
-    border-top-left-radius: 40px;
+    border-top-left-radius: 100px;
     width: 100%;
+    margin-top: auto;
   }
-  .bottom-associate-image {
-    width: 60%;
-    margin: 0 auto;
+  .bottom-associate img {
+    width: 80%;
+    margin-top: -50px; /* makes the image rise out of the background */
   }
 
   .mobile-dots {
@@ -324,7 +334,7 @@
   .scroller section {
     scroll-snap-align: start;
     flex: 0 0 100%;
-    padding: 1rem;
+    gap: 30px;
   }
 
   /* DISABLE HOVER EFFECTS ON MOBILE */
@@ -381,7 +391,7 @@
   .description70 {
     display: inline;
   }
-
+  /*
   .bottom-section:hover {
     transform: none !important;
   }
@@ -396,8 +406,21 @@
     opacity: 0 !important;
     transform: none !important;
   }
-  .mobile-container,
-  .mobile-container2 {
+
+  */
+  .scroll-item {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  /* When revealed */
+  .scroll-item.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroller-container {
     display: none;
   }
 }
@@ -519,8 +542,8 @@
     margin-left: -40px;
     z-index: -1;
   }
-  .mobile-container,
-  .mobile-container2 {
+
+  .scroller-container {
     display: none;
   }
 }

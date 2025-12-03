@@ -104,7 +104,7 @@
       
 
 
-       <div class="bottom-section">
+       <div class="bottom-section ">
             <div class = "left-section">
                 <div class="left-pie-wrapper">
                     <div class="left-pie">
@@ -158,4 +158,23 @@
        </div>
    </div>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".scroll-item");
+
+    function revealOnScroll() {
+        items.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.85) {
+                item.classList.add("revealed");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+});
+</script>
+
 
