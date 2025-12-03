@@ -71,6 +71,13 @@
 
                 </article>
             </div>
+
+
+
+
+
+
+
             <div class="mobile-dots">
                 <span class="dot active"></span>
                 <span class="dot"></span>
@@ -103,11 +110,11 @@
             </div>
       
 
-
-       <div class="bottom-section ">
+        
+         <div class="bottom-section ">
             <div class = "left-section">
                 <div class="left-pie-wrapper">
-                    <div class="left-pie">
+                    <div class="left-pie scroll-item">
                         <?php 
                             $leftImages = array('pie-70.png');
                             $piePath = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
@@ -119,7 +126,7 @@
 
                     </div>
                     
-                    <div class="description70">
+                    <div class="description70 scroll-item">
                         <p class = "textDesc"><?php echo $leftText[0] ?></p>
                     </div>
                 </div>
@@ -134,7 +141,7 @@
 
                 </div>
             </div>
-                <div class="right-section">
+                <div class="right-section scroll-item">
                     <?php 
                         $rightImages = array('pie-98.png', 'pie-94.png', 'pie-75.png');
                         $rightPath = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
@@ -156,25 +163,25 @@
                 </div>
             </div>
        </div>
-   </div>
-</section>
 
+                    
+</section>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const items = document.querySelectorAll(".scroll-item");
+  const items = document.querySelectorAll(".scroll-item");
 
-    function revealOnScroll() {
-        items.forEach(item => {
-            const rect = item.getBoundingClientRect();
-            if (rect.top < window.innerHeight * 0.85) {
-                item.classList.add("revealed");
-            }
-        });
-    }
+  function revealOnScroll() {
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
+        item.classList.add("revealed"); // show element
+      } else {
+        item.classList.remove("revealed"); // hide when scrolled out
+      }
+    });
+  }
 
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // reveal any visible items on load
 });
 </script>
-
-
