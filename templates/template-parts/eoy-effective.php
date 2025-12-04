@@ -12,7 +12,7 @@
             <div class = "scroller-container">
                 <article class = "scroller" >
                     <section class = "mobile-container">
-                        <p>
+                        <p class='nunito-sans'>
                             Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
                             They also learn professional skills that are increasingly important for securing a job in a tight market.
                             Most importantly, they launch with a network of support. This is workforce development that works:
@@ -33,7 +33,7 @@
                             alt="Pie Chart" 
                             class="pie-70-top">
                             <div class = "top-text-container">
-                                <p class = "top-text"><?echo $leftText[0]?></p>
+                                <p class = "top-text nunito-sans"><?echo $leftText[0]?></p>
                             </div>
                         </div>
                         
@@ -47,7 +47,7 @@
                     
                     
                     <section class = "mobile-container" >
-                        <p>
+                        <p class='nunito-sans'>
                             Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
                             They also learn professional skills that are increasingly important for securing a job in a tight market.
                             Most importantly, they launch with a network of support. This is workforce development that works:
@@ -65,7 +65,7 @@
             
             <div class="column-text">
                 <div class="column-left">
-                    <p>
+                    <p class='nunito-sans'>
                         Our BizzNEST Associates earn income and gain real-world 
                         experience that prepare them for the job market. They also 
                         learn professional skills that are increasingly important 
@@ -76,12 +76,12 @@
                 </div>
                 <div class="column-right">
                     <ul>
-                        <li>70% say they belong to a community/group of people who care about their future</li>
-                        <li>98% strengthened their self-awareness skills</li>
-                        <li>94% improved critical thinking and problem solving</li>
-                        <li>91% are more confident learning new things</li>
-                        <li>72% know how to prepare for a job/future career</li>
-                        <li>70% belong to a community invested in their success</li>
+                        <li class='nunito-sans'>70% say they belong to a community/group of people who care about their future</li>
+                        <li class='nunito-sans'>98% strengthened their self-awareness skills</li>
+                        <li class='nunito-sans'>94% improved critical thinking and problem solving</li>
+                        <li class='nunito-sans'>91% are more confident learning new things</li>
+                        <li class='nunito-sans'>72% know how to prepare for a job/future career</li>
+                        <li class='nunito-sans'>70% belong to a community invested in their success</li>
                     </ul>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                     </div>
                     
                     <div class="description70">
-                        <p class = "textDesc"><?php echo $leftText[0] ?></p>
+                        <p class="textDesc nunito-sans"><?php echo $leftText[0] ?></p>
                     </div>
                 </div>
                 
@@ -134,7 +134,7 @@
                             <img src="<?php echo $rightPath . rawurlencode($rightImages[$i]); ?>" 
                                 alt="Pie Chart" 
                                 class="pie-right">
-                            <p class="pie-description"><?php echo $rightText[$i]; ?></p>
+                            <p class="pie-description nunito-sans"><?php echo $rightText[$i]; ?></p>
                         </div>
                     <?php endfor; ?>
                 </div>
