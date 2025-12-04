@@ -15,16 +15,17 @@
 }
 .confidence-text {
     display: flex;   
+    padding-top: 1em;
 }
 .confidence-text ul {
     margin: 0;
-    padding-top: 1em;
 }
 .confidence-text li p {
     margin: 0;
 }
 .confidence-text div, .confidence-text ul {
     width: 100%;
+    padding-bottom: 1em;
 }
 .confidence-grid {
     display: grid;
