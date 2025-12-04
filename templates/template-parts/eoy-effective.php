@@ -9,7 +9,45 @@
                 <img src="<?php echo $path_pie . rawurlencode($pieChart1[0]); ?>" alt="Star" class="header-image">
                 <h1 class="header-title">A Workforce Launchpad</h1>
             </header>
-            <div class = "scroller-container">
+            
+        <!-- Carousel Template -->
+        <section class='carousel-container'>
+            <div class='carousel-scroller'>
+                <article class='carousel-card first-card'>
+                    <p class='nunito-sans'>
+                        Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
+                        They also learn professional skills that are increasingly important for securing a job in a tight market.
+                        Most importantly, they launch with a network of support. This is workforce development that works:
+                    </p>
+                </article>
+                <article class='carousel-card'>
+                    <div class='card-image'>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image.png" alt="Students with a laptop">
+                    </div>
+                    <div class='card-content'>
+                        <h2 class='ibm-plex-sans'>47%</h2>
+                        <p class='nunito-sans'>Can find helpful and accurate information about careers they are interested in</p>
+                    </div>
+                </article>
+                <article class='carousel-card'>
+                    <div class='card-image'>
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (1).png" alt="Students with a laptop">
+                    </div>
+                    <div class='card-content'>
+                        <h2 class='ibm-plex-sans'>55%</h2>
+                        <p>Can define their ideal worklife balance</p>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+
+
+
+
+
+            <!-- <div class = "scroller-container">
                 <article class = "scroller" >
                     <section class = "mobile-container">
                         <p>
@@ -45,16 +83,28 @@
 
                     </section>
                     
-                    
-                    <section class = "mobile-container" >
-                        <p>
-                            Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
-                            They also learn professional skills that are increasingly important for securing a job in a tight market.
-                            Most importantly, they launch with a network of support. This is workforce development that works:
-                        </p>
+                <section class="mobile-container4">
+                            <?php 
+                                $pieData = [
+                                    ['percent' => 98, 'text' => 'Strengthened self awareness', 'image' => 'pie-98.png'],
+                                    ['percent' => 94, 'text' => 'Improved critical thinking and adaptability', 'image' => 'pie-94.png'],
+                                    ['percent' => 75, 'text' => 'Completed at least one technical certification', 'image' => 'pie-75.png'],
+                                ];
+                                $piePath = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
+                            ?>
+
+                            <?php foreach($pieData as $pie): ?>
+                                <div class="pie-item">
+                                    <img src="<?php echo $piePath . rawurlencode($pie['image']); ?>" alt="<?php echo $pie['percent']; ?>% Pie" class="pie-chart">
+                                    <div class="pie-text">
+                                        <?php echo $pie['text']; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?> 
+                        
                     </section>
                 </article>
-            </div>
+            </div> -->
             <div class="mobile-dots">
                 <span class="dot active"></span>
                 <span class="dot"></span>
@@ -142,4 +192,3 @@
        </div>
    </div>
 </section>
-
