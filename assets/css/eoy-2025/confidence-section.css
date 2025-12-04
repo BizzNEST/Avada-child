@@ -162,12 +162,11 @@
     padding: 0;
 }
 .carousel-card p {
-    font-size: 1em;
-    line-height: 1.2;
+    font-size: 1.15em;
 }
 .carousel-card:not(.first-card) p {
     font-size: 1.25em;
-    line-height: 1;
+    line-height: 1.2;
 }
 .carousel-dots{
     display: flex;
