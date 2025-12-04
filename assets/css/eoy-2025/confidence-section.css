@@ -1,6 +1,6 @@
 .eoy-confidence .container {
     width: 100%;
-    padding: 1em !important;
+    padding: 1em;
     margin: 0;
 }
 #confidence-stars {
@@ -110,7 +110,7 @@
     min-height: 400px; /* Prevents the card from shrinking too much */
     background: 
         linear-gradient(135deg, #35373C, #35373C), /* Foreground Gradient */
-        linear-gradient(to right, #5EBF8D, #D5B43A); /* Border Gradient */
+        linear-gradient(to right, #6A4B9A, #C6A336); /* Border Gradient */
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
     background-repeat: no-repeat; 
@@ -118,13 +118,56 @@
     border-radius: 2em;
     scroll-snap-align: start;
     flex: 0 0 100%; 
-    padding: 1rem;
+    overflow: hidden;
 }
 /* The first carousel card uses a unique background */
 .first-card{
     background: 
-        linear-gradient(135deg, #5EBF8D, #D5B43A), /* Foreground Gradient */
-        linear-gradient(to right, #5EBF8D, #D5B43A); /* Border Gradient */
+        linear-gradient(135deg, #6A4B9A, #C6A336), /* Foreground Gradient */
+        linear-gradient(to right, #6A4B9A, #C6A336); /* Border Gradient */
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-repeat: no-repeat;
+    padding: 1.5em;
+}
+.card-image {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+}
+.card-image img {
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 2em;
+    height: 50%;
+}
+.carousel-card h2 {
+    font-size: 5em;
+    line-height: 1;
+    margin: 0;
+    font-weight: 700;
+    color: #C6A336;
+}
+.carousel-card p, .carousel-card h2 {
+    padding: 0;
+}
+.carousel-card p {
+    font-size: 1em;
+    line-height: 1.2;
+}
+.carousel-card:not(.first-card) p {
+    font-size: 1.25em;
+    line-height: 1;
 }
 .carousel-dots{
     display: flex;
@@ -144,6 +187,9 @@
     }
 }
 @media screen and (max-width: 675px) {
+    .eoy-confidence .container {
+        padding: 0 !important;
+    }
     .carousel-container {
         display: flex;
         flex-direction: column;
@@ -151,9 +197,12 @@
     .carousel-card {
         display: flex;
         flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-content: space-evenly;
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        width: 353px;
+        height: 70vh;
+        min-height: initial; /* Override the desktop min-height */
     }
     .carousel-dots{
         display: flex;
