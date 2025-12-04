@@ -1,7 +1,10 @@
 .eoy-financial .container{
+    border:1px blue solid;
+    background-color: black;
     width: 100%;
     padding: 0 0; 
-    margin: 0 0;    
+    margin: 0 0;
+    position: relative;
 }
 
 .financial-image{
@@ -22,6 +25,15 @@
     font-weight: 700;
 }
 
+.financial-text p{
+    color: #FFF;
+    font-family: Nunito;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .financial-chart-amount{ 
     color: #8447D9;
 }
@@ -30,10 +42,12 @@
     animation: fadeIn 0.5s ease reverse slide-in;
 } */
 
+
 .pie-chart {
-    width: 300px;
-    height: 300px;
+    width: 430px;
+    height: 430px;
     margin: 0 auto;
+    margin-left: 50px;
     position: relative;
     border-radius: 50%;
     cursor: pointer;
@@ -49,8 +63,8 @@
 
 .pie-segment.programs {
     background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-purple.png');
-    background-size: 400px 400px;
-    background-position: 40% center;
+    background-size: 3091px 4000px;
+    background-position: 20% 60%;
     background-repeat: no-repeat;
     -webkit-mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
     mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
@@ -60,8 +74,8 @@
 
 .pie-segment.operations {
     background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-green.png');
-    background-size: 300px 300px;
-    background-position: 20% 90%;
+    background-size: 800px 800px;
+    background-position: 20% 80%;
     background-repeat: no-repeat;
     z-index: 1;
 }
@@ -70,7 +84,7 @@
     position: absolute;
     bottom: 20%;
     right: 15%;
-    font-size: 2rem;
+    font-size: 3.125rem; /* what is 50px in rem? */
     font-weight: bold;
     color: white;
     z-index: 5;
@@ -81,7 +95,7 @@
     position: absolute;
     top: 10%;
     left: 30%;
-    font-size: 1.5rem;
+    font-size: 2.5625rem;
     font-weight: bold;
     color: white;
     z-index: 5;
@@ -110,9 +124,13 @@
 }
 
 .financial-chart-section{
+    padding-left: 2em;
+    padding-right: 2em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 80px;
+    
 }
 
 .financial-chart-text h3,
@@ -166,7 +184,7 @@
 
 .financial-chart-section.in-view .pie-segment.programs {
     transform: scale(1.10);
-    background-size: 363.64px 363.64px;
+    background-size: 727.27px 727.27px;
 }
 
 .pie-segment::before {
@@ -195,49 +213,94 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (max-width: 800px) {
+.financial-chart-section:hover .pie-chart {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile - Hide text and pie chart, show carousel */
+@media screen and (max-width: 675px) {
+    .financial-text,
+    .financial-chart-section {
+        display: none;
+    }
+    
+    .mobile-section {
+        display: block;
+    }
+}
+
+/* Tablet - Scale everything down */
+@media screen and (min-width: 676px) and (max-width: 1024px) {
+    .financial-chart-section {
+        gap: 30px;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .pie-chart {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
+        margin-left: 30px;
+    }
+
+    .financial-chart-section.in-view .pie-chart {
+        transform: scale(1.10);
+    }
+
+    .pie-segment.programs,
+    .pie-segment.operations {
+        background-size: 560px 725px;
+    }
+
+    .financial-chart-section.in-view .pie-segment.programs,
+    .financial-chart-section.in-view .pie-segment.operations {
+        background-size: 509.09px 659.09px;
     }
 
     .pie-percentage {
-        font-size: 1.5rem;
-        bottom: 18%;
-        right: 12%;
+        font-size: 2.2rem;
     }
 
     .pie-percentage-12 {
-        font-size: 1rem;
-        top: 12%;
-        left: 28%;
+        font-size: 1.8rem;
     }
 
     .pie-label {
         font-size: 0.75rem;
-        bottom: 11%;
-        right: 12%;
     }
 
-    .pie-segment.operations::after {
-        font-size: 1rem;
-        top: 32%;
-        right: 18%;
+    .financial-chart-text {
+        max-width: 450px;
+    }
+
+    .financial-chart-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .financial-chart-text li {
+        font-size: 0.9rem;
+    }
+
+    .financial-chart-text p {
+        font-size: 0.9rem;
     }
 }
 
-@media screen and (min-width: 801px) {
+/* Desktop - Original styles */
+@media screen and (min-width: 1025px) {
     .pie-chart {
-        width: 300px;
-        height: 300px;
+        width: 430px;
+        height: 430px;
     }
 
     .pie-percentage {
-        font-size: 2rem;
+        font-size: 3.125rem;
     }
 
     .pie-percentage-12 {
-        font-size: 1.5rem;
+        font-size: 2.5625rem;
     }
 
     .pie-label {
@@ -249,3 +312,98 @@
     }
 }
 
+
+/* Mobile - Styles */
+.mobile-section {
+    display: none;
+}
+
+/* Mobile carousel */
+@media screen and (max-width: 675px) {
+    .mobile-section {
+        display: block;
+        padding: 40px 20px;
+    }
+
+    .mobile-carousel {
+        width: 100%;
+        max-width: 353px;
+        margin: 0 auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+    }
+
+    .mobile-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 20px;
+        padding: 0 calc(50% - 176.5px);
+    }
+
+    .carousel-slide {
+        min-width: 353px;
+        flex-shrink: 0;
+        display: flex;
+        height: 401px;
+        padding: 50px 30px 30px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        border-radius: 20px;
+        border: 3px solid #5EBF8D;
+        background: #35373C;
+        box-sizing: border-box;
+        scroll-snap-align: center;
+    }
+
+    .carousel-slide h3 {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .carousel-slide p {
+        color: white;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .carousel-pagination {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+
+    .pagination-dot.active {
+        background: white;
+        width: 12px;
+        height: 12px;
+    }
+
+    .pagination-dot:hover {
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
