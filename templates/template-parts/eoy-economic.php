@@ -136,11 +136,11 @@ function getPeopleInVisualOrder() {
         <div class="main-text">
                 <p class='nunito-sans'>Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
                 <ul>
-                    <li>79% secured paid next opportunities</li>
-                    <li>41% landed full or art-time jobs</li>
-                    <li>33% secured paid internships</li>
-                    <li>11% found contract work</li>
-                    <li>5% launched as entrepreneurs</li>
+                    <li class='nunito-sans'>79% secured paid next opportunities</li>
+                    <li class='nunito-sans'>41% landed full or art-time jobs</li>
+                    <li class='nunito-sans'>33% secured paid internships</li>
+                    <li class='nunito-sans'>11% found contract work</li>
+                    <li class='nunito-sans'>5% launched as entrepreneurs</li>
                 </ul>
         </div>
     </div>
@@ -150,19 +150,19 @@ function getPeopleInVisualOrder() {
             </div>                
             <div class="stats">
                 <div class="fortyOne child">
-                    <h3>41%</h3>
+                    <h3 class='ibm-plex-sans'>41%</h3>
                     <p class='nunito-sans'>Landed full or part-time jobs</p>
                 </div>
                 <div class="thirtyThree child">
-                    <h3>33%</h3>
+                    <h3 class='ibm-plex-sans'>33%</h3>
                     <p class='nunito-sans'>Secured paid internships</p>
                 </div>
                 <div class="eleven child">
-                    <h3>11%</h3>
+                    <h3 class='ibm-plex-sans'>11%</h3>
                     <p class='nunito-sans'>Found contract work</p>
                 </div>
                 <div class="five child">
-                    <h3>5%</h3>
+                    <h3 class='ibm-plex-sans'>5%</h3>
                     <p class='nunito-sans'>Launched a venture</p>
                 </div>
             </div>
