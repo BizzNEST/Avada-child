@@ -1,6 +1,5 @@
-/*  */
-
-@media screen and (max-width:800px) {
+/* Mobile View */
+@media screen and (max-width:899px) {
     .eoy-toc .container{
         display: flex;
         flex-direction: column;
@@ -14,7 +13,11 @@
         row-gap: 1.5em;
     }
     .eoy-toc .button-container{
-        display: none;
+        display: none !important;
+    }
+
+    .eoy-toc button {
+        display: none !important;
     }
 
     .eoy-toc h2{
@@ -26,20 +29,8 @@
     }
 }
 
-@media screen and (min-width : 801px){
-    .eoy-toc .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        justify-self: center;
-        width: 100vw;
-        padding: 3em 1.5em;
-        padding-bottom: 4em;
-        margin: 0 0;    
-        row-gap: 1.5em;
-    }
-
+/* Desktop View */
+@media screen and (min-width : 900px) {
     .eoy-toc .button-container {
         display: flex;
         column-gap: .7em;
@@ -48,47 +39,49 @@
         border-radius: 3em;
         padding: .4em .4em;
         width: fit-content;
-        /* white-space: nowrap; */
     }
-
-    .eoy-toc button {
-        background-color: white;
-        color: black;
-        border: none;
-        border-radius: 3em;
-        font-size: x-large;
-        font-weight: 800;
-        padding: .5em 1.8em;
-        line-height: 1;
-        transition: 350ms;
-    }
-    .eoy-toc button:hover {
-        /* transition: 250ms; */
-        color: white;
-        
-    }
-    #btn-mustard:hover {
-        background-color: #CAA737;
-    }
-    #btn-violet:hover{
-        background-color: #6A4B9A;
-    }
-    #btn-blue:hover{
-        background-color: #0B7AB6;
-    }
-    #btn-cranberry:hover{
-        background-color: #CE2459;
-    }
-/*     
-    .eoy-toc h2 {
-        padding: 0 35%;
-
-    } */
 }
 
-.eoy-toc .container {
+.eoy-toc .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    justify-self: center;
+    width: 100vw;
+    padding: 3em 1.5em;
+    padding-bottom: 4em;
+    margin: 0 0;    
+    row-gap: 1.5em;
     background-image: linear-gradient(to bottom, black, transparent);
+}
+
+.eoy-toc button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 3em;
+    font-size: x-large;
+    font-weight: 800;
+    padding: .5em 1.8em;
+    line-height: 1;
+    transition: 350ms;
+}
+
+.eoy-toc button:hover {
+    color: white;
+}
+#btn-mustard:hover {
+    background-color: #CAA737;
+}
+#btn-violet:hover{
+    background-color: #6A4B9A;
+}
+#btn-blue:hover{
+    background-color: #0B7AB6;
+}
+#btn-cranberry:hover{
+    background-color: #CE2459;
 }
 
 .eoy-toc h2 {
