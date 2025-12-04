@@ -53,6 +53,7 @@
     text-shadow: 0 0 50px black;
 }
 .item-stat h2 {
+    font-size: 60px;
     top: 0%;
     left: 0%;
 }
