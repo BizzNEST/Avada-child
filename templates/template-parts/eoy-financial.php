@@ -36,10 +36,35 @@
                 </div>
             </div>
         </div>
+        <div class="mobile-section">
+            <div class="mobile-carousel">
+                <div class="carousel-track">
+                    <!-- Slide 1 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide">
+                        <h3>Your Content Here</h3>
+                        <p>Add your content for slide 1</p>
+                    </div>
+                    
+                    <!-- Slide 2 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide">
+                        <h3>Your Content Here</h3>
+                        <p>Add your content for slide 2</p>
+                    </div>
+                    
+                    <!-- Slide 3 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide">
+                        <h3>Your Content Here</h3>
+                        <p>Add your content for slide 3</p>
+                    </div>
+                </div>
+                <div class="carousel-pagination"></div>
+            </div>
+        </div>
     </div>
 </section>
 
 <script>
+    // Pie chart scroll animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -56,5 +81,48 @@
     
     if (financialSection) {
         observer.observe(financialSection);
+    }
+
+    // Mobile carousel functionality
+    const carouselContainer = document.querySelector('.mobile-carousel');
+    const carousel = document.querySelector('.carousel-track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const pagination = document.querySelector('.carousel-pagination');
+    
+    if (carouselContainer && carousel && slides.length > 0 && pagination) {
+        // Create pagination dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('pagination-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            });
+            pagination.appendChild(dot);
+        });
+        
+        const dots = document.querySelectorAll('.pagination-dot');
+        
+        // Update active dot on scroll based on which slide is centered
+        carouselContainer.addEventListener('scroll', () => {
+            const containerCenter = carouselContainer.scrollLeft + carouselContainer.offsetWidth / 2;
+            
+            let closestIndex = 0;
+            let closestDistance = Infinity;
+            
+            slides.forEach((slide, index) => {
+                const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+                const distance = Math.abs(containerCenter - slideCenter);
+                
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestIndex = index;
+                }
+            });
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === closestIndex);
+            });
+        });
     }
 </script>
