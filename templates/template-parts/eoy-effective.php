@@ -45,13 +45,25 @@
 
                     </section>
                     
-                    
-                    <section class = "mobile-container" >
-                        <p>
-                            Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
-                            They also learn professional skills that are increasingly important for securing a job in a tight market.
-                            Most importantly, they launch with a network of support. This is workforce development that works:
-                        </p>
+                <section class="mobile-container4">
+                            <?php 
+                                $pieData = [
+                                    ['percent' => 98, 'text' => 'Strengthened self awareness', 'image' => 'pie-98.png'],
+                                    ['percent' => 94, 'text' => 'Improved critical thinking and adaptability', 'image' => 'pie-94.png'],
+                                    ['percent' => 75, 'text' => 'Completed at least one technical certification', 'image' => 'pie-75.png'],
+                                ];
+                                $piePath = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
+                            ?>
+
+                            <?php foreach($pieData as $pie): ?>
+                                <div class="pie-item">
+                                    <img src="<?php echo $piePath . rawurlencode($pie['image']); ?>" alt="<?php echo $pie['percent']; ?>% Pie" class="pie-chart">
+                                    <div class="pie-text">
+                                        <?php echo $pie['text']; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?> 
+                        
                     </section>
                 </article>
             </div>
