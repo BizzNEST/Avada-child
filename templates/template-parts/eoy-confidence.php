@@ -24,7 +24,7 @@
         <section class='carousel-container'>
             <div class='carousel-scroller'>
                 <article class='carousel-card first-card'>
-                    <p class='nunito-sans'>Confidence is necessary to identify, pursue, and achieve one’s professional ambitions. At Digital NEST, we bake confidence into our programming within four categories: career navigation skills, professional skills, technical skills, and (for our 18+ members) securing a next step that prepares them for a wealth-building career such as a job, internship, or enrollment or return to college. This year, our members reported dramatic increases in their ability to navigate their futures. When NESTers exercise their agency to follow their dreams, transformation begins.</p>
+                    <p class='nunito-sans'>Confidence is necessary to identify, pursue and achieve one’s professional ambitions. This year, our members reported dramatic increases in their ability to navigate their futures. When NESTers exercise their agency to follow their dreams, transformation begins.</p>
                 </article>
                 <article class='carousel-card'>
                     <div class='card-image'>
