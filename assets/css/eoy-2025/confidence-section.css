@@ -86,6 +86,17 @@
     right: 0%;
     transition: 0.5s ease;
 }
+
+/* Carousel Card */
+.carousel-card {
+    background: linear-gradient(#35373C, #35373C), linear-gradient(to right, #5EBF8D, #D5B43A);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-repeat: no-repeat; 
+    border: 5px solid transparent;
+    border-radius: 2em;
+}
+
 /* Desktop View */
 @media screen and (min-width: 900px){
     .confidence-grid {

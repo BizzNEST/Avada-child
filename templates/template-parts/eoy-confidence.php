@@ -20,6 +20,10 @@
             </ul>
         </div>
 
+        <div class='carousel-card'>
+            <p>This is the gradient card.</p>
+        </div>
+
         <div class='confidence-grid'>
             <div class='grid-item'>
                 <div class='item-stat'>
