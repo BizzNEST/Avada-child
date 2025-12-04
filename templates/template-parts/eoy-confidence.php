@@ -20,6 +20,26 @@
             </ul>
         </div>
 
+        <!-- Carousel Template -->
+        <section class='carousel-container'>
+            <div class='carousel-scroller'>
+                <article class='carousel-card first-card'>
+                    <p>Lorem ipsum</p>
+                </article>
+                <article class='carousel-card'>
+                    <p>Lorem ipsum</p>
+                </article>
+                <article class='carousel-card'>
+                    <p>Lorem ipsum</p>
+                </article>
+            </div>
+            <div class='carousel-dots'>
+                <span class='dot active'></span>
+                <span class='dot'></span>
+                <span class='dot'></span>
+            </div>
+        </section>
+
         <div class='confidence-grid'>
             <div class='grid-item'>
                 <div class='item-stat'>
