@@ -34,7 +34,6 @@
 }
 .grid-item {
     display: flex;
-    background-color: gray;
     border-radius: 12px;
     align-items: center;
     overflow: hidden;
