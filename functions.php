@@ -72,8 +72,8 @@
                 true // Load in the footer (recommended for performance)
             );
             wp_enqueue_script(
-                'eoy-animations',
-                get_stylesheet_directory_uri() . '/scripts/eoy-animations.js',
+                'eoy-javascript',
+                get_stylesheet_directory_uri() . '/scripts/eoy-javascript.js',
                 array('animejs'), // DEPENDS on 'animejs' being loaded first
                 '1.0',
                 true 
