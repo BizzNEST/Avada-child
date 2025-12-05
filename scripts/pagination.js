@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const scroller = document.querySelector(".scroller");
-    const sections = scroller.querySelectorAll("section");
+    const scroller = document.querySelector(".ef-carousel-scroller");
+    const sections = scroller.querySelectorAll("article");
     const paginationContainer = document.getElementById('pagination-1');
 
     if (!scroller || !sections.length || !paginationContainer) return;
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const dots = paginationContainer.querySelectorAll(".ef-dot");
     scroller.addEventListener("scroll", () => {
+        console.log("I just scrolled")
         const scrollLeft = scroller.scrollLeft;
         const scrollerWidth = scroller.offsetWidth;
 
@@ -32,7 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === activeIndex);
+            dot.classList.toggle("ef-dot-active", i === activeIndex);
         });
     });
 });
+console.log("Your Dad")
