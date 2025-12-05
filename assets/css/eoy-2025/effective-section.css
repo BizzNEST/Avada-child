@@ -578,9 +578,7 @@
         transform: none !important;
     }
 
-    .mobile-container,
-    .mobile-container2,
-    .mobile-container4 {
+    .topPie, .ef-pie-chart, .bottom-associate-image, p.nunito-sans, .pie-text {
         display: none;
     }
 }
@@ -592,6 +590,11 @@
 
     .column-text {
         flex-direction: row;
+        padding-bottom: 2rem;
+    }
+    .column-right ul {
+        padding: 0;   /* removes left indent */
+        margin: 0;    /* removes top/bottom spacing */
     }
 
     .bottom-section {

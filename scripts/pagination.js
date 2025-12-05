@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const dots = paginationContainer.querySelectorAll(".ef-dot");
     scroller.addEventListener("scroll", () => {
-        console.log("I just scrolled")
         const scrollLeft = scroller.scrollLeft;
         const scrollerWidth = scroller.offsetWidth;
 
@@ -37,4 +36,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-console.log("Your Dad")
