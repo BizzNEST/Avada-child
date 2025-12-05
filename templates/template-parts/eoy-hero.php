@@ -44,7 +44,7 @@
                 families, we will become a national model for workforce development 
                 and sustain our presence for generations to come.
             </p>
-            <button class='btn-donation'>DONATE NOW</button>
+            <a href="/donations"><button class='btn-donation'>DONATE NOW</button></a>
         </div>
     </div>
 </section>

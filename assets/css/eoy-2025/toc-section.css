@@ -56,6 +56,11 @@
     background-image: linear-gradient(to bottom, black, transparent);
 }
 
+.eoy-toc .button-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .eoy-toc button {
     background-color: white;
     color: black;

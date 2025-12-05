@@ -98,6 +98,11 @@
     padding-bottom: 1em;
 }
 
+.hero-description a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .marquee-images1, .marquee-images2 {
     display: flex;
     flex-direction: column;
