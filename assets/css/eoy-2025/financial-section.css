@@ -1,23 +1,23 @@
-.eoy-financial .container{
-    border:1px blue solid;
-    background-color: black;
+.eoy-financial .container {
+    background-color: transparent;
+    padding-left: 0 !important;
     width: 100%;
-    padding: 0 0; 
+    padding: 0 0;
     margin: 0 0;
     position: relative;
 }
 
-.financial-image{
+.financial-image {
     width: 118px;
     height: 118px;
 }
 
-.financial-heading{
+.financial-heading {
     display: flex;
     align-items: center;
 }
 
-.financial-title h2{
+.financial-title h2 {
     color: white !important;
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 40px;
@@ -25,7 +25,7 @@
     font-weight: 700;
 }
 
-.financial-text p{
+.financial-text p {
     color: #FFF;
     font-family: Nunito;
     font-size: 21px;
@@ -34,7 +34,7 @@
     line-height: normal;
 }
 
-.financial-chart-amount{ 
+.financial-chart-amount {
     color: #8447D9;
 }
 
@@ -84,7 +84,8 @@
     position: absolute;
     bottom: 20%;
     right: 15%;
-    font-size: 3.125rem; /* what is 50px in rem? */
+    font-size: 3.125rem;
+    /* what is 50px in rem? */
     font-weight: bold;
     color: white;
     z-index: 5;
@@ -123,14 +124,14 @@
     z-index: 3;
 }
 
-.financial-chart-section{
+.financial-chart-section {
     padding-left: 2em;
     padding-right: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 80px;
-    
+
 }
 
 .financial-chart-text h3,
@@ -143,7 +144,7 @@
     color: white !important;
 }
 
-.financial-chart-text{
+.financial-chart-text {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -159,7 +160,7 @@
     transition: all 1s ease, transform 1s ease, background-size 0.6s ease;
 }
 
-.financial-chart-section.in-view .financial-chart-text{
+.financial-chart-section.in-view .financial-chart-text {
     visibility: visible;
     opacity: 1;
 }
@@ -169,18 +170,53 @@
     transform: translateX(0);
 }
 
-.financial-chart-section.in-view .financial-chart-text li:nth-child(1) { transition-delay: 0.1s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(2) { transition-delay: 0.15s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(3) { transition-delay: 0.2s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(4) { transition-delay: 0.25s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(5) { transition-delay: 0.3s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(6) { transition-delay: 0.35s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(7) { transition-delay: 0.4s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(8) { transition-delay: 0.45s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(9) { transition-delay: 0.5s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(10) { transition-delay: 0.55s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(11) { transition-delay: 0.6s; }
-.financial-chart-section.in-view .financial-chart-text li:nth-child(12) { transition-delay: 0.65s; }
+.financial-chart-section.in-view .financial-chart-text li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(5) {
+    transition-delay: 0.3s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(6) {
+    transition-delay: 0.35s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(7) {
+    transition-delay: 0.4s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(8) {
+    transition-delay: 0.45s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(9) {
+    transition-delay: 0.5s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(10) {
+    transition-delay: 0.55s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(11) {
+    transition-delay: 0.6s;
+}
+
+.financial-chart-section.in-view .financial-chart-text li:nth-child(12) {
+    transition-delay: 0.65s;
+}
 
 .financial-chart-section.in-view .pie-segment.programs {
     transform: scale(1.10);
@@ -193,14 +229,12 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-image: 
-        repeating-linear-gradient(
-            45deg,
+    background-image:
+        repeating-linear-gradient(45deg,
             transparent,
             transparent 2px,
             rgba(255, 255, 255, 0.03) 2px,
-            rgba(255, 255, 255, 0.03) 4px
-        );
+            rgba(255, 255, 255, 0.03) 4px);
     z-index: 2;
     pointer-events: none;
 }
@@ -219,11 +253,12 @@
 
 /* Mobile - Hide text and pie chart, show carousel */
 @media screen and (max-width: 675px) {
+
     .financial-text,
     .financial-chart-section {
         display: none;
     }
-    
+
     .mobile-section {
         display: block;
     }
@@ -313,6 +348,9 @@
 }
 
 
+/* ========== MOBILE CAROUSEL CSS START ========== */
+/* Copy from here to add carousel styles to another section */
+
 /* Mobile - Styles */
 .mobile-section {
     display: none;
@@ -322,7 +360,11 @@
 @media screen and (max-width: 675px) {
     .mobile-section {
         display: block;
-        padding: 40px 20px;
+
+    }
+
+    .financial-heading {
+        flex-direction: column;
     }
 
     .mobile-carousel {
@@ -333,6 +375,7 @@
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
+        padding-bottom: 1rem;
         scroll-snap-type: x mandatory;
     }
 
@@ -343,15 +386,19 @@
     .carousel-track {
         display: flex;
         gap: 20px;
+
+
         padding: 0 calc(50% - 176.5px);
     }
 
     .carousel-slide {
         min-width: 353px;
+        max-width: 353px;
+        width: 353px;
         flex-shrink: 0;
         display: flex;
         height: 401px;
-        padding: 50px 30px 30px 30px;
+        padding: 30px;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
@@ -360,18 +407,103 @@
         background: #35373C;
         box-sizing: border-box;
         scroll-snap-align: center;
+        overflow: hidden;
     }
 
     .carousel-slide h3 {
         color: white;
         font-size: 1.5rem;
         margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .carousel-slide p {
         color: white;
         font-size: 1rem;
         margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-slide ul,
+    .carousel-slide ol {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding-left: 1.2rem;
+    }
+
+    .carousel-slide li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* Slide 3 - tighter list spacing */
+    .slide-3 ul {
+        margin-top: 0px;
+    }
+
+    .slide-3 li {
+        line-height: 1.3;
+    }
+
+    /* Slide 2 - Mobile Pie Chart */
+    .slide-2 {
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .mobile-pie-chart {
+        width: 280px;
+        height: 280px;
+        position: relative;
+        border-radius: 50%;
+    }
+
+    .mobile-pie-chart .pie-segment {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    .mobile-pie-chart .pie-segment.programs {
+        background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-purple.png');
+        background-size: 800px 800px;
+        background-position: 30% 60%;
+        background-repeat: no-repeat;
+        -webkit-mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
+        mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
+        z-index: 2;
+    }
+
+    .mobile-pie-chart .pie-segment.operations {
+        background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-green.png');
+        background-size: 522px 522px;
+        background-position: 20% 80%;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .mobile-pie-chart .pie-percentage {
+        position: absolute;
+        bottom: 20%;
+        right: 15%;
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+        z-index: 5;
+    }
+
+    .mobile-pie-chart .pie-percentage-12 {
+        position: absolute;
+        top: 10%;
+        left: 28%;
+        font-size: 1.65rem;
+        font-weight: bold;
+        color: white;
+        z-index: 5;
     }
 
     .carousel-pagination {
@@ -406,4 +538,90 @@
     .pagination-dot:hover {
         background: rgba(255, 255, 255, 0.6);
     }
+
+    .slide-colors {
+        border-radius: 20px;
+        border: 3px solid #5EBF8D;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), linear-gradient(142deg, #5EBF8D 0%, #D5B43A 100%);
+    }
+
+    .slide-1 {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide-3 {
+        gap: 0px;
+        color: white;
+        font-size: 18px;
+    }
+
+    .slide-3 p{
+        font-size: 18px;
+    }
+    
 }
+
+/* Smaller mobile screens - Scale down carousel */
+@media screen and (max-width: 400px) {
+    .mobile-carousel {
+        max-width: 300px;
+    }
+
+    .carousel-track {
+        padding: 0 calc(50% - 150px);
+    }
+
+    .carousel-slide {
+        min-width: 300px;
+        max-width: 300px;
+        width: 300px;
+        height: 341px;
+        padding: 20px 30px 30px 30px;
+        gap: 0px;
+    }
+
+    .carousel-slide h3 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-slide p {
+        font-size: 0.9rem;
+    }
+
+    .slide-3 {
+        font-size: 16px;
+    }
+
+    .slide-3 ul {
+        margin-top: 0px;
+    }
+
+    .slide-3 p {
+        font-size: 16px;
+    }
+
+    /* Scale down mobile pie chart */
+    .mobile-pie-chart {
+        width: 240px;
+        height: 240px;
+    }
+
+    .mobile-pie-chart .pie-segment.programs {
+        background-size: 400px 400px;
+    }
+
+    .mobile-pie-chart .pie-segment.operations {
+        background-size: 447px 447px;
+    }
+
+    .mobile-pie-chart .pie-percentage {
+        font-size: 1.7rem;
+    }
+
+    .mobile-pie-chart .pie-percentage-12 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ========== MOBILE CAROUSEL CSS END ========== */
