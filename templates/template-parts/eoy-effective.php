@@ -12,9 +12,9 @@
             
         <!-- Carousel Template -->
         <section class='ef-carousel-container'>
-            <div class='ef-carousel-scroller'>
+            <div class='ef-carousel-scroller nunito-sans'>
                 <article class='ef-carousel-card ef-first-card'>
-                    <p class='nunito-sans'>
+                    <p>
                         Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
                         They also learn professional skills that are increasingly important for securing a job in a tight market.
                         Most importantly, they launch with a network of support. This is workforce development that works:
@@ -77,7 +77,7 @@
             
             
             <div class="column-text">
-                <div class="column-left">
+                <div class="column-left nunito-sans" >
                     <p>
                         Our BizzNEST Associates earn income and gain real-world 
                         experience that prepare them for the job market. They also 
@@ -87,7 +87,7 @@
                         that works:
                     </p>
                 </div>
-                <div class="column-right">
+                <div class="column-right nunito-sans">
                     <ul>
                         <li>70% say they belong to a community/group of people who care about their future</li>
                         <li>98% strengthened their self-awareness skills</li>
@@ -116,7 +116,7 @@
 
                     </div>
                     
-                    <div class="description70">
+                    <div class="description70 nunito-sans">
                         <p class = "textDesc"><?php echo $leftText[0] ?></p>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
 
                 </div>
             </div>
-                <div class="right-section">
+                <div class="right-section nunito-sans">
                     <?php 
                         $rightImages = array('pie-98.png', 'pie-94.png', 'pie-75.png');
                         $rightPath = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';

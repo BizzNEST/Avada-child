@@ -447,6 +447,9 @@
     .pie-text{
         width: 100% !important;
         overflow-x: scroll;
+        overflow-y: hidden;   
+
+
     }
 
 }
@@ -454,6 +457,7 @@
     .pie-text{
         width: 100% !important;
         overflow-x: scroll;
+
         white-space: nowrap;
     }
 }
