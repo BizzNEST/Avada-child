@@ -11,6 +11,18 @@ body {
     margin: 0;
 }
 
+/* Consistent section spacing */
+.eoy-hero,
+.eoy-toc,
+.eoy-economic,
+.eoy-confidence,
+.eoy-effective,
+.eoy-financial,
+.eoy-donation {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 main {
     width: 100%;
     background-image: url('../../images/eoy-2025/page-background.png') !important;

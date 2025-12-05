@@ -103,6 +103,10 @@
     color: inherit;
 }
 
+.btn-donation:hover {
+    cursor: pointer;
+}
+
 .marquee-images1, .marquee-images2 {
     display: flex;
     flex-direction: column;
