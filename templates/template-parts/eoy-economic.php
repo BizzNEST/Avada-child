@@ -104,13 +104,28 @@ function getPeopleInVisualOrder() {
         const group2 = generateGroup(15);
         const group3 = generateGroup(15);
         const group4 = generateGroup(10);
+        const group5 = generateGroup(25);
         group4.classList.add("special")
         container.append(group1);
         container.append(group2);
         container.append(group3);
         container.append(group4);
+        function handleResize () {
+            if (window.innerWidth <= 675){
+                const card1 = document.querySelector(".carousel-people1");
+                console.log(card1);
+                const card2 = document.querySelector(".carousel-people2");
+                const card3 = document.querySelector(".carousel-people3");
+                const card4 = document.querySelector(".carousel-people4");
+                card1.append(group5);
+                console.log(card1);
+            }
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
         const children = container.querySelectorAll(".peopleContainer");
         const childrenB = containerB.querySelectorAll(".child");
+        if(window.innerWidth > 675){
         const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -125,6 +140,7 @@ function getPeopleInVisualOrder() {
     }, { threshold: 0.3 });
 
     observer.observe(container);
+    }
     })
     </script>
 <section class="eoy-economic">
@@ -143,6 +159,34 @@ function getPeopleInVisualOrder() {
                     <li>5% launched as entrepreneurs</li>
                 </ul>
         </div>
+    </div>
+    <div class = "carousel">
+        <!-- Carousel Template -->
+        <section class='carousel-container'>
+            <div class='carousel-scroller'>
+                <article class='carousel-card1 first-card1'>
+                    <p>Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
+                </article>
+                <article class='carousel-card1'>
+                    <div class="carousel-header">
+                        <h3> 43% </h3>
+                        <p>Landed full or part-time jobs</p>
+                    </div>
+                    <div class="carousel-people1">
+
+                    </div>
+                </article>
+                <article class='carousel-card1'>
+                    <p>Lorem ipsum</p>
+                </article>
+            </div>
+            <div class='carousel-dots'>
+                <span class='dot active'></span>
+                <span class='dot'></span>
+                <span class='dot'></span>
+            </div>
+        </section>
+<!-- CAROUSEL END -->
     </div>
     <div class="animation">
             <div class="animationPeople">
