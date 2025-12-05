@@ -477,3 +477,6 @@ align-self: stretch;
 .carousel-people4 .peopleContainer {
     grid-template-columns: repeat(3, 1fr);
 }
+.carousel-scroller::-webkit-scrollbar {
+  display: none;
+}
