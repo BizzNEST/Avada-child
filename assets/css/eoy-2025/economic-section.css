@@ -15,30 +15,12 @@ align-items: flex-start;
 gap: 40px;
 align-self: stretch;
 }
-.eoy-economic .container{
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 20px;
-align-self: stretch;
-width: 100%;
-}
 .eoy-economic .main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     align-self: stretch;
-}
-.eoy-economic .header {
-    display: flex;
-justify-content: center;
-align-items: center;
-gap: 20px;
-}
-.eoy-economic .star {
-    width: 118px;
-    height: 118px;
 }
 .eoy-economic h2 {
     color: #FFF;
@@ -78,7 +60,6 @@ font-weight: 400;
 line-height: normal;
 }
 .eoy-economic .subtext {
-    display: flex;
 align-items: flex-start;
 gap: 24px;
 align-self: stretch;
@@ -95,7 +76,6 @@ line-height: normal;
 letter-spacing: -0.352px;
 }
 .eoy-economic .animation {
-display: flex;
 width: 100%;
 flex-direction: column;
 align-items: flex-start;
@@ -249,25 +229,72 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
         }
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 676px) {
     .main-text {
         display: flex;
     }
+    .animation {
+        display: flex;
+    }
+    .subtext {
+        display: flex;
+    }
+    .eoy-economic .star {
+    width: 118px;
+    height: 118px;
 }
-@media screen and (max-width: 800px){
+.eoy-economic .header {
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+.eoy-economic .container1{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+width: 100%;
+}
+}
+@media screen and (max-width: 675px){
     .header {
-        flex-direction: column;
-        gap:16px;
+        display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 16px;
+    }
+    .container1 {
+        align-items: center;
+    }
+    .star {
+        width: 90px;
+height: 90px;
     }
     .main-text {
         display:none;
+    }
+    .animation {
+        display: none;
+    }
+    .subtext {
+        display: none;
+    }
+    .eoy-economic {
+        display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 24px;
     }
 }
 .carousel {
     width: 100%;
 }
 /* Carousel Template */
-.carousel-container {
+.carousel-container1 {
     overflow: hidden;
     display: none; /* This makes it hide in desktop view */
 }
@@ -296,10 +323,19 @@ line-height: normal;
     scroll-snap-align: start;
     flex: 0 0 100%; 
     padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    background: 
+    linear-gradient(135deg, #35373C, #35373C) padding-box, 
+    linear-gradient(to right, #5EBF8D, #D5B43A) border-box;
+
 }
 /* The first carousel card uses a unique background */
 .first-card1 {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), linear-gradient(142deg, #5EBF8D 0%, #D5B43A 100%);
+    background: 
+    linear-gradient(135deg, #5EBF8D, #D5B43A) padding-box, 
+    linear-gradient(to right, #5EBF8D, #D5B43A) border-box;
 }
 .first-card1 p {
     color: #FFF;
@@ -324,12 +360,13 @@ line-height: normal;
     height: 10px;
     background-color: grey;
     border-radius: 50%;
-    &.active{
-        background-color: white;
-    }
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+  background: #fff; /* or brand color */
 }
 @media screen and (max-width: 675px) {
-    .carousel-container {
+    .carousel-container1 {
         display: flex;
         flex-direction: column;
     }
@@ -344,7 +381,99 @@ line-height: normal;
         display: flex;
     }
 }
-.carousel-people1 .peopleContainer{
-    color:#D5B43A;
+.carousel-people {
+    width: 100%;
+    min-height: 200px;
+}
+
+.carousel-people .peopleContainer{
+    row-gap: 10px;
     opacity: 1;
+    place-items: center;
+}
+.carousel-people1 .person {
+    width: 16.904px;
+height: 39.442px;
+color:#FFC907
+
+}
+.carousel-people2 .person {
+    width: 19.533px;
+height: 45.578px;
+    color:#ED1C65
+
+}
+.carousel-people3 .person {
+    width: 31.25px;
+height: 72.917px;
+    color:#4298D3
+
+}
+.carousel-people4 .person {
+    width: 57.078px;
+height: 133.182px;
+    color:#65469C
+
+}
+ul {
+    margin-top: 0;
+}
+.carousel-people4 .person svg {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-people4 .person svg[viewBox*="0 0 18"],
+.carousel-people4 .person svg[viewBox*="0 0 15"] {
+  transform: scale(0.6);
+  transform-origin: center;
+}
+.statistic{
+    color: #FFF;
+
+/* Mobile/CardStatisticText */
+font-family: "Nunito Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.44px;
+}
+.first-card1 p {
+    color: #FFF;
+
+/* Mobile/Body 1 */
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.title1{
+font-family: "IBM Plex Sans", sans-serif;
+font-size: 54px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 0;
+}
+.carousel-header {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 17px;
+align-self: stretch;
+}
+.carousel-people1 .peopleContainer {
+    grid-template-columns: repeat(8, 1fr);
+}
+.carousel-people2 .peopleContainer {
+    grid-template-columns: repeat(7, 1fr);
+}
+.carousel-people3 .peopleContainer {
+    grid-template-columns: repeat(4, 1fr);
+}
+.carousel-people4 .peopleContainer {
+    grid-template-columns: repeat(3, 1fr);
 }
