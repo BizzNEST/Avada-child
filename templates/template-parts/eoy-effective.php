@@ -14,7 +14,7 @@
         <section class='ef-carousel-container'>
             <div class='ef-carousel-scroller nunito-sans'>
                 <article class='ef-carousel-card ef-first-card'>
-                    <p>
+                    <p class = "nunito-sans">
                         Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
                         They also learn professional skills that are increasingly important for securing a job in a tight market.
                         Most importantly, they launch with a network of support. This is workforce development that works:
