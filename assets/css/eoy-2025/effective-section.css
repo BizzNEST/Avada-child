@@ -136,6 +136,7 @@
 .ef-carousel-card {
     display: flex;
     flex-direction: column;
+    gap: 40px;
     width: 100%; /* Makes each card stretch to the screen */
     background: 
         linear-gradient(135deg, #35373C, #35373C), /* Foreground Gradient */
@@ -148,8 +149,12 @@
     scroll-snap-align: start;
     flex: 0 0 100%; 
     overflow: hidden;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+.ef-carousel-card:nth-child(3) {
     justify-content: center;
-    height: 500px;
 }
 
 /* The first carousel card uses a unique background */
@@ -280,17 +285,17 @@
     .bottom-associate {
         padding: 0 !important;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        align-items: end;
         margin: 0;
         background: linear-gradient(90deg, #1b7dc1 11.54%, #694b9e 50%);
         border-top-left-radius: 100px;
         width: 100%;
-        margin-top: auto;
+        flex: 1;
     }
     .bottom-associate img {
-        width: 80%;
-        margin-top: -50px; /* makes the image rise out of the background */
+        width: 100%;
+        height: 120%;
+        object-fit: cover;
     }
 
 
@@ -381,11 +386,15 @@
 }
 
 @media(max-width: 530px){
+    .ef-carousel-card{
+        gap: 40px;
+    }
     .topPie {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 1rem;
+        
         
     }
 
@@ -426,24 +435,6 @@
         text-align: center;
     }
 
-    .bottom-associate {
-        padding: 0 !important;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        margin: 0;
-        background: linear-gradient(90deg, #1b7dc1 11.54%, #694b9e 50%);
-        border-top-left-radius: 100px;
-        width: 100%;
-        margin-top: auto;
-        flex-shrink: 0;
-    }
-    
-    .bottom-associate img {
-        width: 80%;
-        max-width: 250px;
-        margin-top: -30px;
-    }
     .pie-text{
         width: 100% !important;
         overflow-x: scroll;
