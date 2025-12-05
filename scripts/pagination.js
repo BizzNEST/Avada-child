@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     paginationContainer.innerHTML = "";
     sections.forEach((_, index) => {
         const dot = document.createElement("span");
-        dot.classList.add("dot");
+        dot.classList.add("ef-dot");
         if (index === 0) dot.classList.add("active");
         paginationContainer.appendChild(dot);
 
@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    const dots = paginationContainer.querySelectorAll(".dot");
-
+    const dots = paginationContainer.querySelectorAll(".ef-dot");
     scroller.addEventListener("scroll", () => {
         const scrollLeft = scroller.scrollLeft;
         const scrollerWidth = scroller.offsetWidth;

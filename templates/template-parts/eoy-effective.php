@@ -11,54 +11,17 @@
             </header>
             
         <!-- Carousel Template -->
-        <section class='carousel-container'>
-            <div class='carousel-scroller'>
-                <article class='carousel-card first-card'>
+        <section class='ef-carousel-container'>
+            <div class='ef-carousel-scroller'>
+                <article class='ef-carousel-card ef-first-card'>
                     <p class='nunito-sans'>
                         Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
                         They also learn professional skills that are increasingly important for securing a job in a tight market.
                         Most importantly, they launch with a network of support. This is workforce development that works:
                     </p>
                 </article>
-                <article class='carousel-card'>
-                    <div class='card-image'>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image.png" alt="Students with a laptop">
-                    </div>
-                    <div class='card-content'>
-                        <h2 class='ibm-plex-sans'>47%</h2>
-                        <p class='nunito-sans'>Can find helpful and accurate information about careers they are interested in</p>
-                    </div>
-                </article>
-                <article class='carousel-card'>
-                    <div class='card-image'>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (1).png" alt="Students with a laptop">
-                    </div>
-                    <div class='card-content'>
-                        <h2 class='ibm-plex-sans'>55%</h2>
-                        <p>Can define their ideal worklife balance</p>
-                    </div>
-                </article>
-            </div>
 
-        </section>
-
-
-
-
-
-
-            <!-- <div class = "scroller-container">
-                <article class = "scroller" >
-                    <section class = "mobile-container">
-                        <p>
-                            Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
-                            They also learn professional skills that are increasingly important for securing a job in a tight market.
-                            Most importantly, they launch with a network of support. This is workforce development that works:
-                        </p>
-                    </section>
-                    
-                    
-                    <section class = "mobile-container2">
+                <article class='ef-carousel-card'>
                         <?php 
                             $topImages = array('pie-70.png');
                             $piePathtop = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
@@ -80,10 +43,9 @@
                             alt="Pie Chart" 
                             class="bottom-associate-image">
                         </div>
-
-                    </section>
-                    
-                <section class="mobile-container4">
+                </article>
+                
+                <article class='ef-carousel-card'>
                             <?php 
                                 $pieData = [
                                     ['percent' => 98, 'text' => 'Strengthened self awareness', 'image' => 'pie-98.png'],
@@ -94,23 +56,24 @@
                             ?>
 
                             <?php foreach($pieData as $pie): ?>
-                                <div class="pie-item">
-                                    <img src="<?php echo $piePath . rawurlencode($pie['image']); ?>" alt="<?php echo $pie['percent']; ?>% Pie" class="pie-chart">
+                                <div class="ef-pie-item">
+                                    <img src="<?php echo $piePath . rawurlencode($pie['image']); ?>" alt="<?php echo $pie['percent']; ?>% Pie" class="ef-pie-chart">
                                     <div class="pie-text">
                                         <?php echo $pie['text']; ?>
                                     </div>
                                 </div>
                             <?php endforeach; ?> 
                         
-                    </section>
                 </article>
-            </div> -->
-            <div class="mobile-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
             </div>
-            
+
+        </section>
+
+        <nav id ="pagination-1" class="ef-pagination-dots" data-page-amount="3" data-page-id="1">
+            <span class="ef-dot"></span>
+            <span class="ef-dot"></span>
+            <span class="ef-dot"></span>
+        </nav>
             
             
             <div class="column-text">
