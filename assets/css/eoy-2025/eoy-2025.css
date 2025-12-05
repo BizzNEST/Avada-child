@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .content-area{
     width: 100%;
 }
@@ -5,6 +9,16 @@
 body {
     width: 100%;
     margin: 0;
+}
+
+/* Consistent section spacing */
+.eoy-economic,
+.eoy-confidence,
+.eoy-effective,
+.eoy-financial,
+.eoy-donation {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 main {

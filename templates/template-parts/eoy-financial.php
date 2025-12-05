@@ -1,4 +1,4 @@
-<section class="eoy-financial">
+<section class="eoy-financial" id="financial-foundation">
     <div class="container">
         <div class="financial-heading">
             <div class="financial-image"><img src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Stars/financial-star.png" alt="Financial Efficiency Section 4"></div>

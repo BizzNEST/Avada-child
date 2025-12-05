@@ -1,4 +1,4 @@
-<section class="eoy-confidence">
+<section class="eoy-confidence" id="confidence-agency">
     <div class="container">
 
         <div class='confidence-heading'>

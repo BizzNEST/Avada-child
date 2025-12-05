@@ -127,7 +127,7 @@ function getPeopleInVisualOrder() {
     observer.observe(container);
     })
     </script>
-<section class="eoy-economic">
+<section class="eoy-economic" id="economic-prosperity">
     <div class="container">
         <div class="header">
                 <img class="star" src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Stars/Property 1=Default.png" alt="Financial Foundations Section 4">
