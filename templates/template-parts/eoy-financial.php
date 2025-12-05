@@ -36,30 +36,52 @@
                 </div>
             </div>
         </div>
+        <!-- ========== MOBILE CAROUSEL START ========== -->
+        <!-- Copy from here to add carousel to another section -->
         <div class="mobile-section">
             <div class="mobile-carousel">
                 <div class="carousel-track">
                     <!-- Slide 1 - Copy this entire div to add more slides -->
-                    <div class="carousel-slide">
-                        <h3>Your Content Here</h3>
-                        <p class="nunito-sans">Add your content for slide 1</p>
+                    <div class="carousel-slide slide-colors slide-1">
+                        <p class="nunito-sans">Your dollar goes farther at the NEST. 88% of all funding directly supports our programs. The remaining 12% ensures an enduring ecosystem in our communities by providing the necessary financial, human resources, and investments, and digital infrastructure support. </p>
                     </div>
                     
-                    <!-- Slide 2 - Copy this entire div to add more slides -->
-                    <div class="carousel-slide">
-                        <h3>Your Content Here</h3>
-                        <p class="nunito-sans">Add your content for slide 2</p>
+                    <!-- Slide 2 - Pie Chart -->
+                    <div class="carousel-slide slide-2">
+                        <div class="mobile-pie-chart">
+                            <div class="pie-segment programs" data-percentage="88"></div>
+                            <div class="pie-segment operations" data-percentage="12"></div>
+                            <span class="pie-percentage nunito-sans">88%</span>
+                            <span class="pie-percentage-12 nunito-sans">12%</span>
+                        </div>
+                        <div class="mobile-chart-text">
+                            <p>Scroll to learn where the 88% goes!</p>
+                        </div>
                     </div>
                     
                     <!-- Slide 3 - Copy this entire div to add more slides -->
-                    <div class="carousel-slide">
-                        <h3>Your Content Here</h3>
-                        <p class="nunito-sans">Add your content for slide 3</p>
+                    <div class="carousel-slide slide-colors slide-3">
+                        <p class="nunito-sans">88¢ of every dollar goes to:</p>
+                        <ul class="nunito-sans">
+                            <li>Mentor Programs</li>
+                            <li>Workshops</li>
+                            <li>BizzNEST</li>
+                            <li>Data & Evaluation</li>
+                            <li>Technical Skills</li>
+                            <li>Networking Events</li>
+                            <li>Alumni Services</li>
+                            <li>Career Navigation</li>
+                            <li>Laptops, Software & Equipment</li>
+                            <li>Professional Skills</li>
+                            <li>Free snacks</li>
+                            <li>High-speed Internet</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="carousel-pagination"></div>
             </div>
         </div>
+        <!-- ========== MOBILE CAROUSEL END ========== -->
     </div>
 </section>
 
@@ -83,6 +105,8 @@
         observer.observe(financialSection);
     }
 
+    /* ========== MOBILE CAROUSEL JAVASCRIPT START ========== */
+    /* Copy this entire section along with the HTML above */
     // Mobile carousel functionality
     const carouselContainer = document.querySelector('.mobile-carousel');
     const carousel = document.querySelector('.carousel-track');
@@ -125,4 +149,5 @@
             });
         });
     }
+    /* ========== MOBILE CAROUSEL JAVASCRIPT END ========== */
 </script>
