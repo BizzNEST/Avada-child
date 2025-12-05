@@ -81,7 +81,25 @@
         }
     }
     add_action( 'wp_enqueue_scripts', 'enqueue_anime_script' );
-
+   function enque_pagination_script(){
+        if(is_page('eoy-2025')){
+            wp_enqueue_script(
+                'paginationjs', // Script handle (unique name)
+                get_stylesheet_directory_uri() . '/scripts/pagination.js', // Full URI to the file
+                array(), // Dependencies (none needed for animejs itself)
+                '4.0.0', // Version number (or '1.0' or false)
+                true // Load in the footer (recommended for performance)
+            );
+            wp_enqueue_script(
+                'eoy-javascript',
+                get_stylesheet_directory_uri() . '/scripts/eoy-javascript.js',
+                array('paginationjs'), // DEPENDS on 'animejs' being loaded first
+                '1.0',
+                true 
+            );
+        }
+    }
+    add_action( 'wp_enqueue_scripts', 'enque_pagination_script' );
     function eoy_2025_enqueue_section_styles() {
         $base_uri  = get_stylesheet_directory_uri() . '/assets/css/eoy-2025/';
         $base_path = get_stylesheet_directory() . '/assets/css/eoy-2025/';

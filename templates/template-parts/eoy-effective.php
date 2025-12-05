@@ -9,18 +9,19 @@
                 <img src="<?php echo $path_pie . rawurlencode($pieChart1[0]); ?>" alt="Star" class="header-image">
                 <h1 class="header-title">A Workforce Launchpad</h1>
             </header>
-            <div class = "scroller-container">
-                <article class = "scroller" >
-                    <section class = "mobile-container">
-                        <p>
-                            Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
-                            They also learn professional skills that are increasingly important for securing a job in a tight market.
-                            Most importantly, they launch with a network of support. This is workforce development that works:
-                        </p>
-                    </section>
-                    
-                    
-                    <section class = "mobile-container2">
+            
+        <!-- Carousel Template -->
+        <section class='ef-carousel-container'>
+            <div class='ef-carousel-scroller nunito-sans'>
+                <article class='ef-carousel-card ef-first-card'>
+                    <p class = "nunito-sans">
+                        Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
+                        They also learn professional skills that are increasingly important for securing a job in a tight market.
+                        Most importantly, they launch with a network of support. This is workforce development that works:
+                    </p>
+                </article>
+
+                <article class='ef-carousel-card'>
                         <?php 
                             $topImages = array('pie-70.png');
                             $piePathtop = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
@@ -42,29 +43,41 @@
                             alt="Pie Chart" 
                             class="bottom-associate-image">
                         </div>
+                </article>
+                
+                <article class='ef-carousel-card'>
+                            <?php 
+                                $pieData = [
+                                    ['percent' => 98, 'text' => 'Strengthened self awareness', 'image' => 'pie-98.png'],
+                                    ['percent' => 94, 'text' => 'Improved critical thinking and adaptability', 'image' => 'pie-94.png'],
+                                    ['percent' => 75, 'text' => 'Completed at least one technical certification', 'image' => 'pie-75.png'],
+                                ];
+                                $piePath = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
+                            ?>
 
-                    </section>
-                    
-                    
-                    <section class = "mobile-container" >
-                        <p>
-                            Our BizzNEST Associates earn income and gain real-world experience that prepare them for the job market.
-                            They also learn professional skills that are increasingly important for securing a job in a tight market.
-                            Most importantly, they launch with a network of support. This is workforce development that works:
-                        </p>
-                    </section>
+                            <?php foreach($pieData as $pie): ?>
+                                <div class="ef-pie-item">
+                                    <img src="<?php echo $piePath . rawurlencode($pie['image']); ?>" alt="<?php echo $pie['percent']; ?>% Pie" class="ef-pie-chart">
+                                    <div class="pie-text">
+                                        <?php echo $pie['text']; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?> 
+                        
                 </article>
             </div>
-            <div class="mobile-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-            
+
+        </section>
+
+        <nav id ="pagination-1" class="ef-pagination-dots" data-page-amount="3" data-page-id="1">
+            <span class="ef-dot"></span>
+            <span class="ef-dot"></span>
+            <span class="ef-dot"></span>
+        </nav>
             
             
             <div class="column-text">
-                <div class="column-left">
+                <div class="column-left nunito-sans" >
                     <p>
                         Our BizzNEST Associates earn income and gain real-world 
                         experience that prepare them for the job market. They also 
@@ -74,7 +87,7 @@
                         that works:
                     </p>
                 </div>
-                <div class="column-right">
+                <div class="column-right nunito-sans">
                     <ul>
                         <li>70% say they belong to a community/group of people who care about their future</li>
                         <li>98% strengthened their self-awareness skills</li>
@@ -103,7 +116,7 @@
 
                     </div>
                     
-                    <div class="description70">
+                    <div class="description70 nunito-sans">
                         <p class = "textDesc"><?php echo $leftText[0] ?></p>
                     </div>
                 </div>
@@ -118,7 +131,7 @@
 
                 </div>
             </div>
-                <div class="right-section">
+                <div class="right-section nunito-sans">
                     <?php 
                         $rightImages = array('pie-98.png', 'pie-94.png', 'pie-75.png');
                         $rightPath = '/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/';
@@ -142,4 +155,24 @@
        </div>
    </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
 
+    const targets = document.querySelectorAll(".bottom-section");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+            } else {
+                entry.target.classList.remove("in-view");
+            }
+        });
+    }, {
+        threshold: 0.3 
+    });
+
+    targets.forEach(el => observer.observe(el));
+});
+
+</script>
