@@ -2,7 +2,7 @@
     .eoy-donation .container{
         display: flex;
         flex-direction: column;
-        padding: 1em 2em;
+        padding: 0 !important;
     }
 
     .container .donation-hero {
@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 801px){
     .eoy-donation .container {
-        padding: 2em 5em;
+        padding: 0;
     }
 
     .container .donation-hero:hover {
@@ -63,6 +63,11 @@
     flex-direction: column;
     align-items: center;
     gap: 1em;
+}
+
+.donation-text a {
+    text-decoration: none;
+    color: inherit;
 }
 .donation-text h2 {
     color: #FFF;

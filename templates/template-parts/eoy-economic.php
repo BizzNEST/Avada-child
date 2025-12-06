@@ -211,7 +211,7 @@ function updateDots(activeIndex) {
         window.addEventListener('resize', handleResize);
     })
     </script>
-<section class="eoy-economic">
+<section class="eoy-economic" id="economic-prosperity">
     <div class="container1">
         <div class="header">
                 <img class="star" src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Stars/Property 1=Default.png" alt="Financial Foundations Section 4">

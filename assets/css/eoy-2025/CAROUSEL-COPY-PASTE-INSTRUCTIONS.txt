@@ -1,0 +1,352 @@
+================================================================================
+MOBILE CAROUSEL - COPY & PASTE INSTRUCTIONS
+================================================================================
+
+This carousel is a horizontal scrolling card system with pagination dots that 
+works on mobile devices (≤675px). It features:
+- Horizontal scroll/swipe functionality
+- White pagination dots that update as you scroll
+- Easy to add more slides
+- Snap-to-center behavior
+- Fixed pagination at bottom of container
+
+================================================================================
+STEP 1: ADD HTML TO YOUR TEMPLATE FILE
+================================================================================
+
+Copy the following HTML into your template-part PHP file.
+Place it INSIDE your main container div (the container must have position: relative).
+
+<!-- ========== MOBILE CAROUSEL START ========== -->
+<div class="mobile-section">
+    <div class="mobile-carousel">
+        <div class="carousel-track">
+            <!-- Slide 1 - Copy this entire div to add more slides -->
+            <div class="carousel-slide">
+                <h3>Your Content Here</h3>
+                <p class="nunito-sans">Add your content for slide 1</p>
+            </div>
+            
+            <!-- Slide 2 - Copy this entire div to add more slides -->
+            <div class="carousel-slide">
+                <h3>Your Content Here</h3>
+                <p class="nunito-sans">Add your content for slide 2</p>
+            </div>
+            
+            <!-- Slide 3 - Copy this entire div to add more slides -->
+            <div class="carousel-slide">
+                <h3>Your Content Here</h3>
+                <p class="nunito-sans">Add your content for slide 3</p>
+            </div>
+        </div>
+        <div class="carousel-pagination"></div>
+    </div>
+</div>
+<!-- ========== MOBILE CAROUSEL END ========== -->
+
+HOW TO ADD MORE SLIDES:
+Simply copy any <div class="carousel-slide">...</div> block and paste it 
+inside the carousel-track div. The pagination dots will automatically update!
+
+
+================================================================================
+STEP 2: ADD JAVASCRIPT TO YOUR TEMPLATE FILE
+================================================================================
+
+Copy the following JavaScript into a <script> tag at the bottom of your 
+template file (before the closing </section> or similar tag).
+
+<script>
+/* ========== MOBILE CAROUSEL JAVASCRIPT START ========== */
+// Mobile carousel functionality
+const carouselContainer = document.querySelector('.mobile-carousel');
+const carousel = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.carousel-slide');
+const pagination = document.querySelector('.carousel-pagination');
+
+if (carouselContainer && carousel && slides.length > 0 && pagination) {
+    // Create pagination dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('pagination-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+        pagination.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.pagination-dot');
+    
+    // Update active dot on scroll based on which slide is centered
+    carouselContainer.addEventListener('scroll', () => {
+        const containerCenter = carouselContainer.scrollLeft + carouselContainer.offsetWidth / 2;
+        
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        
+        slides.forEach((slide, index) => {
+            const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+            const distance = Math.abs(containerCenter - slideCenter);
+            
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = index;
+            }
+        });
+        
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === closestIndex);
+        });
+    });
+}
+/* ========== MOBILE CAROUSEL JAVASCRIPT END ========== */
+</script>
+
+
+================================================================================
+STEP 3: ADD CSS TO YOUR STYLESHEET
+================================================================================
+
+Copy the following CSS into your section's CSS file (e.g., your-section.css).
+
+/* ========== MOBILE CAROUSEL CSS START ========== */
+
+/* Hide mobile section by default (shows only on mobile) */
+.mobile-section {
+    display: none;
+}
+
+/* Mobile carousel styles - Only displays on screens ≤675px */
+@media screen and (max-width: 675px) {
+    .mobile-section {
+        display: block;
+    }
+
+    .mobile-carousel {
+        width: 100%;
+        max-width: 353px;
+        margin: 0 auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 1rem;
+        scroll-snap-type: x mandatory;
+    }
+
+    .mobile-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 20px;
+        padding: 0 calc(50% - 176.5px);
+    }
+
+    .carousel-slide {
+        min-width: 353px;
+        max-width: 353px;
+        width: 353px;
+        flex-shrink: 0;
+        display: flex;
+        height: 401px;
+        padding: 50px 30px 30px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        border-radius: 20px;
+        border: 3px solid #5EBF8D;
+        background: #35373C;
+        box-sizing: border-box;
+        scroll-snap-align: center;
+        overflow: hidden;
+    }
+
+    .carousel-slide h3 {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-slide p {
+        color: white;
+        font-size: 1rem;
+        margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-slide ul,
+    .carousel-slide ol {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding-left: 1.2rem;
+    }
+
+    .carousel-slide li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-pagination {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+
+    .pagination-dot.active {
+        background: white;
+        width: 12px;
+        height: 12px;
+    }
+
+    .pagination-dot:hover {
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Smaller mobile screens - Scale down carousel for better fit */
+@media screen and (max-width: 400px) {
+    .mobile-carousel {
+        max-width: 300px;
+    }
+
+    .carousel-track {
+        padding: 0 calc(50% - 150px);
+    }
+
+    .carousel-slide {
+        min-width: 300px;
+        max-width: 300px;
+        width: 300px;
+        height: 341px;
+        padding: 42px 25px 25px 25px;
+        gap: 20px;
+    }
+
+    .carousel-slide h3 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-slide p {
+        font-size: 0.9rem;
+    }
+}
+/* ========== MOBILE CAROUSEL CSS END ========== */
+
+
+================================================================================
+STEP 4: ENSURE CONTAINER HAS POSITION RELATIVE
+================================================================================
+
+Make sure the parent container (where you placed the mobile-section) has 
+position: relative so the pagination dots position correctly.
+
+Example:
+.your-section .container {
+    position: relative;
+}
+
+
+================================================================================
+CUSTOMIZATION OPTIONS
+================================================================================
+
+CHANGE BORDER COLOR:
+In the CSS, find: border: 3px solid #5EBF8D;
+Replace #5EBF8D with your desired color
+
+CHANGE BACKGROUND COLOR:
+In the CSS, find: background: #35373C;
+Replace #35373C with your desired color
+
+CHANGE CARD SIZE:
+In the CSS, find:
+- min-width: 353px; (card width minimum)
+- max-width: 353px; (card width maximum - keeps it from expanding)
+- width: 353px; (card exact width)
+- height: 401px; (card height)
+- padding: 50px 30px 30px 30px; (internal spacing)
+
+NOTE: The card has overflow: hidden and word-wrap: break-word to ensure
+long text wraps instead of expanding the card width.
+
+CHANGE MOBILE BREAKPOINT:
+In the CSS, find: @media screen and (max-width: 675px)
+Change 675px to your desired breakpoint
+
+NOTE: There's also a smaller screen breakpoint at 400px that scales 
+everything down to 85% for very small mobile devices. You can adjust 
+this breakpoint or remove it if not needed.
+
+CHANGE PAGINATION DOT COLOR:
+In the CSS, find:
+- background: rgba(255, 255, 255, 0.3); (inactive dots)
+- background: white; (active dot)
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PAGINATION DOTS NOT SHOWING:
+- Ensure parent container has position: relative
+- Check z-index if other elements are covering them
+
+CAROUSEL NOT SCROLLING:
+- Verify all HTML classes are correct
+- Check that JavaScript is loading after the HTML
+
+SLIDES EXPANDING WITH LONG CONTENT:
+- Ensure max-width: 353px; is set on .carousel-slide
+- Verify overflow: hidden; is present
+- Check that word-wrap: break-word; is on all text elements
+
+PAGINATION DOTS NOT UPDATING:
+- Ensure JavaScript is running without errors (check browser console)
+- Verify .mobile-carousel and .carousel-slide classes are correct
+
+SLIDES NOT CENTERING:
+- Check that scroll-snap-type and scroll-snap-align are in the CSS
+- Verify padding calculation: padding: 0 calc(50% - 176.5px);
+  (176.5px = half of 353px slide width)
+
+
+================================================================================
+ADDITIONAL NOTES
+================================================================================
+
+- This carousel only displays on mobile (≤675px by default)
+- Carousel automatically scales down to 85% size on very small screens (≤400px)
+- Pagination dots are automatically generated based on number of slides
+- Clicking a dot smoothly scrolls to that slide
+- Swipe left/right to navigate between slides
+- The carousel snaps each slide to center for better UX
+- No external libraries required (pure CSS + vanilla JavaScript)
+- All dimensions maintain proper ratios when scaled down for smaller screens
+
+
+================================================================================
+END OF INSTRUCTIONS
+================================================================================
