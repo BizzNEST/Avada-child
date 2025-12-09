@@ -351,104 +351,26 @@
 /* ========== MOBILE CAROUSEL CSS START ========== */
 /* Copy from here to add carousel styles to another section */
 
-/* Mobile - Styles */
-.mobile-section {
-    display: none;
-}
 
 /* Mobile carousel */
 @media screen and (max-width: 675px) {
-    .mobile-section {
-        display: block;
-
-    }
 
     .financial-heading {
         flex-direction: column;
     }
 
-    .mobile-carousel {
-        width: 100%;
-        max-width: 353px;
-        margin: 0 auto;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        padding-bottom: 1rem;
-        scroll-snap-type: x mandatory;
-    }
-
-    .mobile-carousel::-webkit-scrollbar {
-        display: none;
-    }
-
-    .carousel-track {
-        display: flex;
-        gap: 20px;
-
-
-        padding: 0 calc(50% - 176.5px);
-    }
-
-    .carousel-slide {
-        min-width: 353px;
-        max-width: 353px;
-        width: 353px;
-        flex-shrink: 0;
-        display: flex;
-        height: 401px;
-        padding: 30px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-        border-radius: 20px;
-        border: 3px solid #5EBF8D;
-        background: #35373C;
-        box-sizing: border-box;
-        scroll-snap-align: center;
-        overflow: hidden;
-    }
-
-    .carousel-slide h3 {
-        color: white;
-        font-size: 1.5rem;
-        margin: 0;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .carousel-slide p {
-        color: white;
-        font-size: 1rem;
-        margin: 0;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .carousel-slide ul,
-    .carousel-slide ol {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        padding-left: 1.2rem;
-    }
-
-    .carousel-slide li {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
+    
     /* Slide 3 - tighter list spacing */
-    .slide-3 ul {
+    .financial-carousel-track > .slide-3 ul {
         margin-top: 0px;
     }
 
-    .slide-3 li {
+    .financial-carousel-track > .slide-3 li {
         line-height: 1.3;
     }
 
     /* Slide 2 - Mobile Pie Chart */
-    .slide-2 {
+    .financial-carousel-track > .slide-2 {
         justify-content: center;
         align-items: center;
         padding: 30px;
@@ -506,57 +428,21 @@
         z-index: 5;
     }
 
-    .carousel-pagination {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
+    .financial-carousel-track > .slide-1 {
         justify-content: center;
         align-items: center;
-        gap: 12px;
-        z-index: 10;
-    }
-
-    .pagination-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        border: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        padding: 0;
-    }
-
-    .pagination-dot.active {
-        background: white;
-        width: 12px;
-        height: 12px;
-    }
-
-    .pagination-dot:hover {
-        background: rgba(255, 255, 255, 0.6);
-    }
-
-    .slide-colors {
         border-radius: 20px;
-        border: 3px solid #5EBF8D;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), linear-gradient(142deg, #5EBF8D 0%, #D5B43A 100%);
+
     }
 
-    .slide-1 {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .slide-3 {
+    .financial-carousel-track > .slide-3 {
         gap: 0px;
         color: white;
         font-size: 18px;
     }
 
-    .slide-3 p{
+    .financial-carousel-track > .slide-3 p{
         font-size: 18px;
     }
     
@@ -564,40 +450,17 @@
 
 /* Smaller mobile screens - Scale down carousel */
 @media screen and (max-width: 400px) {
-    .mobile-carousel {
-        max-width: 300px;
-    }
+    
 
-    .carousel-track {
-        padding: 0 calc(50% - 150px);
-    }
-
-    .carousel-slide {
-        min-width: 300px;
-        max-width: 300px;
-        width: 300px;
-        height: 341px;
-        padding: 20px 30px 30px 30px;
-        gap: 0px;
-    }
-
-    .carousel-slide h3 {
-        font-size: 1.3rem;
-    }
-
-    .carousel-slide p {
-        font-size: 0.9rem;
-    }
-
-    .slide-3 {
+    .financial-carousel-track > .slide-3 {
         font-size: 16px;
     }
 
-    .slide-3 ul {
+    .financial-carousel-track > .slide-3 ul {
         margin-top: 0px;
     }
 
-    .slide-3 p {
+    .financial-carousel-track > .slide-3 p {
         font-size: 16px;
     }
 

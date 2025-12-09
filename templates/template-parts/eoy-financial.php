@@ -40,9 +40,9 @@
         <!-- Copy from here to add carousel to another section -->
         <div class="mobile-section">
             <div class="mobile-carousel">
-                <div class="carousel-track">
+                <div class="carousel-track financial-carousel-track">
                     <!-- Slide 1 - Copy this entire div to add more slides -->
-                    <div class="carousel-slide slide-colors slide-1">
+                    <div class="carousel-slide slide-1">
                         <p class="nunito-sans">Your dollar goes farther at the NEST. 88% of all funding directly supports our programs. The remaining 12% ensures an enduring ecosystem in our communities by providing the necessary financial, human resources, and investments, and digital infrastructure support. </p>
                     </div>
                     
@@ -60,7 +60,7 @@
                     </div>
                     
                     <!-- Slide 3 - Copy this entire div to add more slides -->
-                    <div class="carousel-slide slide-colors slide-3">
+                    <div class="carousel-slide slide-3">
                         <p class="nunito-sans">88¢ of every dollar goes to:</p>
                         <ul class="nunito-sans">
                             <li>Mentor Programs</li>
@@ -105,49 +105,4 @@
         observer.observe(financialSection);
     }
 
-    /* ========== MOBILE CAROUSEL JAVASCRIPT START ========== */
-    /* Copy this entire section along with the HTML above */
-    // Mobile carousel functionality
-    const carouselContainer = document.querySelector('.mobile-carousel');
-    const carousel = document.querySelector('.carousel-track');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const pagination = document.querySelector('.carousel-pagination');
-    
-    if (carouselContainer && carousel && slides.length > 0 && pagination) {
-        // Create pagination dots
-        slides.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.classList.add('pagination-dot');
-            if (index === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            });
-            pagination.appendChild(dot);
-        });
-        
-        const dots = document.querySelectorAll('.pagination-dot');
-        
-        // Update active dot on scroll based on which slide is centered
-        carouselContainer.addEventListener('scroll', () => {
-            const containerCenter = carouselContainer.scrollLeft + carouselContainer.offsetWidth / 2;
-            
-            let closestIndex = 0;
-            let closestDistance = Infinity;
-            
-            slides.forEach((slide, index) => {
-                const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-                const distance = Math.abs(containerCenter - slideCenter);
-                
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    closestIndex = index;
-                }
-            });
-            
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === closestIndex);
-            });
-        });
-    }
-    /* ========== MOBILE CAROUSEL JAVASCRIPT END ========== */
 </script>
