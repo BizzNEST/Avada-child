@@ -19,7 +19,7 @@
 </svg>`, `<svg xmlns="http://www.w3.org/2000/svg" width="35" height="54" viewBox="0 0 35 54" fill="none">
   <path d="M25.6182 2.59205C25.4724 2.44618 25.3293 2.37324 25.1105 2.23017C19.8871 -0.743389 14.3749 -0.743389 9.29695 2.23017C9.15107 2.3031 9.00801 2.44898 8.86213 2.51911C3.3498 7.23474 0.665229 17.7517 0.0117176 25.298C-0.134152 26.8942 1.10014 28.3445 2.69636 28.4904C4.29258 28.6362 5.74287 27.4019 5.88873 25.8057C6.39648 20.0746 7.84682 14.5624 9.8778 10.7893L5.52405 32.6956C6.82849 33.0575 8.13573 33.2763 9.51313 33.4923C9.58607 37.8461 9.659 44.2279 9.73194 48.0743L9.80488 49.7434C9.87781 51.6285 11.4011 53.1518 13.2862 53.1518H13.3592C15.2443 53.0789 16.7675 51.5556 16.6946 49.6704L16.8405 34.1463H17.567L17.8559 49.7437H17.9289C17.9289 51.6288 19.3792 53.1521 21.2643 53.225H21.3372C23.2224 53.225 24.7456 51.7018 24.8186 49.8166L24.8915 48.1475C24.9645 44.3015 25.0374 37.9922 25.1103 33.5656C26.4877 33.3468 27.8679 33.0578 29.0994 32.696L24.8186 11.0058C26.7038 14.633 28.011 19.7104 28.5917 25.8032C28.7376 27.3265 30.042 28.4879 31.4923 28.4879H31.7813C33.3775 28.342 34.609 26.8916 34.393 25.2955C33.3802 14.7086 30.2608 6.65455 25.6179 2.59272L25.6182 2.59205Z" fill="currentColor"/>
 </svg>`]];
-    function generateGroup(amount){
+    function generateGroup(amount, time){
         const group = document.createElement("div");
         group.classList.add("peopleContainer");
         for (var i = 0; i < amount; i++){
@@ -27,7 +27,9 @@
             if (svgIcons.at(randomInteger).length > 1){
                 const person = document.createElement("div");
                 person.classList.add("person");
-                person.style.color = "#B2B2B2";
+                if (time == 0){
+                    person.style.color = "#B2B2B2";
+                }
                 var personHTML = "";
                 for (var j = 0; j < svgIcons.at(randomInteger).length; j++) {
                     personHTML += svgIcons.at(randomInteger).at(j);
@@ -37,43 +39,41 @@
             } else {
                 const person = document.createElement("div");
                 person.classList.add("person");
-                person.style.color = "#B2B2B2";
+                if (time == 0) {
+                    person.style.color = "#B2B2B2";
+                }
                 person.innerHTML = svgIcons.at(randomInteger).at(0);
                 group.append(person);
             }
         }
         return group;
     }
-    let orderedPeople = null;
+  function getPeopleInVisualOrder() {
+  const parent = document.querySelector(".animationPeople");
+  if (!parent) return [];
 
-function getPeopleInVisualOrder() {
-  if (orderedPeople) return orderedPeople;
-
-  orderedPeople = Array.from(document.querySelectorAll(".person"))
+  return Array.from(parent.querySelectorAll(".person"))
     .sort((a, b) => {
       const ra = a.getBoundingClientRect();
       const rb = b.getBoundingClientRect();
+
       const colDiff = ra.left - rb.left;
       if (Math.abs(colDiff) > 5) {
         return colDiff;
       }
       return ra.top - rb.top;
     });
-
-  return orderedPeople;
 }
-
 
     var counter = 0;
     function changeColor(num, color){
     const people = getPeopleInVisualOrder();
-    for (var i = counter; i < counter + num; i++ ){
-        console.log(i);
+    for (var i = counter; i < counter + num && i < people.length; i++ ){
         people[i].style.color = color;
     }
-    counter+= num;
+    counter += num;
 }
-    function animateChildrenSequentially(children, delay = 500, num) {
+    function animateChildrenSequentially(children, delay = 800, num) {
     return new Promise(resolve => {
         children.forEach((child, index) => {
             setTimeout(() => {
@@ -98,26 +98,106 @@ function getPeopleInVisualOrder() {
 }
 
     document.addEventListener('DOMContentLoaded', (event) => {
-        const container = document.querySelector(".animationPeople");
-        const containerB = document.querySelector(".stats");
-        const group1 = generateGroup(15);
-        const group2 = generateGroup(15);
-        const group3 = generateGroup(15);
-        const group4 = generateGroup(10);
+        const scroller = document.querySelector('.carousel-scroller');
+const cards = Array.from(document.querySelectorAll('.carousel-card1'));
+const dots = Array.from(document.querySelectorAll('.dot'));
+
+scroller.addEventListener('scroll', () => {
+    const scrollPosition = scroller.scrollLeft;
+    const cardWidth = cards[0].offsetWidth;
+    
+    const index = Math.round(scrollPosition / cardWidth);
+
+    updateDots(index);
+});
+
+function updateDots(activeIndex) {
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === activeIndex);
+    });
+}
+
+        const group1 = generateGroup(15, 0);
+        group1.classList.add("animated");
+        const group2 = generateGroup(15, 0);
+        group2.classList.add("animated");
+        const group3 = generateGroup(15, 0);
+        group3.classList.add("animated");
+        const group4 = generateGroup(10, 0);
+        group4.classList.add("animated");
+        const group5 = generateGroup(25, 1);
+        const group6 = generateGroup(20, 1);
+        const group7 = generateGroup(7, 1);
+        const group8 = generateGroup(3,1);
         group4.classList.add("special")
-        container.append(group1);
-        container.append(group2);
-        container.append(group3);
-        container.append(group4);
-        const children = container.querySelectorAll(".peopleContainer");
-        const childrenB = containerB.querySelectorAll(".child");
-        const observer = new IntersectionObserver((entries) => {
+        let observerCreated = false;
+        let observer = null;
+        let isDesktop = null; 
+
+        function handleResize () {
+    const nowDesktop = window.innerWidth > 675;
+
+    if (nowDesktop === isDesktop) {
+        return;
+    }
+    isDesktop = nowDesktop;
+
+    if (!nowDesktop) {
+        counter = 0;
+
+        if (observer) {
+            observer.disconnect();
+            observer = null;
+        }
+
+        const card1 = document.querySelector(".carousel-people1");
+        const card2 = document.querySelector(".carousel-people2");
+        const card3 = document.querySelector(".carousel-people3");
+        const card4 = document.querySelector(".carousel-people4");
+
+        if (!card1.querySelector(".peopleContainer")) {
+            card1.append(group5);
+            card2.append(group6);
+            card3.append(group7);
+        }
+
+        return;
+    }
+
+
+    const container = document.querySelector(".animationPeople");
+    const containerB = document.querySelector(".stats");
+
+    container.append(group1);
+    container.append(group2);
+    container.append(group3);
+    container.append(group4);
+
+    counter = 0;
+    container.querySelectorAll(".person").forEach(p => {
+        p.style.color = "#B2B2B2";
+    });
+
+    container.querySelectorAll(".animated").forEach(c => {
+        c.classList.remove("show");
+    });
+    containerB.querySelectorAll(".child").forEach(c => {
+        c.classList.remove("show");
+    });
+
+    const childrenB = containerB.querySelectorAll(".child");
+    const children = container.querySelectorAll(".animated");
+
+    observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 animateChildrenSequentially(children, 500, 0)
-                    .then(() => {
-                        animateChildrenSequentially(childrenB, 500, 1);
-                    });
+    .then(() => {
+        setTimeout(() => {
+            animateChildrenSequentially(childrenB, 500, 1);
+        }, 800);
+    });
+
 
                 observer.unobserve(container);
             }
@@ -125,10 +205,14 @@ function getPeopleInVisualOrder() {
     }, { threshold: 0.3 });
 
     observer.observe(container);
+}
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
     })
     </script>
 <section class="eoy-economic" id="economic-prosperity">
-    <div class="container">
+    <div class="container1">
         <div class="header">
                 <img class="star" src="<?= get_stylesheet_directory_uri() ?>/assets/images/eoy-2025/Stars/Property 1=Default.png" alt="Financial Foundations Section 4">
                 <h2>Economic Prosperity</h2>
@@ -143,6 +227,79 @@ function getPeopleInVisualOrder() {
                     <li>5% launched as entrepreneurs</li>
                 </ul>
         </div>
+    </div>
+    <div class = "carousel">
+        <!-- Carousel Template -->
+        <section class='carousel-container1'>
+            <div class='carousel-scroller'>
+                <article class='carousel-card1 first-card1'>
+                    <p>Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
+                </article>
+                <article class='carousel-card1'>
+                    <div class="carousel-header">
+                        <p class="title1" style="color:#FFC907"> 41% </p>
+                        <p class ="statistic">Landed full or part-time jobs</p>
+                    </div>
+                    <div class="carousel-people carousel-people1">
+
+                    </div>
+                </article>
+                <article class='carousel-card1'>
+                    <div class="carousel-header">
+                        <p class="title1" style ="color:#ED1C65"> 33% </p>
+                        <p class ="statistic">Secured paid internships</p>
+                    </div>
+                    <div class="carousel-people carousel-people2">
+
+                    </div>
+                </article>
+                <article class='carousel-card1'>
+                    <div class="carousel-header">
+                        <p class = "title1" style="color:#4298D3"> 11% </p>
+                        <p class ="statistic">Found contract work</p>
+                    </div>
+                    <div class="carousel-people carousel-people3">
+
+                    </div>
+                </article>
+                <article class='carousel-card1'>
+                    <div class="carousel-header">
+                        <p class = "title1" style="color:#65469C"> 5% </p>
+                        <p class ="statistic">Launched a venture</p>
+                    </div>
+                    <div class="carousel-people carousel-people4">
+                        <div class="peopleContainer">
+                            <div class="person">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
+  <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
+  <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
+</svg>
+                            </div>
+                            <div class="person">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
+  <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
+  <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
+</svg>
+                            </div>
+                            <div class="person">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
+  <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
+  <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
+</svg>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class='carousel-dots'>
+                <span class='dot active'></span>
+                <span class='dot'></span>
+                <span class='dot'></span>
+                <span class='dot'></span>
+                <span class='dot'></span>
+            </div>
+        </section>
+<!-- CAROUSEL END -->
     </div>
     <div class="animation">
             <div class="animationPeople">
