@@ -98,25 +98,6 @@
 }
 
     document.addEventListener('DOMContentLoaded', (event) => {
-        const scroller = document.querySelector('.carousel-scroller');
-const cards = Array.from(document.querySelectorAll('.carousel-card1'));
-const dots = Array.from(document.querySelectorAll('.dot'));
-
-scroller.addEventListener('scroll', () => {
-    const scrollPosition = scroller.scrollLeft;
-    const cardWidth = cards[0].offsetWidth;
-    
-    const index = Math.round(scrollPosition / cardWidth);
-
-    updateDots(index);
-});
-
-function updateDots(activeIndex) {
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === activeIndex);
-    });
-}
-
         const group1 = generateGroup(15, 0);
         group1.classList.add("animated");
         const group2 = generateGroup(15, 0);
@@ -133,7 +114,50 @@ function updateDots(activeIndex) {
         let observerCreated = false;
         let observer = null;
         let isDesktop = null; 
-
+        /* ========== MOBILE CAROUSEL JAVASCRIPT START ========== */
+// Mobile carousel functionality
+const carouselContainer = document.querySelector('.mobile-carousel');
+const carousel = document.querySelector('.carousel-track1.economic');
+const slides = document.querySelectorAll('.carousel-track1.economic .carousel-slide');
+const pagination = document.querySelector('.carousel-pagination1');
+console.log(pagination);
+if (carouselContainer && carousel && slides.length > 0 && pagination) {
+    // Create pagination dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.classList.add('pagination-dot');
+        if (index == 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            slides[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
+        pagination.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.pagination-dot');
+    
+    // Update active dot on scroll based on which slide is centered
+    carouselContainer.addEventListener('scroll', () => {
+        const containerCenter = carouselContainer.scrollLeft + carouselContainer.offsetWidth / 2;
+        
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+        
+        slides.forEach((slide, index) => {
+            const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+            const distance = Math.abs(containerCenter - slideCenter);
+            
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestIndex = index;
+            }
+        });
+        
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === closestIndex);
+        });
+    });
+}
+/* ========== MOBILE CAROUSEL JAVASCRIPT END ========== */
         function handleResize () {
     const nowDesktop = window.innerWidth > 675;
 
@@ -229,41 +253,52 @@ function updateDots(activeIndex) {
         </div>
     </div>
     <div class = "carousel">
-        <!-- Carousel Template -->
-        <section class='carousel-container1'>
-            <div class='carousel-scroller'>
-                <article class='carousel-card1 first-card1'>
-                    <p>Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
-                        <p class="title1" style="color:#FFC907"> 41% </p>
-                        <p class ="statistic">Landed full or part-time jobs</p>
-                    </div>
-                    <div class="carousel-people carousel-people1">
+        <!-- ========== MOBILE CAROUSEL START ========== -->
+<div class="mobile-section">
+    <div class="mobile-carousel">
+        <div class="carousel-track1 economic">
+            <!-- Slide 1 - Copy this entire div to add more slides -->
+            <div class="carousel-slide first-card1">
+                <p class="nunito-sans">Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
 
-                    </div>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
-                        <p class="title1" style ="color:#ED1C65"> 33% </p>
-                        <p class ="statistic">Secured paid internships</p>
-                    </div>
-                    <div class="carousel-people carousel-people2">
+            </div>
+            
+            <!-- Slide 2 - Copy this entire div to add more slides -->
+            <div class="carousel-slide">
+                <div class="carousel-header">
+                    <p class="title1" style="color:#FFC907"> 41% </p>
+                    <p class ="statistic">Landed full or part-time jobs</p>
+                </div>
+                <div class="carousel-people carousel-people1">
 
-                    </div>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
-                        <p class = "title1" style="color:#4298D3"> 11% </p>
-                        <p class ="statistic">Found contract work</p>
-                    </div>
-                    <div class="carousel-people carousel-people3">
+                </div>
+            </div>
+            
+            <!-- Slide 3 - Copy this entire div to add more slides -->
+            <div class="carousel-slide">
+                <div class="carousel-header">
+                    <p class="title1" style ="color:#ED1C65"> 33% </p>
+                    <p class ="statistic">Secured paid internships</p>
+                </div>
+                <div class="carousel-people carousel-people2">
 
-                    </div>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
+                </div>
+            </div>
+
+            <!-- Slide 4 - Copy this entire div to add more slides -->
+             <div class="carousel-slide">
+                <div class="carousel-header">
+                    <p class = "title1" style="color:#4298D3"> 11% </p>
+                    <p class ="statistic">Found contract work</p>
+                </div>
+                <div class="carousel-people carousel-people3">
+
+                </div>
+            </div>
+
+            <!-- Slide 5 - Copy this entire div to add more slides -->
+             <div class="carousel-slide">
+                <div class="carousel-header">
                         <p class = "title1" style="color:#65469C"> 5% </p>
                         <p class ="statistic">Launched a venture</p>
                     </div>
@@ -289,17 +324,11 @@ function updateDots(activeIndex) {
                             </div>
                         </div>
                     </div>
-                </article>
             </div>
-            <div class='carousel-dots'>
-                <span class='dot active'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-            </div>
-        </section>
-<!-- CAROUSEL END -->
+        </div>
+        <div class="carousel-pagination1"></div>
+    </div>
+</div>
     </div>
     <div class="animation">
             <div class="animationPeople">

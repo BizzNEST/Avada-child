@@ -291,6 +291,7 @@ gap: 24px;
     }
 }
 .carousel {
+    position: relative;
     width: 100%;
 }
 /* Carousel Template */
@@ -332,11 +333,6 @@ gap: 24px;
 
 }
 /* The first carousel card uses a unique background */
-.first-card1 {
-    background: 
-    linear-gradient(135deg, #5EBF8D, #D5B43A) padding-box, 
-    linear-gradient(to right, #5EBF8D, #D5B43A) border-box;
-}
 .first-card1 p {
     color: #FFF;
 
@@ -355,15 +351,15 @@ line-height: normal;
     height: 100px;
     border: #5EBF8D;
 }
-.dot {
+.dot1 {
     width: 10px;
     height: 10px;
-    background-color: grey;
+    background-color: #fff;
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
-.dot.active {
-  background: #fff; /* or brand color */
+.dot1.active {
+  background: grey; /* or brand color */
 }
 @media screen and (max-width: 675px) {
     .carousel-container1 {
@@ -379,6 +375,12 @@ line-height: normal;
     }
     .carousel-dots{
         display: flex;
+    }
+    .main-text p {
+        margin: 0px;
+    }
+    .header h2{
+        margin: 0px
     }
 }
 .carousel-people {
@@ -433,25 +435,15 @@ ul {
 
 /* Mobile/CardStatisticText */
 font-family: "Nunito Sans";
-font-size: 20px;
+font-size: 20px !important;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 letter-spacing: -0.44px;
 }
-.first-card1 p {
-    color: #FFF;
-
-/* Mobile/Body 1 */
-font-family: Nunito;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
 .title1{
 font-family: "IBM Plex Sans", sans-serif;
-font-size: 54px;
+font-size: 54px !important;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -477,6 +469,167 @@ align-self: stretch;
 .carousel-people4 .peopleContainer {
     grid-template-columns: repeat(3, 1fr);
 }
-.carousel-scroller::-webkit-scrollbar {
-  display: none;
+/* ========== MOBILE CAROUSEL CSS START ========== */
+
+/* Hide mobile section by default (shows only on mobile) */
+.mobile-section {
+    display: none;
 }
+
+/* Mobile carousel styles - Only displays on screens ≤675px */
+@media screen and (max-width: 675px) {
+    .mobile-section {
+        display: block;
+    }
+
+    .mobile-carousel {
+        width: 100%;
+        max-width: 353px;
+        margin: 0 auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 1rem;
+        scroll-snap-type: x mandatory;
+    }
+
+    .mobile-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-track1 {
+        display: flex;
+        gap: 20px;
+        padding: 0 calc(50% - 176.5px);
+    }
+    .carousel-track1.economic .first-card1 {
+        background: 
+        linear-gradient(135deg, #5EBF8D, #D5B43A) padding-box, 
+        linear-gradient(to right, #5EBF8D, #D5B43A) border-box;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .carousel-track1.economic .first-card1 p {
+    color: #FFF;
+
+/* Mobile/Body 1 */
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+    .carousel-slide {
+        min-width: 353px;
+        max-width: 353px;
+        width: 353px;
+        flex-shrink: 0;
+        display: flex;
+        height: 401px;
+        padding: 50px 30px 30px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        border-radius: 20px;
+        border: 3px solid #5EBF8D;
+        background: #35373C;
+        box-sizing: border-box;
+        scroll-snap-align: center;
+        overflow: hidden;
+    }
+
+    .carousel-slide h3 {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-slide p {
+        color: white;
+        font-size: 1rem;
+        margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-slide ul,
+    .carousel-slide ol {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding-left: 1.2rem;
+    }
+
+    .carousel-slide li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-pagination1 {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+
+    .pagination-dot.active {
+        background: white;
+        width: 12px;
+        height: 12px;
+    }
+
+    .pagination-dot:hover {
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Smaller mobile screens - Scale down carousel for better fit */
+@media screen and (max-width: 400px) {
+    .mobile-carousel {
+        max-width: 300px;
+    }
+
+    .carousel-track1 {
+        padding: 0 calc(50% - 150px);
+    }
+
+    .carousel-slide {
+        min-width: 300px;
+        max-width: 300px;
+        width: 300px;
+        height: 341px;
+        padding: 42px 25px 25px 25px;
+        gap: 20px;
+    }
+
+    .carousel-slide h3 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-slide p {
+        font-size: 0.9rem;
+    }
+}
+/* ========== MOBILE CAROUSEL CSS END ========== */
