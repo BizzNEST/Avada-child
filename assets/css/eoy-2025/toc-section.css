@@ -78,15 +78,19 @@
 }
 #btn-mustard:hover {
     background-color: #CAA737;
+    cursor: pointer;
 }
 #btn-violet:hover{
     background-color: #6A4B9A;
+    cursor: pointer;
 }
 #btn-blue:hover{
     background-color: #0B7AB6;
+    cursor: pointer;
 }
 #btn-cranberry:hover{
     background-color: #CE2459;
+    cursor: pointer;
 }
 
 .eoy-toc h2 {
