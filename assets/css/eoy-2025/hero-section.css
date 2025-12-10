@@ -39,7 +39,7 @@
         background-color: white;
         border: transparent;
         color: black;
-        padding: 1em 0;
+        padding: 1em 4em;
         font-weight: 700;
         font-size: large;
     }
@@ -84,6 +84,10 @@
         font-size: large;
     }
 }
+
+.eoy-hero .nunito-sans{
+        display: flex;
+    }
 
 .eoy-hero h2, .eoy-hero p {
     color: white;

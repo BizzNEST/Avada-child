@@ -98,25 +98,6 @@
 }
 
     document.addEventListener('DOMContentLoaded', (event) => {
-        const scroller = document.querySelector('.carousel-scroller');
-const cards = Array.from(document.querySelectorAll('.carousel-card1'));
-const dots = Array.from(document.querySelectorAll('.dot'));
-
-scroller.addEventListener('scroll', () => {
-    const scrollPosition = scroller.scrollLeft;
-    const cardWidth = cards[0].offsetWidth;
-    
-    const index = Math.round(scrollPosition / cardWidth);
-
-    updateDots(index);
-});
-
-function updateDots(activeIndex) {
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === activeIndex);
-    });
-}
-
         const group1 = generateGroup(15, 0);
         group1.classList.add("animated");
         const group2 = generateGroup(15, 0);
@@ -132,85 +113,85 @@ function updateDots(activeIndex) {
         group4.classList.add("special")
         let observerCreated = false;
         let observer = null;
-        let isDesktop = null; 
+        let isDesktop = null;
 
         function handleResize () {
-    const nowDesktop = window.innerWidth > 675;
+            const nowDesktop = window.innerWidth > 675;
 
-    if (nowDesktop === isDesktop) {
-        return;
-    }
-    isDesktop = nowDesktop;
-
-    if (!nowDesktop) {
-        counter = 0;
-
-        if (observer) {
-            observer.disconnect();
-            observer = null;
-        }
-
-        const card1 = document.querySelector(".carousel-people1");
-        const card2 = document.querySelector(".carousel-people2");
-        const card3 = document.querySelector(".carousel-people3");
-        const card4 = document.querySelector(".carousel-people4");
-
-        if (!card1.querySelector(".peopleContainer")) {
-            card1.append(group5);
-            card2.append(group6);
-            card3.append(group7);
-        }
-
-        return;
-    }
-
-
-    const container = document.querySelector(".animationPeople");
-    const containerB = document.querySelector(".stats");
-
-    container.append(group1);
-    container.append(group2);
-    container.append(group3);
-    container.append(group4);
-
-    counter = 0;
-    container.querySelectorAll(".person").forEach(p => {
-        p.style.color = "#B2B2B2";
-    });
-
-    container.querySelectorAll(".animated").forEach(c => {
-        c.classList.remove("show");
-    });
-    containerB.querySelectorAll(".child").forEach(c => {
-        c.classList.remove("show");
-    });
-
-    const childrenB = containerB.querySelectorAll(".child");
-    const children = container.querySelectorAll(".animated");
-
-    observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateChildrenSequentially(children, 500, 0)
-    .then(() => {
-        setTimeout(() => {
-            animateChildrenSequentially(childrenB, 500, 1);
-        }, 800);
-    });
-
-
-                observer.unobserve(container);
+            if (nowDesktop === isDesktop) {
+                return;
             }
-        });
-    }, { threshold: 0.3 });
+            isDesktop = nowDesktop;
 
-    observer.observe(container);
-}
+            if (!nowDesktop) {
+                counter = 0;
+
+                if (observer) {
+                    observer.disconnect();
+                    observer = null;
+                }
+
+                const card1 = document.querySelector(".carousel-people1");
+                const card2 = document.querySelector(".carousel-people2");
+                const card3 = document.querySelector(".carousel-people3");
+                const card4 = document.querySelector(".carousel-people4");
+
+                if (!card1.querySelector(".peopleContainer")) {
+                    card1.append(group5);
+                    card2.append(group6);
+                    card3.append(group7);
+                }
+
+                return;
+            }
+
+
+            const container = document.querySelector(".animationPeople");
+            const containerB = document.querySelector(".stats");
+
+            container.append(group1);
+            container.append(group2);
+            container.append(group3);
+            container.append(group4);
+
+            counter = 0;
+            container.querySelectorAll(".person").forEach(p => {
+                p.style.color = "#B2B2B2";
+            });
+
+            container.querySelectorAll(".animated").forEach(c => {
+                c.classList.remove("show");
+            });
+            containerB.querySelectorAll(".child").forEach(c => {
+                c.classList.remove("show");
+            });
+
+            const childrenB = containerB.querySelectorAll(".child");
+            const children = container.querySelectorAll(".animated");
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateChildrenSequentially(children, 500, 0)
+                    .then(() => {
+                        setTimeout(() => {
+                            animateChildrenSequentially(childrenB, 500, 1);
+                        }, 800);
+                    });
+                        observer.unobserve(container);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(container);
+        }
 
         handleResize();
         window.addEventListener('resize', handleResize);
-    })
-    </script>
+    });
+
+</script>
+
 <section class="eoy-economic" id="economic-prosperity">
     <div class="container1">
         <div class="header">
@@ -229,77 +210,81 @@ function updateDots(activeIndex) {
         </div>
     </div>
     <div class = "carousel">
-        <!-- Carousel Template -->
-        <section class='carousel-container1'>
-            <div class='carousel-scroller'>
-                <article class='carousel-card1 first-card1'>
-                    <p>Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
-                        <p class="title1" style="color:#FFC907"> 41% </p>
-                        <p class ="statistic">Landed full or part-time jobs</p>
+        <!-- ========== MOBILE CAROUSEL START ========== -->
+        <div class="mobile-section">
+            <div class="mobile-carousel">
+                <div class="carousel-track economic-carousel-track">
+                    <!-- Slide 1 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide first-card1 slide-1">
+                        <p class="nunito-sans">Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
                     </div>
-                    <div class="carousel-people carousel-people1">
+                    
+                    <!-- Slide 2 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide">
+                        <div class="carousel-header">
+                            <p class="title1" style="color:#FFC907"> 41% </p>
+                            <p class ="statistic">Landed full or part-time jobs</p>
+                        </div>
+                        <div class="carousel-people carousel-people1">
 
+                        </div>
                     </div>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
-                        <p class="title1" style ="color:#ED1C65"> 33% </p>
-                        <p class ="statistic">Secured paid internships</p>
-                    </div>
-                    <div class="carousel-people carousel-people2">
+                    
+                    <!-- Slide 3 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide">
+                        <div class="carousel-header">
+                            <p class="title1" style ="color:#ED1C65"> 33% </p>
+                            <p class ="statistic">Secured paid internships</p>
+                        </div>
+                        <div class="carousel-people carousel-people2">
 
+                        </div>
                     </div>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
-                        <p class = "title1" style="color:#4298D3"> 11% </p>
-                        <p class ="statistic">Found contract work</p>
-                    </div>
-                    <div class="carousel-people carousel-people3">
 
+                    <!-- Slide 4 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide">
+                        <div class="carousel-header">
+                            <p class = "title1" style="color:#4298D3"> 11% </p>
+                            <p class ="statistic">Found contract work</p>
+                        </div>
+                        <div class="carousel-people carousel-people3">
+
+                        </div>
                     </div>
-                </article>
-                <article class='carousel-card1'>
-                    <div class="carousel-header">
-                        <p class = "title1" style="color:#65469C"> 5% </p>
-                        <p class ="statistic">Launched a venture</p>
-                    </div>
-                    <div class="carousel-people carousel-people4">
-                        <div class="peopleContainer">
-                            <div class="person">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
-  <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
-  <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
-</svg>
-                            </div>
-                            <div class="person">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
-  <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
-  <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
-</svg>
-                            </div>
-                            <div class="person">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
-  <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
-  <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
-</svg>
+
+                    <!-- Slide 5 - Copy this entire div to add more slides -->
+                    <div class="carousel-slide">
+                        <div class="carousel-header">
+                            <p class = "title1" style="color:#65469C"> 5% </p>
+                            <p class ="statistic">Launched a venture</p>
+                        </div>
+                        <div class="carousel-people carousel-people4">
+                            <div class="peopleContainer">
+                                <div class="person">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
+                                        <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
+                                        <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
+                                    </svg>
+                                </div>
+                                <div class="person">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
+                                        <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
+                                        <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
+                                    </svg>
+                                </div>
+                                <div class="person">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="58" height="134" viewBox="0 0 58 134" fill="none">
+                                        <path d="M52.1857 82.2218C54.587 82.2218 56.5991 80.3789 56.7407 77.9913C56.9695 74.0977 57.0762 70.5242 57.0779 67.2349C57.054 50.2877 54.3039 40.907 50.5519 35.2671C48.6767 32.4679 46.4848 30.6717 44.4584 29.6772C42.5409 28.7271 40.8541 28.4991 39.8206 28.4806C39.7356 28.4756 39.6506 28.4683 39.5644 28.4683H17.517C17.4296 28.4683 17.3446 28.4761 17.2585 28.4806C16.2244 28.5003 14.537 28.726 12.6201 29.6766C9.55056 31.1748 6.24187 34.4507 3.925 40.2556C1.58073 46.0831 0.00798923 54.5092 0 67.2337C0 70.5225 0.108996 74.0988 0.341254 77.9935C0.48449 80.3789 2.49549 82.2212 4.8934 82.2212C4.98414 82.2212 5.07487 82.2184 5.16675 82.2133C7.68336 82.0673 9.60363 79.942 9.45754 77.4651C9.23384 73.7316 9.13055 70.3294 9.13055 67.2337C9.11229 53.6332 11.1273 45.9943 13.1069 42.0087V126.24C13.1069 130.075 16.2666 133.182 20.162 133.182C24.0584 133.182 27.2182 130.075 27.2182 126.24V75.5509H29.8632V126.24C29.8632 130.075 33.0229 133.182 36.9182 133.182C40.8147 133.182 43.9744 130.075 43.9744 126.24V42.0362C44.3128 42.719 44.6535 43.5012 44.9896 44.4142C46.5978 48.8019 47.9502 55.9995 47.9462 67.2343C47.9462 70.3311 47.8441 73.7339 47.6244 77.4685C47.4777 79.9454 49.3991 82.0702 51.9163 82.2139C52.0065 82.2195 52.0966 82.2218 52.1857 82.2218Z" fill="#65469C"/>
+                                        <path d="M28.54 25.2683C35.6313 25.2683 41.3799 19.6118 41.3799 12.6341C41.3799 5.6565 35.6313 0 28.54 0C21.4488 0 15.7002 5.6565 15.7002 12.6341C15.7002 19.6118 21.4488 25.2683 28.54 25.2683Z" fill="#65469C"/>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </article>
+                </div>
+                <div class="carousel-pagination"></div>
             </div>
-            <div class='carousel-dots'>
-                <span class='dot active'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-            </div>
-        </section>
-<!-- CAROUSEL END -->
+        </div>
     </div>
     <div class="animation">
             <div class="animationPeople">
