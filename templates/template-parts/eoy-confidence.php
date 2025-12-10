@@ -11,13 +11,15 @@
                 <p>Confidence is necessary to identify, pursue, and achieve one’s professional ambitions. At Digital NEST, we bake confidence into our programming within four categories: career navigation skills, professional skills, technical skills, and (for our 18+ members) securing a next step that prepares them for a wealth-building career such as a job, internship, or enrollment or return to college. </p>
                 <p>This year, our members reported dramatic increases in their ability to navigate their futures. When NESTers exercise their agency to follow their dreams, transformation begins.</p>
             </div>
+            <section class="bulletpoints">
             <ul>
-                <li><p class='nunito-sans'>62% increased confidence that they can identify employers, companies, and/or institutions relevant to their career goals.</p></li>
-                <li><p class='nunito-sans'>47% increased confidence that they can find accurate and helpful information about careers they are interested in.</p></li>
-                <li><p class='nunito-sans'>55% increased confidence that they can define how they want to establish and maintain a work-life balance.</p></li>
-                <li><p class='nunito-sans'>53% increased confidence they can determine the steps they need to take to successfully accomplish their education and/or career goals</p></li>
-                <li><p class='nunito-sans'>42% increased confidence they can choose a career that will match their work-life balance.</p></li>
-            </ul>
+                <li><p >62% increased confidence that they can identify employers, companies, and/or institutions relevant to their career goals.</p></li>
+                <li><p >47% increased confidence that they can find accurate and helpful information about careers they are interested in.</p></li>
+                <li><p >55% increased confidence that they can define how they want to establish and maintain a work-life balance.</p></li>
+                <li><p >53% increased confidence they can determine the steps they need to take to successfully accomplish their education and/or career goals</p></li>
+                <li><p >42% increased confidence they can choose a career that will match their work-life balance.</p></li>
+            </ul></section>
+
         </div>
 
         <!-- Carousel Template -->
@@ -26,7 +28,7 @@
                 <div class="carousel-track confidence-carousel-track">
                     <!-- Slide 1 - Copy this entire div to add more slides -->
                     <div class="carousel-slide slide-1">
-                        <p class='nunito-sans'>Confidence is necessary to identify, pursue and achieve one’s professional ambitions. This year, our members reported dramatic increases in their ability to navigate their futures. When NESTers exercise their agency to follow their dreams, transformation begins.</p>
+                        <p c>Confidence is necessary to identify, pursue and achieve one’s professional ambitions. This year, our members reported dramatic increases in their ability to navigate their futures. When NESTers exercise their agency to follow their dreams, transformation begins.</p>
                     </div>
                     
                     <!-- Slide 2 - Copy this entire div to add more slides -->
@@ -36,7 +38,7 @@
                         </div>
                         <div class='card-content'>
                             <h2 class='ibm-plex-sans'>47%</h2>
-                            <p class='nunito-sans'>Can find helpful and accurate information about careers they are interested in</p>
+                            <p >Can find helpful and accurate information about careers they are interested in</p>
                         </div>
                     </div>
                     
@@ -47,7 +49,7 @@
                         </div>
                         <div class='card-content'>
                             <h2 class='ibm-plex-sans'>55%</h2>
-                            <p class='nunito-sans'>Can define their ideal worklife balance</p>
+                            <p >Can define their ideal worklife balance</p>
                         </div>
                     </div>
 
@@ -57,7 +59,7 @@
                         </div>
                         <div class='card-content'>
                             <h2 class='ibm-plex-sans'>53%</h2>
-                            <p class='nunito-sans'>Can map the steps to accomplish their goals</p>
+                            <p '>Can map the steps to accomplish their goals</p>
                         </div>
                     </div>
 
@@ -67,7 +69,7 @@
                         </div>
                         <div class='card-content'>
                             <h2 class='ibm-plex-sans'>62%</h2>
-                            <p class='nunito-sans'>Gained confidence to identify career-relevant employers</p>
+                            <p >Gained confidence to identify career-relevant employers</p>
                         </div>
                     </div>
                 </div>
@@ -82,7 +84,7 @@
                     <h2 class='ibm-plex-sans'>47%</h2>
                 </div>
                 <div class='item-content'>
-                    <p class='nunito-sans'>Can find helpful and accurate information about careers they are interested in</p>
+                    <p >Can find helpful and accurate information about careers they are interested in</p>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image.png" alt="Students with a laptop">
                 </div>
             </div>
@@ -91,13 +93,13 @@
                     <h2 class='ibm-plex-sans'>55%</h2>
                 </div>
                 <div class='item-content'>
-                    <p class='nunito-sans'>Can define their ideal worklife balance</p>
+                    <p >Can define their ideal worklife balance</p>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (1).png" alt="Students with a laptop">
                 </div>
             </div>
             <div class='grid-item'>
                 <div class='item-content'>
-                    <p class='nunito-sans'>Can map the steps to accomplish their goals</p>
+                    <p>Can map the steps to accomplish their goals</p>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (2).png" alt="Students with a laptop">
                 </div>
                 <div class='item-stat'>
@@ -109,7 +111,7 @@
                     <h2 class='ibm-plex-sans'>62%</h2>
                 </div>
                 <div class='item-content'>
-                    <p class='nunito-sans'>Gained confidence to identify career-relevant employers</p>
+                    <p >Gained confidence to identify career-relevant employers</p>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (3).png" alt="Students with a laptop">
                 </div>
             </div>
