@@ -87,125 +87,70 @@
     transition: 0.5s ease;
 }
 
-/* Carousel Template */
-.carousel-container {
-    overflow: hidden;
-    display: none; /* This makes it hide in desktop view */
-}
-/* Carousel Scroller */
-.carousel-scroller {
-    display: flex;
-    width: 100%;
-    overflow: scroll;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: flex-start; 
-    gap: 2rem;
-}
-/* Carousel Cards */
-.carousel-card {
-    display: flex;
-    width: 100%; /* Makes each card stretch to the screen */
-    min-height: 400px; /* Prevents the card from shrinking too much */
-    background: 
-        linear-gradient(135deg, #35373C, #35373C), /* Foreground Gradient */
-        linear-gradient(to right, #6A4B9A, #C6A336); /* Border Gradient */
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
-    background-repeat: no-repeat; 
-    border: 3px solid transparent;
-    border-radius: 2em;
-    scroll-snap-align: start;
-    flex: 0 0 100%; 
-    overflow: hidden;
-}
-/* The first carousel card uses a unique background */
-.first-card{
-    background: 
-        linear-gradient(135deg, #6A4B9A, #C6A336), /* Foreground Gradient */
-        linear-gradient(to right, #6A4B9A, #C6A336); /* Border Gradient */
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
-    background-repeat: no-repeat;
-    padding: 1.5em;
-}
+/* Carousel */
+
 .card-image {
     display: flex;
     overflow: hidden;
     width: 100%;
     height: 50%;
 }
+
 .card-image img {
     object-fit: cover;
-    object-position: top;
+    object-position: center;
     width: 100%;
     height: 100%;
 }
+
 .card-content {
     display: flex;
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
-    gap: 1em;
-    padding: 2em;
+    gap: 1rem;
+    padding: 2rem;
     height: 50%;
 }
-.carousel-card h2 {
-    font-size: 5em;
-    line-height: 1;
-    margin: 0;
-    font-weight: 700;
-    color: #C6A336;
-}
-.carousel-card p, .carousel-card h2 {
-    padding: 0;
-}
-.carousel-card p {
-    font-size: 1.15em;
-}
-.carousel-card:not(.first-card) p {
-    font-size: 1.25em;
-    line-height: 1.2;
-}
-.carousel-dots{
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 1rem;
-    height: 100px;
-    border: #5EBF8D;
-}
-.dot {
-    width: 10px;
-    height: 10px;
-    background-color: grey;
-    border-radius: 50%;
-    &.active{
-        background-color: white;
-    }
-}
+
+
 @media screen and (max-width: 675px) {
     .eoy-confidence .container {
         padding: 0 !important;
     }
-    .carousel-container {
-        display: flex;
-        flex-direction: column;
+
+    .confidence-carousel-track .carousel-slide {
+        background: linear-gradient(135deg, #35373C, #35373C), linear-gradient(142deg, #6A4B9A, #C7A436);
+        background-origin: padding-box, border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+
+        padding: 0px;
+        gap: 0px;
     }
-    .carousel-card {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        align-items: flex-start;
+
+    .confidence-carousel-track .carousel-slide h2 {
+        font-size: 5em;
+        line-height: 1;
+        margin: 0;
+        font-weight: 700;
+        color: #C6A336;
+    }
+
+    .confidence-carousel-track > .slide-1 {
         justify-content: center;
-        width: 353px;
-        height: 70vh;
-        min-height: initial; /* Override the desktop min-height */
+        border-radius: 20px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), linear-gradient(142deg, #C7A436 0%, #6A4B9A 100%), linear-gradient(142deg, #6A4B9A, #C7A436);
+        background-origin: padding-box, border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+
+        padding: 1rem;
+
     }
-    .carousel-dots{
-        display: flex;
+
+    .confidence-carousel-track > .slide-2 img {
+        object-position: top;
     }
 }
 
