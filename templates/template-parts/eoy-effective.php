@@ -191,6 +191,25 @@
                 </div>
             </div>
        </div>
+
+       <!-- TABLET ONLY LAYOUT CONTAINER -->
+       <div class="tablet-layout">
+            <div class="tablet-pies">
+                <!-- 70% Pie Chart -->
+                <img src="<?php echo $piePath . rawurlencode($leftImages[0]); ?>" alt="70% Pie Chart">
+                
+                <!-- 98%, 94%, 75% Pie Charts -->
+                <?php foreach ($rightImages as $image): ?>
+                    <img src="<?php echo $rightPath . rawurlencode($image); ?>" alt="Pie Chart">
+                <?php endforeach; ?>
+            </div>
+            
+            <div class="tablet-associate">
+                <img src="<?php echo $associatePath . rawurlencode($associateLeft[0]); ?>" alt="Associate" class="overlay-image">
+            </div>
+        </div>
+        <!-- END TABLET ONLY CONTAINER -->
+       
    </div>
 </section>
 <script>
