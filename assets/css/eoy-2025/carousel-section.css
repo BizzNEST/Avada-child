@@ -10,6 +10,7 @@
     .mobile-section {
         display: block;
         position: relative;
+        padding-bottom: 2rem;
     }
 
     .mobile-carousel {
@@ -79,7 +80,7 @@
 
     .carousel-pagination {
         position: absolute;
-        bottom: -20px;
+        bottom: 15px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
