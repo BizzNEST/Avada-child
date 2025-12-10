@@ -306,19 +306,19 @@ function updateDots(activeIndex) {
 
             </div>                
             <div class="stats">
-                <div class="fortyOne child">
+                <div class="percent-holder fortyOne child">
                     <h3>41%</h3>
                     <p>Landed full or part-time jobs</p>
                 </div>
-                <div class="thirtyThree child">
+                <div class="percent-holder thirtyThree child">
                     <h3>33%</h3>
                     <p>Secured paid internships</p>
                 </div>
-                <div class="eleven child">
+                <div class="percent-holder eleven child">
                     <h3>11%</h3>
                     <p>Found contract work</p>
                 </div>
-                <div class="five child">
+                <div class="percent-holder five child">
                     <h3>5%</h3>
                     <p>Launched a venture</p>
                 </div>
