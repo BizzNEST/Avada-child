@@ -285,11 +285,17 @@ p {
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 0px;
   }
+}
+.carousel {
+  width: 100%;
 }
 
 /* The first carousel card uses a unique background */
+.first-card1 {
+  background: linear-gradient(135deg, #5ebf8d, #d5b43a) padding-box,
+    linear-gradient(to right, #5ebf8d, #d5b43a) border-box;
+}
 .first-card1 p {
   color: #fff;
 
@@ -300,7 +306,6 @@ p {
   font-weight: 400;
   line-height: normal;
 }
-
 @media screen and (max-width: 675px) {
   .economic-carousel-track .carousel-slide {
     background: linear-gradient(135deg, #35373c, #35373c),
@@ -322,13 +327,6 @@ p {
     background-origin: padding-box, border-box;
     background-clip: padding-box, border-box;
     background-repeat: no-repeat;
-  }
-
-  .main-text p {
-    margin: 0px;
-  }
-  .header h2 {
-    margin: 0px;
   }
 }
 .carousel-people {
@@ -379,15 +377,25 @@ ul {
 
   /* Mobile/CardStatisticText */
   font-family: "Nunito Sans";
-  font-size: 20px !important;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.44px;
 }
+.first-card1 p {
+  color: #fff;
+
+  /* Mobile/Body 1 */
+  font-family: Nunito;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 .title1 {
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 54px !important;
+  font-size: 3rem !important;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -412,4 +420,7 @@ ul {
 }
 .carousel-people4 .peopleContainer {
   grid-template-columns: repeat(3, 1fr);
+}
+.carousel-scroller::-webkit-scrollbar {
+  display: none;
 }
