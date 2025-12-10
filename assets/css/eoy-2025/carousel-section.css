@@ -9,6 +9,7 @@
 @media screen and (max-width: 675px) {
     .mobile-section {
         display: block;
+        position: relative;
     }
 
     .mobile-carousel {
@@ -42,7 +43,7 @@
         border-radius: 20px;
         box-sizing: border-box;
         scroll-snap-align: start;
-        flex: 0 0 100%; 
+        flex: 0 0 100%;
         overflow: hidden;
         justify-content: center;
         height: 70vh;
@@ -78,7 +79,7 @@
 
     .carousel-pagination {
         position: absolute;
-        bottom: 20px;
+        bottom: -20px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;

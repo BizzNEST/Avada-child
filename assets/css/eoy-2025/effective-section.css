@@ -58,7 +58,7 @@
     margin-top: 2.5rem;
     width: 539px;
     height: 304px;
-    background: linear-gradient(90deg, #1B7DC1 11.54%, #694B9E 50%);
+    background: linear-gradient(90deg, #1b7dc1 11.54%, #694b9e 50%);
     display: flex;
     justify-content: center;
     position: relative;
@@ -85,138 +85,163 @@
     width: 189px;
 }
 
-
 .ef-pagination-dots {
-  display: none;
-
-}
-
-.ef-pagination-dots .ef-dot {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-}
-
-.ef-pagination-dots .ef-dot-active {
-  background-color: white;
-}
-@media (max-width: 675px) {
-
-.ef-pagination-dots {
-    justify-content: center;
-    gap: 8px;
-    margin-top: 1rem;
-    display: flex !important;
-  }
-
-.ef-carousel-container {
-    overflow: hidden;
-    color: white;
-}
-
-/* Carousel Scroller */
-.ef-carousel-scroller {
-    display: flex;
-    width: 100%;
-    overflow: scroll;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: flex-start; 
-    gap: 2rem;
-    scrollbar-width: none;
-}
-.ef-carousel-scroller::-webkit-scrollbar{
     display: none;
 }
 
-/* Carousel Cards */
-.ef-carousel-card {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    width: 100%; /* Makes each card stretch to the screen */
-    background: 
-        linear-gradient(135deg, #35373C, #35373C), /* Foreground Gradient */
-        linear-gradient(to right, #0B7AB6, #CE2459); /* Border Gradient */
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
-    background-repeat: no-repeat; 
-    border: 3px solid transparent;
-    border-radius: 2rem;
-    scroll-snap-align: start;
-    flex: 0 0 100%; 
-    overflow: hidden;
-    justify-content: space-between;
-    height: 70vh;
+.ef-pagination-dots .ef-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
 }
 
-.ef-carousel-card:nth-child(3) {
-    justify-content: center;
+.ef-pagination-dots .ef-dot-active {
+    background-color: white;
 }
+@media (max-width: 675px) {
+    .ef-pagination-dots {
+        justify-content: center;
+        gap: 8px;
+        margin-top: 1rem;
+        display: flex !important;
+    }
 
-/* The first carousel card uses a unique background */
-.ef-first-card{
-    background: 
-        linear-gradient(144.36deg, #CE2459 -4.99%, #0B7AB6 74.13%), /* Foreground Gradient */
-        linear-gradient(to right, #0B7AB6, #CE2459); /* Border Gradient */
-    background-origin: padding-box, border-box;
-    background-clip: padding-box, border-box;
-    background-repeat: no-repeat;
-    padding: 1.5em;
+    .ef-carousel-container {
+        overflow: hidden;
+        color: white;
+    }
 
-}
+    .ef-track .carousel-slide {
+        background:
+            linear-gradient(135deg, #35373c, #35373c),
+            linear-gradient(to right, #0b7ab6, #ce2459);
+        background-origin: padding-box, border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+    }
 
-.ef-first-card p {
+    .ef-track > .slide-1 {
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        background:
+            linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.25) 0%,
+                rgba(0, 0, 0, 0.25) 100%
+            ),
+            linear-gradient(135deg, #0b7ab6, #ce2459);
+        background-origin: padding-box, border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+    }
+
+    .ef-track > .slide-2 {
+        padding: 0;
+        padding-top: 1rem;
+    }
+
+    /* Carousel Scroller */
+    .ef-carousel-scroller {
+        display: flex;
+        width: 100%;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 2rem;
+        scrollbar-width: none;
+    }
+    .ef-carousel-scroller::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Carousel Cards */
+    .ef-carousel-card {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%; /* Makes each card stretch to the screen */
+        background:
+            linear-gradient(135deg, #35373c, #35373c),
+            /* Foreground Gradient */
+                linear-gradient(to right, #0b7ab6, #ce2459); /* Border Gradient */
+        background-origin: padding-box, border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+        border: 3px solid transparent;
+        border-radius: 2rem;
+        scroll-snap-align: start;
+        flex: 0 0 100%;
+        overflow: hidden;
+        justify-content: space-between;
+        height: 70vh;
+    }
+
+    .ef-carousel-card:nth-child(3) {
+        justify-content: center;
+    }
+
+    /* The first carousel card uses a unique background */
+    .ef-first-card {
+        background:
+            linear-gradient(144.36deg, #ce2459 -4.99%, #0b7ab6 74.13%),
+            /* Foreground Gradient */
+                linear-gradient(to right, #0b7ab6, #ce2459); /* Border Gradient */
+        background-origin: padding-box, border-box;
+        background-clip: padding-box, border-box;
+        background-repeat: no-repeat;
+        padding: 1.5em;
+    }
+
+    .ef-first-card p {
         height: 90%;
         overflow-y: auto;
         align-content: center;
     }
 
+    .ef-card-image {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 50%;
+    }
+    .ef-card-image img {
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        height: 100%;
+    }
+    .ef-card-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        gap: 1em;
+        padding: 2em;
+        height: 50%;
+    }
+    .ef-carousel-card h2 {
+        font-size: 5em;
+        line-height: 1;
+        margin: 0;
+        font-weight: 700;
+    }
 
-.ef-card-image {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    height: 50%;
-}
-.ef-card-image img {
-    object-fit: cover;
-    object-position: top;
-    width: 100%;
-    height: 100%;
-}
-.ef-card-content {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-    gap: 1em;
-    padding: 2em;
-    height: 50%;
-
-}
-.ef-carousel-card h2 {
-    font-size: 5em;
-    line-height: 1;
-    margin: 0;
-    font-weight: 700;
-}
-
-
-
-.ef-carousel-card p, .ef-carousel-card h2 {
-    padding: 0;
-}
-.ef-carousel-card p {
-    font-size: 1.15em;
-}
-.ef-carousel-card:not(.first-card) p {
-    font-size: 1.28em;
-    line-height: 1.2;
-}
+    .ef-carousel-card p,
+    .ef-carousel-card h2 {
+        padding: 0;
+    }
+    .ef-carousel-card p {
+        font-size: 1.15em;
+    }
+    .ef-carousel-card:not(.first-card) p {
+        font-size: 1.28em;
+        line-height: 1.2;
+    }
 
     .header-title {
         width: 100%;
@@ -238,7 +263,6 @@
         text-align: center;
     }
 
-
     /* Container 2 inner styles */
     .topPie {
         display: flex;
@@ -251,15 +275,15 @@
 
     .pie-70-top {
         width: 30%;
-        aspect-ratio: 1 / 1;      /* Keeps it perfectly circular */
+        aspect-ratio: 1 / 1; /* Keeps it perfectly circular */
         z-index: 1;
         border-radius: 50%;
         box-shadow: #000000 0 0 60px 3px;
-        flex-shrink: 0; 
+        flex-shrink: 0;
     }
 
     .top-text-container {
-        padding-top:0.5rem ;
+        padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         display: flex;
         background: linear-gradient(90deg, #1b7dc1 11.54%, #694b9e 50%);
@@ -271,8 +295,8 @@
         align-items: center;
         justify-content: center;
         min-height: 90px;
-        max-height: 122px;   
-        flex-shrink: 10;  
+        max-height: 122px;
+        flex-shrink: 10;
     }
 
     .top-text {
@@ -298,7 +322,6 @@
         object-fit: cover;
     }
 
-
     /* Container 4 inner styles */
     .ef-pie-item {
         display: flex;
@@ -308,12 +331,10 @@
         padding: 1rem;
     }
 
-
     .ef-pie-chart {
         width: 100px;
         height: 100px;
         flex-shrink: 0;
-
     }
 
     .pie-text {
@@ -356,10 +377,10 @@
         align-items: center;
         scroll-snap-type: x mandatory;
         overflow-x: scroll;
-        display: flex;   
+        display: flex;
         flex-wrap: nowrap;
         gap: 2rem;
-        width: 100%; 
+        width: 100%;
         justify-content: flex-start;
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -371,8 +392,8 @@
 
     .scroller section {
         scroll-snap-align: start;
-        flex: 0 0 100%; 
-        padding: 1rem; 
+        flex: 0 0 100%;
+        padding: 1rem;
     }
 
     /* DISABLE HOVER EFFECTS ON MOBILE */
@@ -385,8 +406,8 @@
     }
 }
 
-@media(max-width: 530px){
-    .ef-carousel-card{
+@media (max-width: 530px) {
+    .ef-carousel-card {
         gap: 40px;
     }
     .topPie {
@@ -394,8 +415,6 @@
         flex-direction: column;
         align-items: center;
         margin-left: 1rem;
-        
-        
     }
 
     .pie-70-top {
@@ -435,17 +454,14 @@
         text-align: center;
     }
 
-    .pie-text{
+    .pie-text {
         width: 100% !important;
         overflow-x: scroll;
-        overflow-y: hidden;   
-
-
+        overflow-y: hidden;
     }
-
 }
-@media(max-width: 377px){
-    .pie-text{
+@media (max-width: 377px) {
+    .pie-text {
         width: 100% !important;
         overflow-x: scroll;
 
@@ -509,14 +525,17 @@
         transform: none !important;
     }
 
-    .topPie, .ef-pie-chart, .bottom-associate-image, p.nunito-sans, .pie-text {
+    .topPie,
+    .ef-pie-chart,
+    .bottom-associate-image,
+    p.nunito-sans,
+    .pie-text {
         display: none;
     }
     .column-right ul {
-        padding: 0;   /* removes left indent */
-        margin: 0;    /* removes top/bottom spacing */
+        padding: 0; /* removes left indent */
+        margin: 0; /* removes top/bottom spacing */
     }
-
 }
 
 @media (min-width: 891px) {
@@ -529,8 +548,8 @@
         padding-bottom: 2rem;
     }
     .column-right ul {
-        padding: 0;   
-        margin: 0;    
+        padding: 0;
+        margin: 0;
     }
 
     .bottom-section {
@@ -547,11 +566,15 @@
     }
 
     .left-pie img {
-        transition: transform 0.8s ease, opacity 0.8s ease;
+        transition:
+            transform 0.8s ease,
+            opacity 0.8s ease;
     }
 
     .associate img {
-        transition: transform 0.8s ease, opacity 0.8s ease;
+        transition:
+            transform 0.8s ease,
+            opacity 0.8s ease;
     }
 
     .bottom-section.in-view .associate img {
@@ -560,7 +583,9 @@
     }
 
     .right-section img {
-        transition: transform 0.8s ease, opacity 0.8s ease;
+        transition:
+            transform 0.8s ease,
+            opacity 0.8s ease;
     }
 
     .bottom-section.in-view {
@@ -570,7 +595,9 @@
 
     .pie-description {
         opacity: 0;
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition:
+            opacity 0.5s ease,
+            transform 0.5s ease;
         transform: translateX(-10px);
     }
 
@@ -597,7 +624,9 @@
 
     .pie-description {
         opacity: 0;
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition:
+            opacity 0.5s ease,
+            transform 0.5s ease;
         transform: translateX(-10px);
         padding-bottom: 80px;
         color: white;
@@ -614,7 +643,9 @@
 
     .description70 {
         opacity: 0;
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition:
+            opacity 0.5s ease,
+            transform 0.5s ease;
         transform: translateX(-10px);
     }
 
@@ -637,7 +668,7 @@
         display: flex;
         align-items: center;
         text-align: center;
-        background: linear-gradient(90deg, #1B7DC1 11.54%, #694B9E 50%);
+        background: linear-gradient(90deg, #1b7dc1 11.54%, #694b9e 50%);
         color: white;
         height: 7rem;
         border-top-right-radius: 10px;
@@ -648,7 +679,6 @@
         margin-left: -40px;
         z-index: -1;
     }
-
 
     .ef-carousel-container {
         display: none;
