@@ -21,59 +21,6 @@
         </div>
 
         <!-- Carousel Template -->
-        <!-- <section class='carousel-container'>
-            <div class='carousel-scroller'>
-                <article class='carousel-card first-card'>
-                    <p class='nunito-sans'>Confidence is necessary to identify, pursue and achieve one’s professional ambitions. This year, our members reported dramatic increases in their ability to navigate their futures. When NESTers exercise their agency to follow their dreams, transformation begins.</p>
-                </article>
-                <article class='carousel-card'>
-                    <div class='card-image'>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image.png" alt="Students with a laptop">
-                    </div>
-                    <div class='card-content'>
-                        <h2 class='ibm-plex-sans'>47%</h2>
-                        <p class='nunito-sans'>Can find helpful and accurate information about careers they are interested in</p>
-                    </div>
-                </article>
-                <article class='carousel-card'>
-                    <div class='card-image'>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (1).png" alt="Students with a laptop">
-                    </div>
-                    <div class='card-content'>
-                        <h2 class='ibm-plex-sans'>55%</h2>
-                        <p class='nunito-sans'>Can define their ideal worklife balance</p>
-                    </div>
-                </article>
-                <article class='carousel-card'>
-                    <div class='card-image'>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (2).png" alt="Students with a laptop">
-                    </div>
-                    <div class='card-content'>
-                        <h2 class='ibm-plex-sans'>53%</h2>
-                        <p class='nunito-sans'>Can map the steps to accomplish their goals</p>
-                    </div>
-                </article>
-                <article class='carousel-card'>
-                    <div class='card-image'>
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/eoy-2025/Confidence & Agency Pics/Image (3).png" alt="Students with a laptop">
-                    </div>
-                    <div class='card-content'>
-                        <h2 class='ibm-plex-sans'>62%</h2>
-                        <p class='nunito-sans'>Gained confidence to identify career-relevant employers</p>
-                    </div>
-                </article>
-            </div>
-            <div class='carousel-dots'>
-                <span class='dot active'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-                <span class='dot'></span>
-            </div>
-        </section> -->
-
-
-        <!-- ========== MOBILE CAROUSEL START ========== -->
         <div class="mobile-section">
             <div class="mobile-carousel">
                 <div class="carousel-track confidence-carousel-track">
