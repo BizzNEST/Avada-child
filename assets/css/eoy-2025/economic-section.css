@@ -245,6 +245,9 @@ p {
     align-self: stretch;
     width: 100%;
   }
+  .carousel {
+    display: none;
+  }
 }
 @media screen and (max-width: 675px) {
   .header {
@@ -429,6 +432,7 @@ ul {
   font-weight: 400;
   line-height: normal;
 }
+
 .title1 {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 54px;
