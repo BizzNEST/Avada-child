@@ -1,0 +1,139 @@
+/* ========== MOBILE CAROUSEL CSS START ========== */
+
+/* Hide mobile section by default (shows only on mobile) */
+.mobile-section {
+    display: none;
+}
+
+/* Mobile carousel styles - Only displays on screens ≤675px */
+@media screen and (max-width: 675px) {
+    .mobile-section {
+        display: block;
+        position: relative;
+        padding-bottom: 2rem;
+    }
+
+    .mobile-carousel {
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 1rem;
+        scroll-snap-type: x mandatory;
+    }
+
+    .mobile-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 20px;
+    }
+
+    .carousel-slide {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        padding: 1rem;
+        gap: 40px;
+        width: 100%; /* Makes each card stretch to the screen */
+        border: 3px solid transparent;
+        border-radius: 20px;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        flex: 0 0 100%;
+        overflow: hidden;
+        justify-content: center;
+        height: 45vh;
+        min-height: 400px;
+    }
+
+    .carousel-slide h3 {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-slide p {
+        color: white;
+        font-size: 1.1rem;
+        margin: 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-slide ul,
+    .carousel-slide ol {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding-left: 1.2rem;
+    }
+
+    .carousel-slide li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-pagination {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    .pagination-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: 0;
+    }
+
+    .pagination-dot.active {
+        background: white;
+        width: 12px;
+        height: 12px;
+    }
+
+    .pagination-dot:hover {
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Smaller mobile screens - Scale down carousel for better fit */
+@media screen and (max-width: 400px) {
+    .mobile-carousel {
+        max-width: 300px;
+    }
+
+    .carousel-track {
+        padding: 0 calc(50% - 150px);
+    }
+
+    .carousel-slide {
+        padding: 1rem;
+        gap: 20px;
+    }
+
+    .carousel-slide h3 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-slide p {
+        font-size: 0.9rem;
+    }
+}
+/* ========== MOBILE CAROUSEL CSS END ========== */

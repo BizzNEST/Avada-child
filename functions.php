@@ -104,7 +104,7 @@
         $base_uri  = get_stylesheet_directory_uri() . '/assets/css/eoy-2025/';
         $base_path = get_stylesheet_directory() . '/assets/css/eoy-2025/';
 
-        $sections = array( 'hero', 'toc', 'financial', 'effective', 'economic', 'donation', 'confidence' );
+        $sections = array( 'hero', 'toc', 'financial', 'effective', 'economic', 'donation', 'confidence', 'carousel' );
 
         if ( is_page( 'eoy-2025' ) ) {
             $main_style_file = 'eoy-2025.css';
