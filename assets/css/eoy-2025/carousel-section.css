@@ -47,7 +47,8 @@
         flex: 0 0 100%;
         overflow: hidden;
         justify-content: center;
-        height: 70vh;
+        height: 45vh;
+        min-height: 400px;
     }
 
     .carousel-slide h3 {
