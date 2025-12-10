@@ -411,10 +411,7 @@
         opacity: 1 !important;
     }
 
-    /* Hide tablet layout on mobile */
-    .tablet-layout {
-        display: none !important;
-    }
+
 }
 
 @media (max-width: 530px) {
