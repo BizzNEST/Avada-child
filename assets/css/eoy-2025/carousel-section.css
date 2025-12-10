@@ -35,7 +35,7 @@
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
-        padding: 50px 30px 30px 30px;
+        padding: 1rem;
         gap: 40px;
         width: 100%; /* Makes each card stretch to the screen */
         border: 3px solid transparent;
@@ -44,7 +44,7 @@
         scroll-snap-align: start;
         flex: 0 0 100%; 
         overflow: hidden;
-        justify-content: space-between;
+        justify-content: center;
         height: 70vh;
     }
 
@@ -125,7 +125,7 @@
         max-width: 300px;
         width: 300px;
         height: 341px;
-        padding: 15px;
+        padding: 1rem;
         gap: 20px;
     }
 

@@ -435,9 +435,8 @@
         z-index: 5;
     }
 
-    .financial-carousel-track > .slide-1 {
+    .financial-carousel-track > .slide-1,  .financial-carousel-track > .slide-3 {
         justify-content: center;
-        align-items: center;
         border-radius: 20px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), linear-gradient(142deg, #5EBF8D 0%, #D5B43A 100%);
         background-origin: padding-box, border-box;
