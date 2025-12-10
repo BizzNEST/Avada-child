@@ -113,81 +113,83 @@
         group4.classList.add("special")
         let observerCreated = false;
         let observer = null;
-        let isDesktop = null; 
+        let isDesktop = null;
+
         function handleResize () {
-        const nowDesktop = window.innerWidth > 675;
+            const nowDesktop = window.innerWidth > 675;
 
-        if (nowDesktop === isDesktop) {
-            return;
-        }
-        isDesktop = nowDesktop;
-
-        if (!nowDesktop) {
-            counter = 0;
-
-            if (observer) {
-                observer.disconnect();
-                observer = null;
+            if (nowDesktop === isDesktop) {
+                return;
             }
+            isDesktop = nowDesktop;
 
-            const card1 = document.querySelector(".carousel-people1");
-            const card2 = document.querySelector(".carousel-people2");
-            const card3 = document.querySelector(".carousel-people3");
-            const card4 = document.querySelector(".carousel-people4");
+            if (!nowDesktop) {
+                counter = 0;
 
-            if (!card1.querySelector(".peopleContainer")) {
-                card1.append(group5);
-                card2.append(group6);
-                card3.append(group7);
-            }
-
-            return;
-        }
-
-
-        const container = document.querySelector(".animationPeople");
-        const containerB = document.querySelector(".stats");
-
-        container.append(group1);
-        container.append(group2);
-        container.append(group3);
-        container.append(group4);
-
-        counter = 0;
-        container.querySelectorAll(".person").forEach(p => {
-            p.style.color = "#B2B2B2";
-        });
-
-        container.querySelectorAll(".animated").forEach(c => {
-            c.classList.remove("show");
-        });
-        containerB.querySelectorAll(".child").forEach(c => {
-            c.classList.remove("show");
-        });
-
-        const childrenB = containerB.querySelectorAll(".child");
-        const children = container.querySelectorAll(".animated");
-
-        observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateChildrenSequentially(children, 500, 0)
-                .then(() => {
-                    setTimeout(() => {
-                        animateChildrenSequentially(childrenB, 500, 1);
-                    }, 800);
-                });
-                    observer.unobserve(container);
+                if (observer) {
+                    observer.disconnect();
+                    observer = null;
                 }
-            });
-        }, { threshold: 0.3 });
 
-        observer.observe(container);
-}
+                const card1 = document.querySelector(".carousel-people1");
+                const card2 = document.querySelector(".carousel-people2");
+                const card3 = document.querySelector(".carousel-people3");
+                const card4 = document.querySelector(".carousel-people4");
+
+                if (!card1.querySelector(".peopleContainer")) {
+                    card1.append(group5);
+                    card2.append(group6);
+                    card3.append(group7);
+                }
+
+                return;
+            }
+
+
+            const container = document.querySelector(".animationPeople");
+            const containerB = document.querySelector(".stats");
+
+            container.append(group1);
+            container.append(group2);
+            container.append(group3);
+            container.append(group4);
+
+            counter = 0;
+            container.querySelectorAll(".person").forEach(p => {
+                p.style.color = "#B2B2B2";
+            });
+
+            container.querySelectorAll(".animated").forEach(c => {
+                c.classList.remove("show");
+            });
+            containerB.querySelectorAll(".child").forEach(c => {
+                c.classList.remove("show");
+            });
+
+            const childrenB = containerB.querySelectorAll(".child");
+            const children = container.querySelectorAll(".animated");
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateChildrenSequentially(children, 500, 0)
+                    .then(() => {
+                        setTimeout(() => {
+                            animateChildrenSequentially(childrenB, 500, 1);
+                        }, 800);
+                    });
+                        observer.unobserve(container);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(container);
+        }
 
         handleResize();
         window.addEventListener('resize', handleResize);
-    })
+    });
+
 </script>
 
 <section class="eoy-economic" id="economic-prosperity">
