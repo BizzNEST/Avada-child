@@ -131,6 +131,10 @@
         padding-top: 1rem;
     }
 
+    .ef-track > .slide-3 {
+        gap: 1rem;
+    }
+
     .pie-container {
         display: flex;
         flex-direction: row;
@@ -202,12 +206,10 @@
     }
 
     /* Container 4 inner styles */
-    .ef-pie-item {
+    .ef-pie-stat-container {
         display: flex;
         align-items: center;
         gap: 1rem;
-        z-index: 1;
-        padding: 1rem;
     }
 
     .ef-pie-chart {
@@ -269,7 +271,7 @@
     .pie-70-top {
         width: 90px;
         height: 90px;
-        margin-bottom: -20px;
+        margin-bottom: -10px;
     }
 
     .pie-container {
@@ -292,17 +294,7 @@
     }
 
     .pie-text {
-        width: 100% !important;
-        overflow-x: scroll;
-        overflow-y: hidden;
-    }
-}
-@media (max-width: 377px) {
-    .pie-text {
-        width: 100% !important;
-        overflow-x: scroll;
-
-        white-space: nowrap;
+        font-size: 1rem;
     }
 }
 

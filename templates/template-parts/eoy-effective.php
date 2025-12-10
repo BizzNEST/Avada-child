@@ -58,7 +58,7 @@
                             </div>
                         </div>
 
-                        <div class="carousel-slide">
+                        <div class="carousel-slide slide-3">
                             <?php
                             $pieData = [
                                 [
@@ -84,7 +84,7 @@
                             ?>
 
                             <?php foreach ($pieData as $pie): ?>
-                                <div class="ef-pie-item">
+                                <div class="ef-pie-stat-container">
                                     <img src="<?php echo $piePath .
                                         rawurlencode(
                                             $pie["image"],
