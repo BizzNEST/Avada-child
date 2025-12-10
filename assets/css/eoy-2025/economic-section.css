@@ -1,306 +1,370 @@
 p {
-  margin-top: 0px;
-  margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 .child h3 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .eoy-economic {
-  display: flex;
-  padding: 1em;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  align-self: stretch;
+    display: flex;
+padding: 1em;
+flex-direction: column;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
 }
 .eoy-economic .main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  align-self: stretch;
-}
-.eoy-economic h2 {
-  color: #fff;
-
-  /* Desktop/Heading 2 */
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.792px;
-}
-.eoy-economic .main-text {
-  align-items: flex-start;
-  gap: 24px;
-  align-self: stretch;
-}
-.main-text li {
-  color: #fff;
-
-  /* Desktop/Body 1 */
-  font-family: Nunito;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.main-text p {
-  color: #fff;
-  width: 50%;
-
-  /* Desktop/Body 1 */
-  font-family: Nunito;
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.eoy-economic .subtext {
-  align-items: flex-start;
-  gap: 24px;
-  align-self: stretch;
-}
-.subtext p {
-  color: #fff;
-
-  /* Desktop/Caption */
-  font-family: Nunito;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.352px;
-}
-.eoy-economic .animation {
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 28.521px;
-}
-
-.person {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: color 0.6s ease, transform 0.6s ease;
-  width: 30px;
-  height: 70px;
-}
-.peopleContainer {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-  row-gap: 20px;
-}
-.peopleContainer.show {
-  opacity: 1;
-}
-.special {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(3, auto);
-  align-self: end;
-}
-.special > .person:last-child {
-  grid-row: 3;
-  align-self: end;
-}
-.animationPeople {
-  display: flex;
-  padding-left: 10px;
-  align-items: center;
-  width: 100%;
-}
-.animationPeople > .peopleContainer {
-  flex: 1;
-  width: 100%;
-}
-.stats {
-  display: flex;
-  justify-content: space-between;
-  align-self: stretch;
-}
-.child {
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.child p {
-  width: 75%;
-  text-align: left;
-}
-.child.show {
-  opacity: 1;
-}
-.fortyOne {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-.fortyOne h3 {
-  color: #ffc907;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.fortyOne p {
-  color: #fff;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.thirtyThree {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-.thirtyThree h3 {
-  color: #ed1c65;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.thirtyThree p {
-  color: #fff;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.eleven {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-.eleven h3 {
-  color: #4298d3;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.eleven p {
-  color: #fff;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.five {
-  display: flex;
-  padding-left: 10px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-}
-.five h3 {
-  color: #65469c;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-.five p {
-  color: #fff;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-@media screen and (min-width: 676px) {
-  .main-text {
-    display: flex;
-  }
-  .animation {
-    display: flex;
-  }
-  .subtext {
-    display: flex;
-  }
-  .eoy-economic .star {
-    width: 118px;
-    height: 118px;
-  }
-  .eoy-economic .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  .eoy-economic .container1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     align-self: stretch;
+}
+.eoy-economic h2 {
+    color: #FFF;
+
+/* Desktop/Heading 2 */
+font-family: "IBM Plex Sans", sans-serif;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.792px;
+}
+.eoy-economic .main-text {
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
+.main-text li {
+    color: #FFF;
+
+/* Desktop/Body 1 */
+font-family: Nunito;
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.main-text p {
+color: #FFF;
+width: 50%;
+
+/* Desktop/Body 1 */
+font-family: Nunito;
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.eoy-economic .subtext {
+align-items: flex-start;
+gap: 24px;
+align-self: stretch;
+}
+.subtext p {
+    color: #FFF;
+
+/* Desktop/Caption */
+font-family: Nunito;
+font-size: 16px;
+font-style: italic;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.352px;
+}
+.eoy-economic .animation {
+width: 100%;
+flex-direction: column;
+align-items: flex-start;
+gap: 28.521px;
+}
+
+.person {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: color 0.6s ease, transform 0.6s ease;
+            width: 30px;
+height: 70px;
+        }
+        .peopleContainer {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            row-gap: 20px;
+        }
+        .peopleContainer.show {
+            opacity: 1;
+        }
+        .special {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(3, auto);
+            align-self: end;
+            
+        }
+        .special > .person:last-child {
+            grid-row: 3;
+            align-self: end;
+        }
+        .animationPeople {
+            display: flex;
+            padding-left: 10px;
+            align-items: center;
+            width: 100%;
+        }
+        .animationPeople > .peopleContainer {
+            flex: 1;
+            width: 100%;       
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            align-self: stretch;
+        }
+        .child {
+            opacity:0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+
+        }
+        .child p {
+            width: 75%;
+            text-align: left;
+
+        }
+        .child.show {
+            opacity: 1;
+        }
+        .fortyOne {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+        }
+        .fortyOne h3 {
+            color: #FFC907;
+font-family:"IBM Plex Sans", sans-serif;
+font-size: 75px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        .fortyOne p {
+            color: #FFF;
+font-family:"IBM Plex Sans", sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        .thirtyThree {
+            display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+        }
+        .thirtyThree h3 {
+            color: #ED1C65;
+font-family:"IBM Plex Sans", sans-serif;
+font-size: 75px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        .thirtyThree p {
+            color: #FFF;
+font-family:"IBM Plex Sans", sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        .eleven {
+            display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+        }
+        .eleven h3 {
+            color: #4298D3;
+font-family:"IBM Plex Sans", sans-serif;
+font-size: 75px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        .eleven p {
+            color: #FFF;
+font-family:"IBM Plex Sans", sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        .five {
+            display: flex;
+padding-left: 10px;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+        }
+        .five h3 {
+            color: #65469C;
+font-family: "IBM Plex Sans", sans-serif;
+font-size: 75px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+        .five p {
+            color: #FFF;
+font-family:"IBM Plex Sans", sans-serif;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+        }
+@media screen and (min-width: 676px) {
+    .main-text {
+        display: flex;
+    }
+    .animation {
+        display: flex;
+    }
+    .subtext {
+        display: flex;
+    }
+    .eoy-economic .star {
+    width: 118px;
+    height: 118px;
+}
+.eoy-economic .header {
+    display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+.eoy-economic .container1{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+width: 100%;
+}
+}
+@media screen and (max-width: 675px){
+    .header {
+        display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 16px;
+    }
+    .container1 {
+        align-items: center;
+    }
+    .star {
+        width: 90px;
+height: 90px;
+    }
+    .main-text {
+        display:none;
+    }
+    .animation {
+        display: none;
+    }
+    .subtext {
+        display: none;
+    }
+    .eoy-economic {
+        display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 24px;
+    }
+}
+.carousel {
     width: 100%;
-  }
 }
-@media screen and (max-width: 675px) {
-  .header {
+/* Carousel Template */
+.carousel-container1 {
+    overflow: hidden;
+    display: none; /* This makes it hide in desktop view */
+}
+/* Carousel Scroller */
+.carousel-scroller {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
     align-items: center;
-    gap: 16px;
-  }
-  .container1 {
-    align-items: center;
-  }
-  .star {
-    width: 90px;
-    height: 90px;
-  }
-  .main-text {
-    display: none;
-  }
-  .animation {
-    display: none;
-  }
-  .subtext {
-    display: none;
-  }
-  .eoy-economic {
+    flex-wrap: nowrap;
+    justify-content: flex-start; 
+    gap: 2rem;
+}
+/* Carousel Cards */
+.carousel-card1 {
     display: flex;
+    width: 100%; /* Makes each card stretch to the screen */
+    min-height: 400px; /* Prevents the card from shrinking too much */
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-repeat: no-repeat; 
+    border: 3px solid transparent;
+    border-radius: 2em;
+    scroll-snap-align: start;
+    flex: 0 0 100%; 
+    padding: 1rem;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 24px;
-    padding: 0px;
-  }
-}
+    background: 
+    linear-gradient(135deg, #35373C, #35373C) padding-box, 
+    linear-gradient(to right, #5EBF8D, #D5B43A) border-box;
 
+}
 /* The first carousel card uses a unique background */
-.first-card1 p {
-  color: #fff;
-
-  /* Mobile/Body 1 */
-  font-family: Nunito;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.first-card1 {
+    background: 
+    linear-gradient(135deg, #5EBF8D, #D5B43A) padding-box, 
+    linear-gradient(to right, #5EBF8D, #D5B43A) border-box;
 }
+.first-card1 p {
+    color: #FFF;
 
+/* Mobile/Body 1 */
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.carousel-dots{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+    height: 100px;
+    border: #5EBF8D;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.dot.active {
+  background: #fff; /* or brand color */
+}
 @media screen and (max-width: 675px) {
   .economic-carousel-track .carousel-slide {
     background: linear-gradient(135deg, #35373c, #35373c),
@@ -324,45 +388,57 @@ p {
     background-repeat: no-repeat;
   }
 
-  .main-text p {
-    margin: 0px;
-  }
-  .header h2 {
-    margin: 0px;
-  }
+    .carousel-container1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel-card1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .carousel-dots{
+        display: flex;
+    }
 }
 .carousel-people {
-  width: 100%;
-  min-height: 200px;
+    width: 100%;
+    min-height: 200px;
 }
 
-.carousel-people .peopleContainer {
-  row-gap: 10px;
-  opacity: 1;
-  place-items: center;
+.carousel-people .peopleContainer{
+    row-gap: 10px;
+    opacity: 1;
+    place-items: center;
 }
 .carousel-people1 .person {
-  width: 16.904px;
-  height: 39.442px;
-  color: #ffc907;
+    width: 16.904px;
+height: 39.442px;
+color:#FFC907
+
 }
 .carousel-people2 .person {
-  width: 19.533px;
-  height: 45.578px;
-  color: #ed1c65;
+    width: 19.533px;
+height: 45.578px;
+    color:#ED1C65
+
 }
 .carousel-people3 .person {
-  width: 31.25px;
-  height: 72.917px;
-  color: #4298d3;
+    width: 31.25px;
+height: 72.917px;
+    color:#4298D3
+
 }
 .carousel-people4 .person {
-  width: 57.078px;
-  height: 133.182px;
-  color: #65469c;
+    width: 57.078px;
+height: 133.182px;
+    color:#65469C
+
 }
 ul {
-  margin-top: 0;
+    margin-top: 0;
 }
 .carousel-people4 .person svg {
   width: 100%;
@@ -374,42 +450,55 @@ ul {
   transform: scale(0.6);
   transform-origin: center;
 }
-.statistic {
-  color: #fff;
+.statistic{
+    color: #FFF;
 
-  /* Mobile/CardStatisticText */
-  font-family: "Nunito Sans";
-  font-size: 20px !important;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: -0.44px;
+/* Mobile/CardStatisticText */
+font-family: "Nunito Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.44px;
 }
-.title1 {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 54px !important;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 0;
+.first-card1 p {
+    color: #FFF;
+
+/* Mobile/Body 1 */
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.title1{
+font-family: "IBM Plex Sans", sans-serif;
+font-size: 3rem !important;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 0;
 }
 .carousel-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 17px;
-  align-self: stretch;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 17px;
+align-self: stretch;
 }
 .carousel-people1 .peopleContainer {
-  grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 }
 .carousel-people2 .peopleContainer {
-  grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 }
 .carousel-people3 .peopleContainer {
-  grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 .carousel-people4 .peopleContainer {
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+.carousel-scroller::-webkit-scrollbar {
+  display: none;
 }
