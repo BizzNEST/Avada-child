@@ -85,6 +85,10 @@
     }
 }
 
+.eoy-hero .nunito-sans{
+        display: flex;
+    }
+
 .eoy-hero h2, .eoy-hero p {
     color: white;
 }
