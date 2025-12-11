@@ -1,59 +1,23 @@
-/* Mobile View */
-@media screen and (max-width:899px) {
-    .eoy-toc .container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        justify-self: center;
-        width: 100vw;
-        padding: 3em 1.5em;
-        padding-bottom: 4em;
-        margin: 0 0;    
-        row-gap: 1.5em;
-    }
-    .eoy-toc .button-container{
-        display: none !important;
-    }
-
-    .eoy-toc button {
-        display: none !important;
-    }
-
-    .eoy-toc h2{
-        text-align: start;
-    }
-
-    .eoy-toc br {
-        display: none;
-    }
-}
-
 /* Desktop View */
-@media screen and (min-width : 900px) {
-    .eoy-toc .button-container {
-        display: flex;
-        column-gap: .7em;
-        justify-content: center;
-        background-color: #3E3C3C;
-        border-radius: 3em;
-        padding: .4em .4em;
-        width: fit-content;
-    }
-}
-
-.eoy-toc .container{
+.eoy-toc {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    justify-self: center;
-    width: 100vw;
-    padding: 3em 1.5em;
-    padding-bottom: 4em;
-    margin: 0 0;    
-    row-gap: 1.5em;
     background-image: linear-gradient(to bottom, black, transparent);
+    width: 100vw;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.eoy-toc .button-container {
+    display: flex;
+    column-gap: 0.7em;
+    justify-content: center;
+    background-color: #3e3c3c;
+    border-radius: 3em;
+    padding: 0.4em 0.4em;
+    width: fit-content;
 }
 
 .eoy-toc .button-container a {
@@ -68,7 +32,7 @@
     border-radius: 3em;
     font-size: x-large;
     font-weight: 800;
-    padding: .5em 1.8em;
+    padding: 0.5em 1.8em;
     line-height: 1;
     transition: 350ms;
 }
@@ -77,19 +41,19 @@
     color: white;
 }
 #btn-mustard:hover {
-    background-color: #CAA737;
+    background-color: #caa737;
     cursor: pointer;
 }
-#btn-violet:hover{
-    background-color: #6A4B9A;
+#btn-violet:hover {
+    background-color: #6a4b9a;
     cursor: pointer;
 }
-#btn-blue:hover{
-    background-color: #0B7AB6;
+#btn-blue:hover {
+    background-color: #0b7ab6;
     cursor: pointer;
 }
-#btn-cranberry:hover{
-    background-color: #CE2459;
+#btn-cranberry:hover {
+    background-color: #ce2459;
     cursor: pointer;
 }
 
@@ -97,5 +61,27 @@
     color: white;
     text-align: center;
     white-space: normal !important;
+}
 
+/* Mobile View */
+@media screen and (max-width: 899px) {
+    .eoy-toc {
+        row-gap: 1.5em;
+    }
+    .eoy-toc .button-container {
+        display: none !important;
+    }
+
+    .eoy-toc button {
+        display: none !important;
+    }
+
+    .eoy-toc h2 {
+        text-align: start;
+        max-width: 700px;
+    }
+
+    .eoy-toc br {
+        display: none;
+    }
 }

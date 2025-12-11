@@ -1,5 +1,4 @@
 <section class="eoy-toc">
-    <div class="container">
         <h2 class='ibm-plex-sans'>The future starts with you, <br>will you support the NEST generation?</h2>
 
         <div class="button-container ">
@@ -8,8 +7,4 @@
             <a href="#workforce-launchpad"><button class='ibm-plex-sans' id="btn-blue">A Workforce<br>Launchpad </button></a>
             <a href="#financial-foundation"><button class='ibm-plex-sans' id="btn-cranberry">Financial<br>Foundation </button></a>
         </div>
-
-        
-    </div>
-    
 </section>
