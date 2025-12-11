@@ -28,36 +28,37 @@
                         <div class="carousel-slide slide-2">
                             <?php
                             $topImages = ["pie-70.png"];
-                            $piePathtop =
+                            $pieImage =
                                 "/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/";
-                            $leftText = [
+                            $pieSubText = [
                                 "Feel like they belong to a <br>community invested in their success",
                             ];
-                            $associateLeft = [
+                            $associateGroupImg = [
                                 "effective-workforce-associate.png",
                             ];
                             $associatePath =
                                 "/wp-content/themes/Avada-child/assets/images/eoy-2025/";
                             ?>
-                            <div class = "topPie">
-                                <img src="<?php echo $piePathtop .
+                            <div class = "pie-container">
+                                <img src="<?php echo $pieImage .
                                     rawurlencode($topImages[0]); ?>"
                                 alt="Pie Chart"
-                                class="pie-70-top">
-                                <div class = "top-text-container">
-                                    <p class = "top-text"><?echo $leftText[0]?></p>
+                                class="pie-70-top" />
+
+                                <div class = "pie-subtext-container">
+                                    <p><?echo $pieSubText[0]?></p>
                                 </div>
                             </div>
 
-                            <div class = "bottom-associate">
+                            <div class = "associate-img-container">
                                 <img src="<?php echo $associatePath .
-                                    rawurlencode($associateLeft[0]); ?>"
+                                    rawurlencode($associateGroupImg[0]); ?>"
                                 alt="Pie Chart"
-                                class="bottom-associate-image">
+                                class="bottom-associate-image" />
                             </div>
                         </div>
 
-                        <div class="carousel-slide">
+                        <div class="carousel-slide slide-3">
                             <?php
                             $pieData = [
                                 [
@@ -83,7 +84,7 @@
                             ?>
 
                             <?php foreach ($pieData as $pie): ?>
-                                <div class="ef-pie-item">
+                                <div class="ef-pie-stat-container">
                                     <img src="<?php echo $piePath .
                                         rawurlencode(
                                             $pie["image"],
@@ -135,7 +136,7 @@
                         $leftImages = ["pie-70.png"];
                         $piePath =
                             "/wp-content/themes/Avada-child/assets/images/eoy-2025/Pie Charts/";
-                        $leftText = [
+                        $pieSubText = [
                             "Feel like they belong to a <br>community invested in their success",
                         ];
                         ?>
@@ -147,20 +148,20 @@
                     </div>
 
                     <div class="description70 nunito-sans">
-                        <p class = "textDesc"><?php echo $leftText[0]; ?></p>
+                        <p class = "textDesc"><?php echo $pieSubText[0]; ?></p>
                     </div>
                 </div>
 
 
                 <div class = "associate">
                     <?php
-                    $associateLeft = ["effective-workforce-associate.png"];
+                    $associateGroupImg = ["effective-workforce-associate.png"];
                     $associatePath =
                         "/wp-content/themes/Avada-child/assets/images/eoy-2025/";
                     ?>
                     <img src="<?php echo $associatePath .
                         rawurlencode(
-                            $associateLeft[0],
+                            $associateGroupImg[0],
                         ); ?>" alt = "Pie Chart" class = "overlay-image">
 
                 </div>
