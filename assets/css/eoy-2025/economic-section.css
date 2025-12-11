@@ -1,8 +1,8 @@
-p {
+* {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.child h3 {
+.child .stat-number {
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -15,16 +15,8 @@ align-items: flex-start;
 gap: 40px;
 align-self: stretch;
 }
-.eoy-economic .main {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    align-self: stretch;
-}
-.eoy-economic h2 {
+.header-title {
     color: #FFF;
-
 /* Desktop/Heading 2 */
 font-family: "IBM Plex Sans", sans-serif;
 font-size: 36px;
@@ -38,7 +30,7 @@ align-items: flex-start;
 gap: 24px;
 align-self: stretch;
 }
-.main-text li {
+.main-text .list {
     color: #FFF;
 
 /* Desktop/Body 1 */
@@ -48,7 +40,7 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.main-text p {
+.economic-text {
 color: #FFF;
 width: 50%;
 
@@ -64,7 +56,7 @@ align-items: flex-start;
 gap: 24px;
 align-self: stretch;
 }
-.subtext p {
+.subtext-text {
     color: #FFF;
 
 /* Desktop/Caption */
@@ -509,8 +501,6 @@ align-self: stretch;
         linear-gradient(to right, #5EBF8D, #D5B43A) border-box;
         display: flex;
         flex-direction: column;
-        text-align: center;
-        align-items: center;
         justify-content: space-evenly;
     }
     .carousel-track1.economic .first-card1 p {
