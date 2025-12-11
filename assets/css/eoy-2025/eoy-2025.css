@@ -2,7 +2,11 @@ html {
     scroll-behavior: smooth;
 }
 
-.content-area{
+.content-area {
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
@@ -12,36 +16,42 @@ body {
 }
 
 /* Consistent section spacing */
-.eoy-economic,
+/*.eoy-economic,
 .eoy-confidence,
 .eoy-effective,
 .eoy-financial,
 .eoy-donation {
     padding-top: 3rem;
     padding-bottom: 3rem;
-}
+}*/
 
 main {
     width: 100%;
-    background-image: url('../../images/eoy-2025/page-background.png') !important;
+    background-image: url("../../images/eoy-2025/page-background.png") !important;
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .ibm-plex-sans {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 .nunito-sans {
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+
+@media (max-width: 768px) {
+    .content-area {
+        gap: 2rem;
+    }
 }

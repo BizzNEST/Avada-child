@@ -1,3 +1,7 @@
+.eoy-effective {
+    width: 100%;
+}
+
 .eoy-effective .container {
     width: 100%;
     margin: 0;
@@ -245,7 +249,6 @@
         padding-bottom: 2rem !important;
     }
 
-
     /* DISABLE HOVER EFFECTS ON MOBILE */
     .bottom-section:hover,
     .bottom-section:hover .associate img,
@@ -367,7 +370,6 @@
         transform: none !important;
         opacity: 1 !important;
     }
-
 
     .topPie,
     .ef-pie-chart,
