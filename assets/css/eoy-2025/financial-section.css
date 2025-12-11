@@ -1,3 +1,7 @@
+.eoy-financial {
+    width: 100%;
+}
+
 .eoy-financial .container {
     background-color: transparent;
     padding-left: 0 !important;
@@ -26,7 +30,7 @@
 }
 
 .financial-text p {
-    color: #FFF;
+    color: #fff;
     font-family: Nunito;
     font-size: 21px;
     font-style: normal;
@@ -35,13 +39,12 @@
 }
 
 .financial-chart-amount {
-    color: #8447D9;
+    color: #8447d9;
 }
 
 /* .financial-chart-list li{
     animation: fadeIn 0.5s ease reverse slide-in;
 } */
-
 
 .pie-chart {
     width: 430px;
@@ -62,18 +65,21 @@
 }
 
 .pie-segment.programs {
-    background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-purple.png');
+    background-image: url("../../../assets/images/eoy-2025/Backgrounds/BG-purple.png");
     background-size: 3091px 4000px;
     background-position: 20% 60%;
     background-repeat: no-repeat;
-    -webkit-mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
+    -webkit-mask-image: conic-gradient(
+        #000 0deg 316.8deg,
+        transparent 316.8deg 360deg
+    );
     mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
     z-index: 2;
     transform-origin: center;
 }
 
 .pie-segment.operations {
-    background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-green.png');
+    background-image: url("../../../assets/images/eoy-2025/Backgrounds/BG-green.png");
     background-size: 800px 800px;
     background-position: 20% 80%;
     background-repeat: no-repeat;
@@ -114,7 +120,7 @@
 }
 
 .pie-segment.operations::after {
-    content: '12%';
+    content: "12%";
     position: absolute;
     top: 30%;
     right: 20%;
@@ -131,7 +137,6 @@
     justify-content: center;
     align-items: center;
     gap: 80px;
-
 }
 
 .financial-chart-text h3,
@@ -147,17 +152,24 @@
 .financial-chart-text {
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
 }
 
 .financial-chart-text li {
     opacity: 0;
     transform: translateX(-20px);
-    transition: opacity 1s ease, transform 1s ease;
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
 }
 
 .pie-segment.programs {
-    transition: all 1s ease, transform 1s ease, background-size 0.6s ease;
+    transition:
+        all 1s ease,
+        transform 1s ease,
+        background-size 0.6s ease;
 }
 
 .financial-chart-section.in-view .financial-chart-text {
@@ -219,22 +231,23 @@
 }
 
 .financial-chart-section.in-view .pie-segment.programs {
-    transform: scale(1.10);
+    transform: scale(1.1);
     background-size: 727.27px 727.27px;
 }
 
 .pie-segment::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-image:
-        repeating-linear-gradient(45deg,
-            transparent,
-            transparent 2px,
-            rgba(255, 255, 255, 0.03) 2px,
-            rgba(255, 255, 255, 0.03) 4px);
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.03) 2px,
+        rgba(255, 255, 255, 0.03) 4px
+    );
     z-index: 2;
     pointer-events: none;
 }
@@ -253,7 +266,6 @@
 
 /* Mobile - Hide text and pie chart, show carousel */
 @media screen and (max-width: 675px) {
-
     .financial-text,
     .financial-chart-section {
         display: none;
@@ -281,7 +293,7 @@
     }
 
     .financial-chart-section.in-view .pie-chart {
-        transform: scale(1.10);
+        transform: scale(1.1);
     }
 
     .pie-segment.programs,
@@ -347,26 +359,24 @@
     }
 }
 
-
 /* ========== MOBILE CAROUSEL CSS START ========== */
 /* Copy from here to add carousel styles to another section */
 
-
 /* Mobile carousel */
 @media screen and (max-width: 675px) {
-
     .financial-heading {
         flex-direction: column;
     }
 
     .financial-carousel-track .carousel-slide {
-        background: linear-gradient(135deg, #35373C, #35373C), linear-gradient(to right, #5EBF8D, #D5B43A);
+        background:
+            linear-gradient(135deg, #35373c, #35373c),
+            linear-gradient(to right, #5ebf8d, #d5b43a);
         background-origin: padding-box, border-box;
         background-clip: padding-box, border-box;
         background-repeat: no-repeat;
     }
 
-    
     /* Slide 3 - tighter list spacing */
     .financial-carousel-track > .slide-3 ul {
         margin-top: 0px;
@@ -398,17 +408,23 @@
     }
 
     .mobile-pie-chart .pie-segment.programs {
-        background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-purple.png');
+        background-image: url("../../../assets/images/eoy-2025/Backgrounds/BG-purple.png");
         background-size: 800px 800px;
         background-position: 30% 60%;
         background-repeat: no-repeat;
-        -webkit-mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
-        mask-image: conic-gradient(#000 0deg 316.8deg, transparent 316.8deg 360deg);
+        -webkit-mask-image: conic-gradient(
+            #000 0deg 316.8deg,
+            transparent 316.8deg 360deg
+        );
+        mask-image: conic-gradient(
+            #000 0deg 316.8deg,
+            transparent 316.8deg 360deg
+        );
         z-index: 2;
     }
 
     .mobile-pie-chart .pie-segment.operations {
-        background-image: url('../../../assets/images/eoy-2025/Backgrounds/BG-green.png');
+        background-image: url("../../../assets/images/eoy-2025/Backgrounds/BG-green.png");
         background-size: 522px 522px;
         background-position: 20% 80%;
         background-repeat: no-repeat;
@@ -435,14 +451,20 @@
         z-index: 5;
     }
 
-    .financial-carousel-track > .slide-1,  .financial-carousel-track > .slide-3 {
+    .financial-carousel-track > .slide-1,
+    .financial-carousel-track > .slide-3 {
         justify-content: center;
         border-radius: 20px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), linear-gradient(142deg, #5EBF8D 0%, #D5B43A 100%);
+        background:
+            linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.25) 0%,
+                rgba(0, 0, 0, 0.25) 100%
+            ),
+            linear-gradient(142deg, #5ebf8d 0%, #d5b43a 100%);
         background-origin: padding-box, border-box;
         background-clip: padding-box, border-box;
         background-repeat: no-repeat;
-
     }
 
     .financial-carousel-track > .slide-3 {
@@ -451,16 +473,13 @@
         font-size: 18px;
     }
 
-    .financial-carousel-track > .slide-3 p{
+    .financial-carousel-track > .slide-3 p {
         font-size: 18px;
     }
-    
 }
 
 /* Smaller mobile screens - Scale down carousel */
 @media screen and (max-width: 400px) {
-    
-
     .financial-carousel-track > .slide-3 {
         font-size: 16px;
     }

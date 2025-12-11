@@ -4,6 +4,7 @@ html {
 
 .content-area {
     display: flex;
+    gap: 5rem;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -15,14 +16,14 @@ body {
 }
 
 /* Consistent section spacing */
-.eoy-economic,
+/*.eoy-economic,
 .eoy-confidence,
 .eoy-effective,
 .eoy-financial,
 .eoy-donation {
     padding-top: 3rem;
     padding-bottom: 3rem;
-}
+}*/
 
 main {
     width: 100%;
@@ -47,4 +48,10 @@ main {
     font-variation-settings:
         "wdth" 100,
         "YTLC" 500;
+}
+
+@media (max-width: 768px) {
+    .content-area {
+        gap: 2rem;
+    }
 }
