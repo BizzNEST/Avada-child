@@ -1,4 +1,7 @@
 @media screen and (max-width: 800px) {
+    .eoy-hero {
+        margin-bottom: 0;
+    }
     .eoy-hero .container {
         width: 100%;
         align-items: center;
@@ -49,6 +52,10 @@
 }
 
 @media screen and (min-width: 801px) {
+    .eoy-hero {
+        margin-bottom: -5rem;
+    }
+
     .eoy-hero .container {
         /* background-image: url('../../images/eoy-2025/Texture.png');
         background-size: cover; */
@@ -57,7 +64,7 @@
         display: flex;
         justify-content: space-evenly;
         padding: 0 2em;
-        margin: 0 0;
+        margin: 0;
     }
     .hero-marquee {
         display: flex;
@@ -71,14 +78,16 @@
         padding: 0 1em;
     }
     .hero-description {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         width: 50%;
         margin: auto 0;
-        padding: 2em 0;
+        padding: 1rem 0;
         padding-left: 1em;
     }
     .btn-donation {
-        margin-top: 1em;
+        margin-top: 0.6rem;
         background-color: white;
         border: transparent;
         color: black;

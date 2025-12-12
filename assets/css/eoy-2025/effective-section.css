@@ -245,10 +245,6 @@
         display: none;
     }
 
-    .container {
-        padding-bottom: 2rem !important;
-    }
-
     /* DISABLE HOVER EFFECTS ON MOBILE */
     .bottom-section:hover,
     .bottom-section:hover .associate img,
