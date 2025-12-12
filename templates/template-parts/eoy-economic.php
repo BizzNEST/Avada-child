@@ -137,7 +137,7 @@ function getPeopleInVisualOrder() {
                 <p>Of our 24-25 BizzNEST Associates, 79% secured paid next opportunities. Compare that to people looking for work in California, approximately 24% of whom found a job.* Digital NEST’s impact means young professionals are earning income, supporting families, and building wealth in communities historically excluded from economic opportunity.**</p>
                 <ul>
                     <li>79% secured paid next opportunities</li>
-                    <li>41% landed full or art-time jobs</li>
+                    <li>41% landed full or part-time jobs</li>
                     <li>33% secured paid internships</li>
                     <li>11% found contract work</li>
                     <li>5% launched as entrepreneurs</li>
