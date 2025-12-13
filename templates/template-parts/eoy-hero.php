@@ -62,7 +62,7 @@
                 families, we will become a national model for workforce development
                 and sustain our presence for generations to come.
             </p>
-            <a href="/donations?campaign=nestgen_impact"><button class='btn-donation'>DONATE NOW</button></a>
+            <a href="/nest-gen/?campaign=NESTGen_our_impact"><button class='btn-donation'>DONATE NOW</button></a>
         </div>
     </div>
 </section>

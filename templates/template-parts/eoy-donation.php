@@ -3,7 +3,7 @@
         <div class="donation-hero">
             <div class="donation-text">
                 <h2 class='ibm-plex-sans'>Give today and support <br>the NEST-Generation!</h2>
-                <a href="/donations?campaign=nestgen_impact"><button class="donate">Donate Now</button></a>
+                <a href="/nest-gen/?campaign=NESTGen_our_impact"><button class="donate">Donate Now</button></a>
             </div>
         </div>
         <div class="donation-subtext">
