@@ -27,7 +27,7 @@ body {
 
 main {
     width: 100%;
-    background-image: url("../../images/eoy-2025/page-background.png") !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../../images/eoy-2025/page-background.png") !important;
     background-attachment: fixed;
     background-position: top;
     background-repeat: no-repeat;
